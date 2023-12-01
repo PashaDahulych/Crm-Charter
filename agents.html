@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Agents</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231201201746">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__container">
+				<aside data-spollers class="page__aside aside">
+					<div class="aside__header">
+						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
+							<p>Charter<span>Click</span></p>
+						</a>
+						<button type="button" class="aside__button _icon-select-arrow"></button>
+					</div>
+					<nav class="aside__menu">
+						<ul class="aside__list">
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-calendar">
+										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Calendar</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">
+											4321
+										</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Bookings</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-notifications"></div>
+									<p class="aside__link-text">
+										Notifications
+									</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-boast"></div>
+									<p class="aside__link-text">Boats</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-my-company"></div>
+									<p class="aside__link-text">
+										My Company
+									</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Users</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Agents</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Companies</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="aside__user user-aside">
+						<div class="user-aside__account">
+							<div class="user-aside__image">
+								<picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt="user" /></picture>
+								<div class="user-aside__status"></div>
+							</div>
+							<div class="user-aside__about">
+								<h3>Account</h3>
+								<p>Status</p>
+							</div>
+						</div>
+						<div class="user-aside__actions">
+							<button type="button" class="user-aside__button _icon-logout">
+								<span>Logout</span>
+							</button>
+							<a href="!#" class="user-aside__button _icon-edit-profile"><span>Edit profile</span></a>
+						</div>
+					</div>
+				</aside>
+				<div data-one-select class="page__agents agents">
+					<div class="agents__header header-details">
+						<h1 class="header-details__title title">
+							Agents
+						</h1>
+						<div class="header-details__actions">
+							<button type="button" class="header-details__notifications"><span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span></button>
+							<button data-popup="#invite" type="button" class="header-deatils__button button">Invite</button>
+						</div>
+					</div>
+					<form class="agents__form" action="#" method="POST">
+						<div class="agents__line-wrapper">
+							<div class="agents__line">
+								<label for="calendar">Date Added</label>
+								<div class="agents__line-input">
+									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input">
+									<span class="_icon-calendar"></span>
+								</div>
+							</div>
+							<div class="agents__select">
+								<label for="select">Added By</label>
+								<select id="select" multiple data-checkbox name="form[]" data-class-modif="agents">
+									<option value="" selected>Select</option>
+									<option value="2">Owner</option>
+									<option value="3">Agent</option>
+								</select>
+							</div>
+							<div class="agents__line">
+								<label for="name-input">Name</label>
+								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input">
+							</div>
+							<div class="agents__select">
+								<label for="status-action">Status</label>
+								<select id="status-action" multiple data-checkbox name="form[]" data-class-modif="agents">
+									<option value="" selected>Select</option>
+									<option value="2">Requested</option>
+									<option value="3">Activated</option>
+									<option value="4">Rejected</option>
+									<option value="5">Revoked</option>
+								</select>
+							</div>
+							<div class="agents__checkbox checkbox">
+								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]">
+								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
+							</div>
+						</div>
+						<div data-da=".agents__line-wrapper,1300" class="agents__ations">
+							<button type="reset" class="agents__button button button--transparent"><span class="_icon-close"></span>Clear</button>
+						</div>
+					</form>
+					<div class="agents__wrapper">
+						<table class="agents__table">
+							<thead class="agents__thead">
+								<tr>
+									<th>
+										<div>Date Added</div><button type="button" class="_icon-burger-arrow"></button>
+									</th>
+									<th><img src="img/letter-status-image/close.svg" alt="letter"></th>
+									<th>
+										<div>Name</div><button type="button" class="_icon-burger-arrow"></button>
+									</th>
+									<th>
+										<div>Contact Details</div>
+									</th>
+									<th>
+										<div>Access Status</div><button class="_icon-burger-arrow"></button>
+									</th>
+									<th>
+										<div>Automatically Approve Bookings</div>
+									</th>
+									<th>
+										<div>Actions</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody class="agents__tbody">
+								<tr>
+									<td class="agents__date">
+										<p>03.10.2023</p>
+									</td>
+									<td class="agents__letter-status">
+										<img src="img/letter-status-image/email-received.svg" alt="letter">
+									</td>
+									<td class="agents__user-name">
+										<p>User Name</p>
+									</td>
+									<td class="agents__contact">
+										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
+										<a href="tel:9171234567">(917) 123 4567</a>
+									</td>
+									<td class="agents__access-status">
+										<p>Requested</p>
+									</td>
+									<td>
+										<div class="agents__table-checkbox table-checkbox">
+											<input id="approve" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]">
+											<label for="approve" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td class="agents__actions">
+										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Actions</option>
+											<option value="2">Activate </option>
+											<option value="3">Block</option>
+											<option value="4">Revoke </option>
+											<option value="5">Request </option>
+											<option value="6">View Details</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents__date">
+										<p>03.10.2023</p>
+									</td>
+									<td class="agents__letter-status">
+										<img src="img/letter-status-image/email-sent.svg" alt="letter">
+									</td>
+									<td class="agents__user-name">
+										<p>User Name</p>
+									</td>
+									<td class="agents__contact">
+										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
+										<a href="tel:9171234567">(917) 123 4567</a>
+									</td>
+									<td class="agents__access-status">
+										<p>Activated</p>
+									</td>
+									<td>
+										<div class="agents__table-checkbox table-checkbox">
+											<input id="approve-02" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]">
+											<label for="approve-02" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td class="agents__actions">
+										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Actions</option>
+											<option value="2">Activate </option>
+											<option value="3">Block</option>
+											<option value="4">Revoke </option>
+											<option value="5">Request </option>
+											<option value="6">View Details</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents__date">
+										<p>03.10.2023</p>
+									</td>
+									<td class="agents__letter-status">
+										<img src="img/letter-status-image/email-received.svg" alt="letter">
+									</td>
+									<td class="agents__user-name">
+										<p>User Name</p>
+									</td>
+									<td class="agents__contact">
+										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
+										<a href="tel:9171234567">(917) 123 4567</a>
+									</td>
+									<td class="agents__access-status">
+										<p>Requested</p>
+									</td>
+									<td>
+										<div class="agents__table-checkbox table-checkbox">
+											<input id="approve-03" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]">
+											<label for="approve-03" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td class="agents__actions">
+										<select id="statu3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Actions</option>
+											<option value="2">Activate </option>
+											<option value="3">Block</option>
+											<option value="4">Revoke </option>
+											<option value="5">Request </option>
+											<option value="6">View Details</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td class="agents__date">
+										<p>03.10.2023</p>
+									</td>
+									<td class="agents__letter-status">
+										<img src="img/letter-status-image/email-sent.svg" alt="letter">
+									</td>
+									<td class="agents__user-name">
+										<p>User Name</p>
+									</td>
+									<td class="agents__contact">
+										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
+										<a href="tel:9171234567">(917) 123 4567</a>
+									</td>
+									<td class="agents__access-status">
+										<p>Activated</p>
+									</td>
+									<td>
+										<div class="agents__table-checkbox table-checkbox">
+											<input id="approve-04" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]">
+											<label for="approve-04" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td class="agents__actions">
+										<select id="status4" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Actions</option>
+											<option value="2">Activate </option>
+											<option value="3">Block</option>
+											<option value="4">Revoke </option>
+											<option value="5">Request </option>
+											<option value="6">View Details</option>
+										</select>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot class="agents__tfoot">
+								<tr>
+									<td>
+										<nav class="agents__pagging pagging">
+											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
+											<ul class="pagging__list">
+												<li>
+													<a href="#" class="pagging__item _active">1</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">2</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">3</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">4</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item pagging__item--dots">...</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">25</a>
+												</li>
+											</ul>
+											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
+										</nav>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				<aside class="page__notification notification">
+					<div class="notification__header">
+						<div class="notification__header-wrapper">
+							<div class="notification__value">Notification<span>333</span></div>
+							<button type="button" class="notification__close"></button>
+						</div>
+
+						<div class="notification__maim-checkbox">
+							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
+							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
+						</div>
+					</div>
+					<div class="notification__body">
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_1" data-error="Ошибка" class="notification__input" type="checkbox" value="1" name="form[]" />
+									<label for="article_1" class="notification__label"></label>
+								</div>
+								<div class="notification__labels notification__labels--invoices">
+									Invoices
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_2" data-error="Ошибка" class="notification__input" type="checkbox" value="2" name="form[]" />
+									<label for="article_2" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+							<div class="notification__actions">
+								<button type="button" class="notification__button button-chancel">
+									Cancel
+								</button>
+								<button type="button" class="notification__button button-chancel">
+									Accept
+								</button>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_3" data-error="Ошибка" class="notification__input" type="checkbox" value="3" name="form[]" />
+									<label for="article_3" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_4" data-error="Ошибка" class="notification__input" type="checkbox" value="4" name="form[]" />
+									<label for="article_4" class="notification__label"></label>
+								</div>
+								<div class="notification__labels notification__labels--user">
+									User
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_5" data-error="Ошибка" class="notification__input" type="checkbox" value="5" name="form[]" />
+									<label for="article_5" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+					</div>
+				</aside>
+
+			</section>
+		</main>
+	</div>
+	<div id="invite" aria-hidden="true" class="popup popup--invite">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__invite">
+					<h4>Invite an Agent</h4>
+					<form action="#" method="POST" class="invite__form">
+						<div class="invite__line">
+							<label for="email">Email *</label>
+							<input id="email" type="email" name="form[email]" required data-error="" placeholder="" class="input">
+						</div>
+						<div class="invite__line">
+							<label for="fname">Name *</label>
+							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input">
+						</div>
+						<button type="submit" class="invite__button invite__button--disabled">Invite</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__individual-price">
+					<form action="#" method="POST" class="individual-price__form">
+						<h4>Individual Price For Agents</h4>
+						<div class="individual-price__line">
+							<label for="price">Price, AED</label>
+							<input id="price" type="tel" name="form[price]" required data-error="" placeholder="" class="input">
+						</div>
+						<div class="individual-price__agents">
+							<h5>Available To Agents</h5>
+							<div data-simplebar class="individual-price__body">
+								<div class="individual-price__agents-name">
+									<input id="name_1" data-error="" class="individual-price__input-name" type="checkbox" value="1" name="form[]">
+									<label for="name_1" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_2" data-error="" class="individual-price__input-name" type="checkbox" value="2" name="form[]">
+									<label for="name_2" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_3" data-error="" class="individual-price__input-name" type="checkbox" value="3" name="form[]">
+									<label for="name_3" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_4" data-error="" class="individual-price__input-name" type="checkbox" value="4" name="form[]">
+									<label for="name_4" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_5" data-error="" class="individual-price__input-name" type="checkbox" value="5" name="form[]">
+									<label for="name_5" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_6" data-error="" class="individual-price__input-name" type="checkbox" value="6" name="form[]">
+									<label for="name_6" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="individual-price__actions">
+							<button type="reset" class="individual-price__delite-btn">Delete</button>
+							<button type="submit" class="individual-price__button">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="js/app.min.js?_v=20231201201746"></script>
+</body>
+
+</html>
