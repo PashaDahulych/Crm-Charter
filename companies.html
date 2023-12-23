@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Agents</title>
+	<title>Companies by Agents tab</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -28,7 +28,7 @@
 							<li class="aside__item">
 								<a data-spoller href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
-										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
+										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зелений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
 									</div>
 									<p class="aside__link-text">Calendar</p>
@@ -74,9 +74,6 @@
 								<ul class="aside__sub-menu">
 									<li class="aside__sub-padding"></li>
 									<li class="aside__sub-item">
-										<a href="#" class="aside__sub-link">Users</a>
-									</li>
-									<li class="aside__sub-item">
 										<a href="#" class="aside__sub-link">Agents</a>
 									</li>
 									<li class="aside__sub-item">
@@ -105,224 +102,154 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="page__agents agents">
-					<div class="agents__header header-details">
-						<h1 class="header-details__title title">
-							Agents
-						</h1>
+				<div data-one-select class="page__companies companies">
+					<div class="companies__header header-details">
+						<h1 class="header-details__title title">Companies</h1>
 						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications"><span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span></button>
-							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">Invite</button>
+							<button type="button" class="header-details__notifications">
+								<span class="header-details__text">Notification</span>
+								<span class="header-details__icon _icon-notifications"><span>381</span></span>
+							</button>
 						</div>
 					</div>
-					<form class="agents__form" action="#" method="POST">
-						<div class="agents__body">
-							<div class="agents__line">
-								<label for="calendar">Date Added</label>
-								<div class="agents__line-input">
-									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input">
-									<span class="_icon-calendar"></span>
+					<form class="companies__form form-small" action="#" method="POST">
+						<div class="form-small__body">
+							<div class="form-small__line">
+								<div class="form-small__line-input">
+									<input id="searchComp" autocomplete="off" name="searchCopm" type="text" class="input" placeholder="Search" />
+									<button type="button" class="_icon-search"></button>
 								</div>
 							</div>
-							<div class="agents__select">
-								<label for="select">Added By</label>
-								<select id="select" multiple data-checkbox name="form[]" data-class-modif="agents">
-									<option value="" selected>Select</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
-								</select>
+							<button data-popup="#filters" type="button" class="form-small__filters filters-button _icon-filter">
+								Filters
+							</button>
+							<div class="form-small__options-comp options-comp">
+								<div class="options-comp__item">
+									<input id="o_1" class="options-comp__input" type="radio" value="1" name="companies">
+									<label for="o_1" class="options-comp__label">
+										<span class="options-comp__icon"></span>
+										<span class="options-comp__text">All Companies</span>
+									</label>
+								</div>
+								<div class="options-comp__item">
+									<input id="o_2" class="options-comp__input" type="radio" value="2" name="companies">
+									<label for="o_2" class="options-comp__label">
+										<span class="options-comp__icon"></span>
+										<span class="options-comp__text">My Companies</span>
+									</label>
+								</div>
 							</div>
-							<div class="agents__line">
-								<label for="name-input">Name</label>
-								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input">
-							</div>
-							<div class="agents__select">
-								<label for="status-action">Status</label>
-								<select id="status-action" multiple data-checkbox name="form[]" data-class-modif="agents">
-									<option value="" selected>Select</option>
-									<option value="2">Requested</option>
-									<option value="3">Activated</option>
-									<option value="4">Rejected</option>
-									<option value="5">Revoked</option>
-								</select>
-							</div>
-						</div>
-						<div class="agents__ations">
-							<div class="agents__checkbox checkbox">
-								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]">
-								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
-							</div>
-							<button type="reset" class="agents__button button _icon-close">Clear</button>
 						</div>
 					</form>
-					<div class="agents__wrapper">
-						<table class="agents__table">
-							<thead class="agents__thead">
+					<div class="companies__wrapper">
+						<table class="companies__table">
+							<thead class="companies__thead">
 								<tr>
 									<th>
-										<div>Date Added</div><button type="button" class="_icon-burger-arrow"></button>
+										<div>Company name</div>
+										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
-									<th><img src="img/letter-status-image/close.svg" alt="letter"></th>
 									<th>
-										<div>Name</div><button type="button" class="_icon-burger-arrow"></button>
+										<div>Contry</div>
+										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
 									<th>
 										<div>Contact Details</div>
 									</th>
 									<th>
-										<div>Access Status</div><button class="_icon-burger-arrow"></button>
+										<div>Boats</div>
 									</th>
 									<th>
-										<div>Automatically Approve Bookings</div>
-									</th>
-									<th>
-										<div>Actions</div>
+										<div>Access Status</div>
+										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
 								</tr>
 							</thead>
-							<tbody class="agents__tbody">
+							<tbody class="companies__tbody">
 								<tr>
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter">
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
+									<td>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]">
-											<label for="approve" class="table-checkbox__label"></label>
-										</div>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
-									<td class="agents__actions">
+									<td class="companies__contacts">
+										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
+										<a href="tel:9178909654">(917) 890 9654</a>
+									</td>
+									<td class="companies__boats-info">
+										<p>AAA Deep Blue Sea</p>
+										<p>S1-Luxury Boat</p>
+										<p>50 people max</p>
+									</td>
+									<td class="companies__access-status">
 										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
-											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+											<option value="" selected>Status</option>
+											<option value="2">Request</option>
+											<option value="3">Activated</option>
+											<option value="4">Rejected</option>
+											<option value="5">Revoked</option>
 										</select>
 									</td>
 								</tr>
 								<tr>
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter">
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
+									<td>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-02" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]">
-											<label for="approve-02" class="table-checkbox__label"></label>
-										</div>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
-									<td class="agents__actions">
-										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
-											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+									<td class="companies__contacts">
+										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
+										<a href="tel:9178909654">(917) 890 9654</a>
+									</td>
+									<td class="companies__boats-info">
+										<p>AAA Deep Blue Sea</p>
+										<p>S1-Luxury Boat</p>
+										<p>50 people max</p>
+									</td>
+									<td class="companies__access-status">
+										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Status</option>
+											<option value="2">Request</option>
+											<option value="3">Activated</option>
+											<option value="4">Rejected</option>
+											<option value="5">Revoked</option>
 										</select>
 									</td>
 								</tr>
 								<tr>
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter">
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
+									<td>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-03" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]">
-											<label for="approve-03" class="table-checkbox__label"></label>
-										</div>
+										<p>Clarence Polkawitz LLC</p>
 									</td>
-									<td class="agents__actions">
-										<select id="statu3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
-											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
-										</select>
+									<td class="companies__contacts">
+										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
+										<a href="tel:9178909654">(917) 890 9654</a>
 									</td>
-								</tr>
-								<tr>
-									<td class="agents__date">
-										<p>03.10.2023</p>
+									<td class="companies__boats-info">
+										<p>AAA Deep Blue Sea</p>
+										<p>S1-Luxury Boat</p>
+										<p>50 people max</p>
 									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter">
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
-									</td>
-									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-04" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]">
-											<label for="approve-04" class="table-checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status4" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
-											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+									<td class="companies__access-status">
+										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
+											<option value="" selected>Status</option>
+											<option value="2">Request</option>
+											<option value="3">Activated</option>
+											<option value="4">Rejected</option>
+											<option value="5">Revoked</option>
 										</select>
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="agents__tfoot">
+							<tfoot class="companies__tfoot">
 								<tr>
 									<td>
-										<nav class="agents__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
+										<nav class="companies__pagging pagging">
+											<button disabled type="button" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></button>
 											<ul class="pagging__list">
 												<li>
 													<a href="#" class="pagging__item _active">1</a>
@@ -343,7 +270,7 @@
 													<a href="#" class="pagging__item">25</a>
 												</li>
 											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
+											<button type="button" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></button>
 										</nav>
 									</td>
 								</tr>
@@ -790,7 +717,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="js/app.min.js?_v=20231222210034"></script>
 </body>
 

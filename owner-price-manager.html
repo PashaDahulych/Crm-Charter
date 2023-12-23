@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231201201746">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -174,7 +174,9 @@
 				</aside>
 				<div data-one-select class="page__owner owner">
 					<div class="owner__header header-details">
-						<h1 class="header-details__title title">Price Manager</h1>
+						<h1 class="header-details__title title">
+							Price Manager
+						</h1>
 						<button type="button" class="header-details__notifications">
 							<span class="header-details__text">Notification</span>
 							<span class="header-details__icon _icon-notifications">
@@ -205,12 +207,10 @@
 							</div>
 						</div>
 						<div class="form__actions">
-							<button type="reset" class="form__button">
-								<span class="_icon-close"></span>Clear
-							</button>
-							<button type="submit" class="form__button">
-								<span class="_icon-check"></span>Apply
-							</button>
+							<div class="form__buttons">
+								<button type="reset" class="form__button button _icon-close">Clear</button>
+								<button type="submit" class="form__button button _icon-check">Apply</button>
+							</div>
 						</div>
 					</form>
 					<div class="owner__wrapper">
@@ -304,7 +304,9 @@
 									<td class="owner__individual individual">
 										<div class="individual__wrapper">
 											<div class="individual__line-agent"></div>
-											<button class="individual__add-button individual__add-button--disabled" type="button"><span class="_icon-plus"></span>Add</button>
+											<button class="individual__add-button individual__add-button--disabled" type="button" data-popup="#individual-price">
+												<span class="_icon-plus"></span>Add
+											</button>
 										</div>
 									</td>
 								</tr>
@@ -372,27 +374,43 @@
 											<div class="individual__lines">
 												<div class="individual__body-line">
 													<div class="individual__price">
-														<p class="individual__money"><span>aed</span><span>1250</span></p>
-														<p class="individual__agent-name">Agent Name, Vlad, Igorm, Pasha, Anna</p>
+														<p class="individual__money">
+															<span>aed</span><span>1250</span>
+														</p>
+														<p class="individual__agent-name">
+															Agent Name,
+															Vlad, Igorm,
+															Pasha, Anna
+														</p>
 													</div>
 													<button type="button" class="individual__changes-btn _icon-pen"></button>
 												</div>
 												<div class="individual__body-line">
 													<div class="individual__price">
-														<p class="individual__money"><span>aed</span><span>1250</span></p>
-														<p class="individual__agent-name">Agent Name</p>
+														<p class="individual__money">
+															<span>aed</span><span>1250</span>
+														</p>
+														<p class="individual__agent-name">
+															Agent Name
+														</p>
 													</div>
 													<button type="button" class="individual__changes-btn _icon-pen"></button>
 												</div>
 												<div class="individual__body-line">
 													<div class="individual__price">
-														<p class="individual__money"><span>aed</span><span>1250</span></p>
-														<p class="individual__agent-name">Agent Name</p>
+														<p class="individual__money">
+															<span>aed</span><span>1250</span>
+														</p>
+														<p class="individual__agent-name">
+															Agent Name
+														</p>
 													</div>
 													<button type="button" class="individual__changes-btn _icon-pen"></button>
 												</div>
 											</div>
-											<button data-popup="#individual-price" class="individual__add-button" type="button"><span class="_icon-plus"></span>Add</button>
+											<button data-popup="#individual-price" class="individual__add-button" type="button">
+												<span class="_icon-plus"></span>Add
+											</button>
 										</div>
 									</td>
 								</tr>
@@ -458,7 +476,9 @@
 									<td class="owner__individual individual">
 										<div class="individual__wrapper">
 											<div class="individual__line-agent"></div>
-											<button class="individual__add-button individual__add-button--disabled" type="button"><span class="_icon-plus"></span>Add</button>
+											<button class="individual__add-button individual__add-button--disabled" type="button" data-popup="#individual-price">
+												<span class="_icon-plus"></span>Add
+											</button>
 										</div>
 									</td>
 								</tr>
@@ -622,19 +642,20 @@
 	<div id="invite" aria-hidden="true" class="popup popup--invite">
 		<div class="popup__wrapper">
 			<div class="popup__content">
-				<button data-close type="button" class="popup__close"></button>
 				<div class="popup__invite">
 					<h4>Invite an Agent</h4>
 					<form action="#" method="POST" class="invite__form">
 						<div class="invite__line">
 							<label for="email">Email *</label>
-							<input id="email" type="email" name="form[email]" required data-error="" placeholder="" class="input">
+							<input id="email" type="email" name="form[email]" required data-error="" placeholder="" class="input" />
 						</div>
 						<div class="invite__line">
 							<label for="fname">Name *</label>
-							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input">
+							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
 						</div>
-						<button type="submit" class="invite__button invite__button--disabled">Invite</button>
+						<button type="submit" class="invite__button invite__button--disabled">
+							Invite
+						</button>
 					</form>
 				</div>
 			</div>
@@ -650,40 +671,44 @@
 						<h4>Individual Price For Agents</h4>
 						<div class="individual-price__line">
 							<label for="price">Price, AED</label>
-							<input id="price" type="tel" name="form[price]" required data-error="" placeholder="" class="input">
+							<input id="price" type="tel" name="form[price]" required data-error="" placeholder="" class="input" />
 						</div>
 						<div class="individual-price__agents">
 							<h5>Available To Agents</h5>
 							<div data-simplebar class="individual-price__body">
 								<div class="individual-price__agents-name">
-									<input id="name_1" data-error="" class="individual-price__input-name" type="checkbox" value="1" name="form[]">
+									<input id="name_1" data-error="" class="individual-price__input-name" type="checkbox" value="1" name="form[]" />
 									<label for="name_1" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 								<div class="individual-price__agents-name">
-									<input id="name_2" data-error="" class="individual-price__input-name" type="checkbox" value="2" name="form[]">
+									<input id="name_2" data-error="" class="individual-price__input-name" type="checkbox" value="2" name="form[]" />
 									<label for="name_2" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 								<div class="individual-price__agents-name">
-									<input id="name_3" data-error="" class="individual-price__input-name" type="checkbox" value="3" name="form[]">
+									<input id="name_3" data-error="" class="individual-price__input-name" type="checkbox" value="3" name="form[]" />
 									<label for="name_3" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 								<div class="individual-price__agents-name">
-									<input id="name_4" data-error="" class="individual-price__input-name" type="checkbox" value="4" name="form[]">
+									<input id="name_4" data-error="" class="individual-price__input-name" type="checkbox" value="4" name="form[]" />
 									<label for="name_4" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 								<div class="individual-price__agents-name">
-									<input id="name_5" data-error="" class="individual-price__input-name" type="checkbox" value="5" name="form[]">
+									<input id="name_5" data-error="" class="individual-price__input-name" type="checkbox" value="5" name="form[]" />
 									<label for="name_5" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 								<div class="individual-price__agents-name">
-									<input id="name_6" data-error="" class="individual-price__input-name" type="checkbox" value="6" name="form[]">
+									<input id="name_6" data-error="" class="individual-price__input-name" type="checkbox" value="6" name="form[]" />
 									<label for="name_6" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
 								</div>
 							</div>
 						</div>
 						<div class="individual-price__actions">
-							<button type="reset" class="individual-price__delite-btn">Delete</button>
-							<button type="submit" class="individual-price__button">Save</button>
+							<button type="reset" class="individual-price__delite-btn">
+								Delete
+							</button>
+							<button type="submit" class="individual-price__button">
+								Save
+							</button>
 						</div>
 					</form>
 				</div>
@@ -691,7 +716,246 @@
 		</div>
 	</div>
 
-	<script src="js/app.min.js?_v=20231201201746"></script>
+	<!-- =================================================================== -->
+	<div id="filters" aria-hidden="true" class="popup popup--filters">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-one-select class="filters__popup">
+					<h4>Filters</h4>
+					<form action="#" method="POST" class="filters__form">
+						<div class="filters__line">
+							<label for="boatName">Boat Name</label>
+							<select name="form[]" id="boatName" data-scroll data-class-modif="boat-name">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="companyPopup">Company</label>
+							<select name="form[]" data-scroll="" id="companyPopup" data-class-modif="company-filte">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="locationPopup">Location</label>
+							<select name="form[]" data-scroll data-class-modif="form">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+								<option value="9">Пункт №8</option>
+								<option value="10">Пункт №9</option>
+								<option value="11">Пункт №10</option>
+							</select>
+						</div>
+						<button type="submit" class="filters__button filters-button _icon-filter">
+							Filters
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+
+	<div id="new-booking" aria-hidden="true" class="popup popup--new-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-one-select class="new-booking__popup">
+					<h4>New Booking</h4>
+					<form data-one-select action="#" method="POST" class="new-booking__form">
+						<div class="new-booking__top">
+							<div class="new-booking__line">
+								<label for="boatCreate">Boat</label>
+								<select name="form[]" data-show-selected data-scroll data-class-modif="boat-list">
+									<option value="">Search boat</option>
+									<option value="2">
+										Search boat lorem lorem lorem №2
+									</option>
+									<option value="3">
+										Search boat lorem lorem lorem №3
+									</option>
+									<option value="4">
+										Search boat lorem lorem lorem №4
+									</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="dateCreate">Start Date *</label>
+								<div class="new-booking__input-calendar">
+									<input id="dateCreate" autocomplete="off" type="text" required disabled data-datepicker name="form[dateCreate]" data-error="" placeholder="" class="input" />
+									<span class="new-booking__icon-calendar _icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="new-booking__line">
+								<label for="durationCreate">Duration *</label>
+								<select name="form[]" id="durationCreate" required data-scroll data-show-selected disabled data-class-modif="new-booking">
+									<option value=""></option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+							</div>
+						</div>
+						<div class="new-booking__body">
+							<div class="new-booking__line">
+								<label for="startTimeCreate">Start Time *</label>
+								<select name="form[]" id="startTimeCreate" data-scroll data-show-selecte data-class-modif="new-booking" required disabled>
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="guestsCreate">Guests *</label>
+								<select name="form[guestsCreate]" data-scroll required data-show-selecte id="guestsCreate" data-class-modif="new-booking" disabled>
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="pricingCreate">Pricing *</label>
+								<select name="form[pricingCreate]" data-scroll data-show-selected data-class-modif="new-booking" required id="pricingCreate" disabled>
+									<option value="">Automaticaly</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="priceCreate">Price *</label>
+								<select name="form[priceCreate]" data-scroll data-show-selected data-class-modif="new-booking" required id="priceCreate" disabled>
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
+						</div>
+						<div class="new-booking__total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="new-booking__actions">
+							<button type="submit" class="new-booking__button button button--border-create">
+								Create
+							</button>
+							<button type="submit" class="new-booking__button button button--priority">
+								Create and Open
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+
+	<div id="new-booking-second" aria-hidden="true" class="popup popup--new-booking-second">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-one-select class="new-booking__popup">
+					<h4>New Booking</h4>
+					<form data-one-select action="#" method="POST" class="new-booking__form">
+						<div class="new-booking__top new-booking__top--second">
+							<div class="new-booking__line new-booking__line--second">
+								<label for="boatCreateSecond">Boat</label>
+								<input id="boatCreateSecond" autocomplete="off" type="text" name="form[dateCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+						</div>
+						<div class="new-booking__body new-booking__body--second">
+							<div class="new-booking__line">
+								<label for="guestsCreateSecond">Guests *</label>
+								<div data-quantity class="new-booking__quantity quantity">
+									<div class="quantity__input">
+										<input data-quantity-value autocomplete="off" type="text" required name="form[guestsCreateSecond]" value="1" id="guestsCreateSecond" />
+									</div>
+									<div class="quantity__actions">
+										<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+										<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="new-booking__line">
+								<label for="dateCreateSecond">Start Date *</label>
+								<div class="new-booking__input-calendar--second">
+									<input id="dateCreateSecond" autocomplete="off" type="text" required data-datepicker name="form[dateCreateSecond]" data-error="" placeholder="" class="input" />
+									<span class="new-booking__icon-calendar _icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="new-booking__line new-booking__line--second">
+								<label for="durationCreateSecond">Duration *</label>
+								<input id="durationdCreateSecond" autocomplete="off" type="text" required name="form[durationCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+							<div class="new-booking__line new-booking__line--second">
+								<label for="startTimeCreateSecond">Start Time *</label>
+								<input id="startTimeCreateSecond" autocomplete="off" type="text" required name="form[startTimeCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+						</div>
+						<div class="new-booking__price">
+							<p>
+								Price:
+								<span>AED 2205 per hour (proceed to edit).</span>
+							</p>
+						</div>
+						<div class="new-booking__actions new-booking__actions--second">
+							<button type="submit" class="new-booking__button button button--border-create">
+								Create
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20231222210034"></script>
 </body>
 
 </html>

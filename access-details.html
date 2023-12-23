@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar</title>
+	<title>Owner Price Manager</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,8 +14,8 @@
 
 <body>
 	<div class="wrapper">
-		<main class="period">
-			<section class="period__container">
+		<main class="page">
+			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
 						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
@@ -172,178 +172,119 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="period__calendar calendar">
-					<div class="calendar__header header-details">
-						<h1 class="header-details__title title">Calendar</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-						</div>
+				<div data-one-select data-spollers class="page__access-details access-details">
+					<div class="bookings__header header-details">
+						<h1 class="header-details__title title">Agent’s Access Details</h1>
+						<button type="button" class="header-details__notifications">
+							<span class="header-details__text">Notification</span>
+							<span class="header-details__icon _icon-notifications">
+								<span>381</span>
+							</span>
+						</button>
 					</div>
-					<form class="calendar__form" action="#" method="POST">
-						<div class="calendar__line-wrapper">
-							<div class="calendar__line">
-								<label for="period">Period</label>
-								<div class="calendar__line-input">
-									<input id="period" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar"></span>
+					<div class="access-details__form">
+						<div class="access-details__data">
+							<div class="access-details__agent">
+								<h3>Agent:</h3>
+								<div class="access-details__agent-about">
+									<p>User Name</p>
+									<a href="mailto:useremail@gmail.com">Useremail@gmail.com</a>
+									<a href="tel:9171234567">(917) 123 4567</a>
 								</div>
 							</div>
-							<div class="calendar__select">
-								<label for="company">Company</label>
-								<select id="company" name="form[]" data-class-modif="company">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
-								</select>
-							</div>
-							<div class="calendar__filters">
-								<select id="filters" name="form[]" data-class-modif="filters" data-scroll>
-									<option value="" selected>
-										Filters
-									</option>
-									<option value="2">Filters 1</option>
-									<option value="3">Filters 2</option>
-									<option value="4">Filters 3</option>
-									<option value="5">Filters 4</option>
-								</select>
+							<div class="access-details__status">
+								<h3>Status:</h3>
+								<p>View Details</p>
 							</div>
 						</div>
-						<div class="calendar__actions">
-							<button type="button" class="calendar__button button button--priority">Add a Booking</button>
+						<div class="access-details__checkbox checkbox">
+							<input id="automatically-approve-bookings" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" name="form[]">
+							<label for="automatically-approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
 						</div>
-					</form>
-					<div class="calendar__wrapper">
-						<table class="calendar__table">
-							<thead class="calendar__thead">
+						<div class="access-details__actions">
+							<button type="button" class="bookings__button button button--priority">Activate</button>
+							<button type="button" class="bookings__button button button--priority">Block</button>
+						</div>
+					</div>
+					<div class="access-details__wrapper">
+						<h3>Bookings</h3>
+						<table class="access-details__table">
+							<thead class="access-details__thead">
 								<tr>
-									<th class="calendar__boat">
+									<th>
+										<div>ID</div><button type="button" class="_icon-burger-arrow"></button>
+									</th>
+									<th>
+										<div>Booking Date</div>
+									</th>
+									<th>
 										<div>Boat</div>
 									</th>
-									<th class="calendar__today">
-										<p>Today, Su 11</p>
+									<th>
+										<div> Price</div> <button class="_icon-burger-arrow"></button>
 									</th>
-									<th class="calendar__day">
-										<p>Monday <span>12</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Tuesday <span>13</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Wednesday <span>14</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Thursday <span>15</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Friday <span>16</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Saturday <span>17</span></p>
+									<th>
+										<div>Status</div><button class="_icon-burger-arrow"></button>
 									</th>
 								</tr>
 							</thead>
-							<tbody class="calendar__tbody">
+							<tbody class="access-details__tbody">
 								<tr>
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat"></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury Yacht SilverCreek 61 Ft</a>
-											<p class="boat-about__rent-company">Neptune Yacht Rental LLC</p>
-											<p class="boat-about__max-people">65 people max</p>
-										</div>
+									<td class="access-details__id">
+										<a href="#">74967</a>
 									</td>
-									<td class="calendar__today-value">
-										<div class="calendar__booking-status calendar__booking-status--violet">
-											<h3>Neptune Yacht Rental LLC</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">18:00 - 22.00</p>
-												<p class="calendar__total-price"><span>AED</span> 6720</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td class="access-details__date">
+										<p>03.10.2023</p>
 									</td>
-									<td class="calendar__day-value"><button type="button" class="calendar__add"><span class="_icon-plus"></span>Add</button></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--pink">
-											<h3>Neptune Yacht Rental LLC</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">18:00 - 22.00</p>
-												<p class="calendar__total-price"><span>AED</span> 6720</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td class="access-details__boat">
+										<p>Veronika</p>
+									</td>
+									<td class="access-details__price">
+										<p><span>AED</span> 1760</p>
+									</td>
+									<td class="access-details__status-paid">
+										<p>Paid</p>
 									</td>
 								</tr>
 								<tr>
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat"></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury BigDaddy 88ft</a>
-											<p class="boat-about__rent-company">Neptune Yacht Rental LLC</p>
-											<p class="boat-about__max-people">65 people max</p>
-										</div>
+									<td class="access-details__id">
+										<a href="#">74967</a>
 									</td>
-									<td class="calendar__today-value">
+									<td class="access-details__date">
+										<p>03.10.2023</p>
 									</td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add"><span class="_icon-plus"></span>Add</button>
+									<td class="access-details__boat">
+										<p>Veronika</p>
 									</td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--green">
-											<h3>Neptune Yacht Rental LLC</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">18:00 - 22.00</p>
-												<p class="calendar__total-price"><span>AED</span> 6720</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-										<div class="calendar__booking-status">
-											<h3>Neptune Yacht Rental LLC</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">18:00 - 22.00</p>
-												<p class="calendar__total-price"><span>AED</span> 6720</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td class="access-details__price">
+										<p><span>AED</span> 1760</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--green">
-											<h3>Neptune Yacht Rental LLC</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">18:00 - 22.00</p>
-												<p class="calendar__total-price"><span>AED</span> 6720</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td class="access-details__status-paid">
+										<p>Paid</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
+								</tr>
+								<tr>
+									<td class="access-details__id">
+										<a href="#">74967</a>
+									</td>
+									<td class="bookings__date">
+										<p>03.10.2023</p>
+									</td>
+									<td class="access-details__boat">
+										<p>Veronika</p>
+									</td>
+									<td class="access-details__price">
+										<p><span>AED</span> 1760</p>
+									</td>
+									<td class="access-details__status-paid">
+										<p>Paid</p>
+									</td>
 								</tr>
 							</tbody>
-							<tfoot class="calendar__tfoot">
+							<tfoot class="access-details__tfoot">
 								<tr>
 									<td>
-										<nav class="calendar__pagging pagging">
+										<nav class="access-details__pagging pagging">
 											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
 											<ul class="pagging__list">
 												<li>
@@ -371,6 +312,18 @@
 								</tr>
 							</tfoot>
 						</table>
+					</div>
+					<div class="access-details__history history">
+						<button type="button" data-open data-spoller class="history__title">Change History <span class="_icon-select-arrow"></span></button>
+						<div class="history__body">
+							<div class="history__wrapper">
+								<p>03/05/2023 12.00 Status value is changet from ‘Paid’ to ‘Complete’ automatically</p>
+								<p>03/05/2023 12.00 Status value is changet from ‘Paid’ to ‘Complete’ automatically</p>
+								<p>03/05/2023 12.00 Status value is changet from ‘Paid’ to ‘Complete’ automatically</p>
+								<p>03/05/2023 12.00 Status value is changet from ‘Paid’ to ‘Complete’ automatically</p>
+								<p>03/05/2023 12.00 Status value is changet from ‘Paid’ to ‘Complete’ automatically</p>
+							</div>
+						</div>
 					</div>
 				</div>
 				<aside class="page__notification notification">

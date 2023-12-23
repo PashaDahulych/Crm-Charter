@@ -1,26 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Верстка «CharterCRM»</title>
 </head>
 
 <body>
 	<div class="rootpage">
 		<h1>Верстка «CharterCRM»</h1>
-		<div class="rootpage__info">
-			Опис проєкту
-		</div>
+		<div class="rootpage__info">Опис проєкту</div>
 		<h2>Готові сторінки:</h2>
 		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Admin Price Manager</a></li>
-			<li><a target="_blank" href="owner-price-manager.html">Owner Price Manager</a></li>
-			<li><a target="_blank" href="bookings.html">Agent's Access Details</a></li>
-			<li><a target="_blank" href="booking-details.html">Booking Details</a></li>
-			<li><a target="_blank" href="agents.html">Agents</a></li>
-			<li><a target="_blank" href="calendar.html">Calendar</a></li>
+			<li>
+				<a target="_blank" href="home.html">Admin Price Manager by <span>Admin tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="owner-price-manager.html">Owner Price Manager by <span>Owner tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="access-details.html">Agent's Access Details by <span>Owner tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="booking-details-owner.html">Booking Details by <span>Owner tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="agents.html">Agents by <span>Owner tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="calendar.html">Calendar by <span>Owner tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="agents-item.html">Agents by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="boats.html">Boats by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="companies.html">Companies by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="booking-details-agent.html">Booking Details by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="booking-details-agent-second.html">Booking Details (Second) by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="bookings.html">Bookings by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="bookings-check.html">Bookings (Checked) by <span>Agents tab</span></a>
+			</li>
+			<li>
+				<a target="_blank" href="calendar-agents.html">Calendar by <span>Agents tab</span></a>
+			</li>
 		</ol>
 	</div>
 </body>
@@ -56,8 +90,8 @@
 	}
 
 	a {
-		text-decoration: underline;
-		color: #ebe691
+		text-decoration: none;
+		color: #ebe691;
 	}
 
 	a:visited {
@@ -66,7 +100,7 @@
 	}
 
 	a:hover {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 
 	ul li {
@@ -135,6 +169,11 @@
 		margin: 0px 0px 15px 0px;
 	}
 
+	.rootpage__list span {
+		color: red;
+		font-weight: 500;
+	}
+
 	.rootpage__contacts,
 	.rootpage__tnx {
 		border-radius: 200px;
@@ -153,7 +192,6 @@
 
 	.rootpage__contacts {
 		background: #32b5a4;
-
 	}
 
 	.rootpage__contacts a {
