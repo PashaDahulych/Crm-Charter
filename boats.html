@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -136,7 +136,7 @@
 					<div class="boats__wrapper">
 						<table class="boats__table">
 							<thead class="boats__thead">
-								<tr>
+								<tr class="boats__tr">
 									<th>
 										<div class="boats__table-checkbox table-checkbox">
 											<input id="checked-all" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]" />
@@ -171,7 +171,7 @@
 								</tr>
 							</thead>
 							<tbody class="boats__tbody">
-								<tr>
+								<tr class="boats__tr">
 									<td>
 										<div class="boats__table-checkbox table-checkbox">
 											<input id="checked-1" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]" />
@@ -207,7 +207,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="boats__tr">
 									<td>
 										<div class="boats__table-checkbox table-checkbox">
 											<input id="checked-3" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]" />
@@ -243,7 +243,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="boats__tr">
 									<td>
 										<div class="boats__table-checkbox table-checkbox">
 											<input id="checked-4" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]" />
@@ -280,7 +280,7 @@
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="boats__tfoot">
+							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
 										<nav class="boats__pagging pagging">
@@ -316,10 +316,11 @@
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">
-							<div class="notification__value">Notification<span>333</span></div>
+							<div class="notification__value">Notification
+								<div class="notification__bell _icon-notifications"><span>333</span></div>
+							</div>
 							<button type="button" class="notification__close"></button>
 						</div>
-
 						<div class="notification__maim-checkbox">
 							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
@@ -450,7 +451,7 @@
 							<label for="fname">Name *</label>
 							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
 						</div>
-						<button type="submit" class="invite__button invite__button--disabled">
+						<button disabled type="submit" class="invite__button">
 							Invite
 						</button>
 					</form>
@@ -521,8 +522,8 @@
 					<h4>Filters</h4>
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
-							<label for="boatName">Boat Name</label>
-							<select name="form[]" id="boatName" data-scroll data-class-modif="boat-name">
+							<label for="boatNameFilters">Boat Name</label>
+							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -530,8 +531,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="companyPopup">Company</label>
-							<select name="form[]" data-scroll="" id="companyPopup" data-class-modif="company-filte">
+							<label for="companyFilters">Company</label>
+							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -543,8 +544,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="locationPopup">Location</label>
-							<select name="form[]" data-scroll data-class-modif="form">
+							<label for="locationFilters">Location</label>
+							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -752,7 +753,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231222210034"></script>
+	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 
 </html>

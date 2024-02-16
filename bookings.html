@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,7 +104,9 @@
 				</aside>
 				<div data-one-select class="page__bookings bookings">
 					<div class="bookings__header header-details">
-						<h1 class="header-details__title title">Bookings</h1>
+						<h1 class="header-details__title title">
+							Bookings
+						</h1>
 						<div class="header-details__actions">
 							<button type="button" class="header-details__notifications">
 								<span class="header-details__text">Notification</span>
@@ -131,7 +133,7 @@
 					<div class="bookings__wrapper">
 						<table class="bookings__table">
 							<thead class="bookings__thead">
-								<tr>
+								<tr class="bookings__tr">
 									<th>
 										<div>Booking ID</div>
 										<button type="button" class="_icon-burger-arrow"></button>
@@ -158,7 +160,7 @@
 								</tr>
 							</thead>
 							<tbody class="bookings__tbody">
-								<tr>
+								<tr class="bookings__tr">
 									<td>
 										<p>56879</p>
 									</td>
@@ -166,7 +168,7 @@
 										<p>Blue Yonder 40 feet</p>
 									</td>
 									<td>
-										<p>Boat Owner LLC </p>
+										<p>Boat Owner LLC</p>
 									</td>
 									<td>
 										<p>03.10.2023</p>
@@ -183,7 +185,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="bookings__tr">
 									<td>
 										<p>56879</p>
 									</td>
@@ -191,7 +193,7 @@
 										<p>Sunrise</p>
 									</td>
 									<td>
-										<p>Boat Owner LLC </p>
+										<p>Boat Owner LLC</p>
 									</td>
 									<td>
 										<p>03.10.2023</p>
@@ -208,7 +210,7 @@
 										</button>
 									</td>
 								</tr>
-								<tr>
+								<tr class="bookings__tr">
 									<td>
 										<p>56879</p>
 									</td>
@@ -216,7 +218,7 @@
 										<p>AAA Deep Blue Sea</p>
 									</td>
 									<td>
-										<p>Boat Owner LLC </p>
+										<p>Boat Owner LLC</p>
 									</td>
 									<td>
 										<p>03.10.2023</p>
@@ -234,7 +236,7 @@
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="bookings__tfoot">
+							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
 										<nav class="bookings__pagging pagging">
@@ -270,10 +272,11 @@
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">
-							<div class="notification__value">Notification<span>333</span></div>
+							<div class="notification__value">Notification
+								<div class="notification__bell _icon-notifications"><span>333</span></div>
+							</div>
 							<button type="button" class="notification__close"></button>
 						</div>
-
 						<div class="notification__maim-checkbox">
 							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
@@ -404,7 +407,7 @@
 							<label for="fname">Name *</label>
 							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
 						</div>
-						<button type="submit" class="invite__button invite__button--disabled">
+						<button disabled type="submit" class="invite__button">
 							Invite
 						</button>
 					</form>
@@ -475,8 +478,8 @@
 					<h4>Filters</h4>
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
-							<label for="boatName">Boat Name</label>
-							<select name="form[]" id="boatName" data-scroll data-class-modif="boat-name">
+							<label for="boatNameFilters">Boat Name</label>
+							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -484,8 +487,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="companyPopup">Company</label>
-							<select name="form[]" data-scroll="" id="companyPopup" data-class-modif="company-filte">
+							<label for="companyFilters">Company</label>
+							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -497,8 +500,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="locationPopup">Location</label>
-							<select name="form[]" data-scroll data-class-modif="form">
+							<label for="locationFilters">Location</label>
+							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -706,7 +709,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231222210034"></script>
+	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 
 </html>

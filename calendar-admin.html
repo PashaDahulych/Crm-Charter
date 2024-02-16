@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar Agent</title>
+	<title>Calendar Admin</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -182,9 +182,6 @@
 								<span class="header-details__text">Notification</span>
 								<span class="header-details__icon _icon-notifications"><span>381</span></span>
 							</button>
-							<button type="button" class="calendar__button button button--priority">
-								Add a Booking
-							</button>
 						</div>
 					</div>
 					<form class="calendar__form" action="#" method="POST">
@@ -197,18 +194,26 @@
 								</div>
 							</div>
 							<div class="calendar__select">
-								<label for="company">Company</label>
-								<select id="company" name="form[]" data-class-modif="company">
+								<label for="companyCalendar">Company</label>
+								<select id="companyCalendar" name="form[companyCalendar]" data-class-modif="company">
 									<option value="" selected>
 										Select
 									</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
+									<option value="Owner">Owner</option>
+									<option value="Agent">Agent</option>
 								</select>
 							</div>
-							<button type="button" data-popup="#filters" class="calendar__filters-button filters-button _icon-filter">Filters</button>
+							<div class="calendar__filters">
+								<button data-popup="#filters" type="button" class="calendar__filter-button filters-button _icon-filter">
+									Filters
+								</button>
+							</div>
 						</div>
-						<!-- <div class="calendar__actions"></div> -->
+						<div class="calendar__actions">
+							<button type="button" class="calendar__button button">
+								Add a OOS
+							</button>
+						</div>
 					</form>
 					<div class="calendar__wrapper">
 						<table class="calendar__table">
@@ -850,7 +855,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 

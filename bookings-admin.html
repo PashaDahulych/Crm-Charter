@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar Agent</title>
+	<title>Bookongs Admin</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -182,9 +182,6 @@
 								<span class="header-details__text">Notification</span>
 								<span class="header-details__icon _icon-notifications"><span>381</span></span>
 							</button>
-							<button type="button" class="calendar__button button button--priority">
-								Add a Booking
-							</button>
 						</div>
 					</div>
 					<form class="calendar__form" action="#" method="POST">
@@ -197,184 +194,220 @@
 								</div>
 							</div>
 							<div class="calendar__select">
-								<label for="company">Company</label>
-								<select id="company" name="form[]" data-class-modif="company">
+								<label for="companyCalendar">Company</label>
+								<select id="companyCalendar" name="form[companyCalendar]" data-class-modif="company">
 									<option value="" selected>
 										Select
 									</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
+									<option value="Owner">Owner</option>
+									<option value="Agent">Agent</option>
 								</select>
 							</div>
-							<button type="button" data-popup="#filters" class="calendar__filters-button filters-button _icon-filter">Filters</button>
+							<div class="calendar__filters">
+								<button data-popup="#filters" type="button" class="calendar__filter-button filters-button _icon-filter">
+									Filters
+								</button>
+							</div>
 						</div>
-						<!-- <div class="calendar__actions"></div> -->
+						<div class="calendar__actions">
+							<button type="reset" class="calendar__button button _icon-trash">Remove</button>
+							<button type="button" class="calendar__button button">Add a Booking</button>
+							<button type="button" class="calendar__button button">
+								Add a OOS
+							</button>
+						</div>
 					</form>
-					<div class="calendar__wrapper">
-						<table class="calendar__table">
-							<thead class="calendar__thead">
-								<tr class="calendar__tr">
-									<th class="calendar__boat">
-										<div>Boat</div>
+					<div class="bookings-admin__wrapper">
+						<table class="bookings-admin__table">
+							<thead class="bookings-admin__thead">
+								<tr class="bookings-admin__tr">
+									<th>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checkedAll" data-error="" class="table-checkbox__input" type="checkbox" value="all" name="form[checkedAll]" />
+											<label for="checkedAll" class="table-checkbox__label"></label>
+										</div>
 									</th>
-									<th class="calendar__today">
-										<p>Today, Su 11</p>
+									<th>№</th>
+									<th>Type <button type="button" class="_icon-burger-arrow"></button>
 									</th>
-									<th class="calendar__day">
-										<p>Monday <span>12</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Tuesday <span>13</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Wednesday <span>14</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Thursday <span>15</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Friday <span>16</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Saturday <span>17</span></p>
-									</th>
+									<th>Boat <button type="button" class="_icon-burger-arrow"></button></th>
+									<th>Company<button type="button" class="_icon-burger-arrow"></button></th>
+									<th>Date</th>
+									<th>Duration</th>
+									<th>Price</th>
+									<th>Created at</th>
+									<th>Created By <button type="button" class="_icon-burger-arrow"></button></th>
+									<th>Status <button type="button" class="_icon-burger-arrow"></button></th>
 								</tr>
 							</thead>
-							<tbody class="calendar__tbody">
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury Yacht SilverCreek 61
-												Ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+							<tbody class="bookings-admin__tbody">
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-1" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-1]" />
+											<label for="checked-1" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value">
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
 									</td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											<span class="_icon-plus"></span>Add
-										</button>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--not-paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
 								</tr>
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury BigDaddy 88ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-2" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-2]" />
+											<label for="checked-2" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value"></td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											<span class="_icon-plus"></span>Add
-										</button>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
 									</td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
+								</tr>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-3" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-3]" />
+											<label for="checked-3" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
+									</td>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
+								</tr>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-4" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-4]" />
+											<label for="checked-4" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
+									</td>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
+								</tr>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-5" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-5]" />
+											<label for="checked-5" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
+									</td>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
+								</tr>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-6" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-6]" />
+											<label for="checked-6" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
+									</td>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
+								</tr>
+								<tr class="bookings-admin__tr">
+									<td>
+										<div class="bookings-admin__table-checkbox table-checkbox">
+											<input id="checked-7" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[checked-7]" />
+											<label for="checked-7" class="table-checkbox__label"></label>
+										</div>
+									</td>
+									<td>56879</td>
+									<td>Offline</td>
+									<td>Blue Yonder 40 feet</td>
+									<td>Boat Owner LLC </td>
+									<td>
+										<p>03.10.23</p>
+										<p>12:00</p>
+									</td>
+									<td>6 hours</td>
+									<td>146 800.00</td>
+									<td>
+										<p>10.11.23 </p>
+										<p>13:06</p>
+									</td>
+									<td>CharterCLick</td>
+									<td>Paid</td>
 								</tr>
 							</tbody>
 							<tfoot class="main-admin__tfoot">
@@ -850,7 +883,6 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 

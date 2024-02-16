@@ -20311,7 +20311,7 @@
                         selectItemTitle.insertAdjacentHTML("afterbegin", `<span class="${this.selectClasses.classSelectLabel}">${this.getSelectPlaceholder(originalSelect).label.text ? this.getSelectPlaceholder(originalSelect).label.text : this.getSelectPlaceholder(originalSelect).value}</span>`);
                     }
                 }
-                selectItem.insertAdjacentHTML("beforeend", `<div class="${this.selectClasses.classSelectBody}"><div hidden class="${this.selectClasses.classSelectOptions}"></div></div>`);
+                selectItem.insertAdjacentHTML("beforeend", `<div class="${this.selectClasses.classSelectBody}">\n\t\t\t<div hidden class="${this.selectClasses.classSelectOptions}"></div></div>`);
                 this.selectBuild(originalSelect);
                 originalSelect.dataset.speed = originalSelect.dataset.speed ? originalSelect.dataset.speed : this.config.speed;
                 this.config.speed = +originalSelect.dataset.speed;

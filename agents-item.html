@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -121,33 +121,33 @@
 								</div>
 							</div>
 							<div class="agents__select">
-								<label for="select">Added By</label>
-								<select id="select" multiple data-checkbox name="form[]" data-class-modif="agents">
+								<label for="selectAdd">Added By</label>
+								<select id="selectAdd" multiple data-checkbox name="form[selectAdd]" data-class-modif="agents">
 									<option value="" selected>
 										Select
 									</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
+									<option value="Owner">Owner</option>
+									<option value="Agent">Agent</option>
 								</select>
 							</div>
 							<div class="agents__select">
-								<label for="status-action">Status</label>
-								<select id="status-action" multiple data-checkbox name="form[]" data-class-modif="agents">
+								<label for="statusAction">Status</label>
+								<select id="statusAction" multiple data-checkbox name="form[statusAction]" data-class-modif="agents">
 									<option value="" selected>
 										Select
 									</option>
-									<option value="2">Requested</option>
-									<option value="3">Activated</option>
-									<option value="4">Rejected</option>
-									<option value="5">Revoked</option>
+									<option value="Requested">Requested</option>
+									<option value="Activated">Activated</option>
+									<option value="Rejected">Rejected</option>
+									<option value="Revoked">Revoked</option>
 								</select>
 							</div>
 							<button data-popup="#filters" type="button" class="agent__filters filters-button _icon-filter">Filters</button>
 						</div>
 						<div class="agents__ations">
 							<div class="agents__checkbox checkbox">
-								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]" />
-								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
+								<input id="approveBookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[approveBookings]" />
+								<label for="approveBookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
 							</div>
 							<button type="reset" class="agents__button button button--border">Clear</button>
 						</div>
@@ -155,7 +155,7 @@
 					<div class="agents__wrapper">
 						<table class="agents__table">
 							<thead class="agents__thead">
-								<tr>
+								<tr class="agents__tr">
 									<th>
 										<div>Date Added</div>
 										<button type="button" class="_icon-burger-arrow"></button>
@@ -185,7 +185,7 @@
 								</tr>
 							</thead>
 							<tbody class="agents__tbody">
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
@@ -229,7 +229,7 @@
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
@@ -273,7 +273,7 @@
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
@@ -317,7 +317,7 @@
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
@@ -362,7 +362,7 @@
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="agents__tfoot">
+							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
 										<nav class="agents__pagging pagging">
@@ -412,7 +412,7 @@
 							<label for="fname">Name *</label>
 							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
 						</div>
-						<button type="submit" class="invite__button invite__button--disabled">
+						<button disabled type="submit" class="invite__button">
 							Invite
 						</button>
 					</form>
@@ -483,8 +483,8 @@
 					<h4>Filters</h4>
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
-							<label for="boatName">Boat Name</label>
-							<select name="form[]" id="boatName" data-scroll data-class-modif="boat-name">
+							<label for="boatNameFilters">Boat Name</label>
+							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -492,8 +492,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="companyPopup">Company</label>
-							<select name="form[]" data-scroll="" id="companyPopup" data-class-modif="company-filte">
+							<label for="companyFilters">Company</label>
+							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -505,8 +505,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="locationPopup">Location</label>
-							<select name="form[]" data-scroll data-class-modif="form">
+							<label for="locationFilters">Location</label>
+							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -714,7 +714,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20231222210034"></script>
+	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 
 </html>

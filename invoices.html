@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar Agent</title>
+	<title>Admin Invoices</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,8 +14,8 @@
 
 <body>
 	<div class="wrapper">
-		<main class="period">
-			<section class="period__container">
+		<main class="page">
+			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
 						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
@@ -172,215 +172,132 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="period__calendar calendar">
-					<div class="calendar__header header-details">
+				<div class="page__main-admin main-admin">
+					<div class="main-admin__header header-details">
 						<h1 class="header-details__title title">
-							Calendar
+							Invoices
 						</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-							<button type="button" class="calendar__button button button--priority">
-								Add a Booking
-							</button>
-						</div>
+						<button type="button" class="header-details__notifications">
+							<span class="header-details__text">Notification</span>
+							<span class="header-details__icon _icon-notifications">
+								<!-- <span class="main-admin__nonotifications-value">381</span> -->
+								<span>381</span>
+							</span>
+						</button>
 					</div>
-					<form class="calendar__form" action="#" method="POST">
-						<div class="calendar__line-wrapper">
-							<div class="calendar__line">
-								<label for="period">Period</label>
-								<div class="calendar__line-input">
-									<input id="period" autocomplete="off" name="daterange" type="text" class="input" />
+					<form action="#" method="POST" class="main-admin__form form form--ivoices" data-one-select>
+						<div class="form__body">
+							<div class="form__line form__line--calendar">
+								<label for="dateCreated">Date Created</label>
+								<div class="form__line-input">
+									<input id="dateCreated" autocomplete="off" name="daterange" type="text" class="input" />
 									<span class="_icon-calendar"></span>
 								</div>
 							</div>
-							<div class="calendar__select">
-								<label for="company">Company</label>
-								<select id="company" name="form[]" data-class-modif="company">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
+							<div class="form__line form__line--sender">
+								<label for="sender">Sebder</label>
+								<select id="sender" name="form[sender]" data-show-selected data-scroll data-class-modif="sender">
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+									<option value="4">Пункт №5</option>
 								</select>
 							</div>
-							<button type="button" data-popup="#filters" class="calendar__filters-button filters-button _icon-filter">Filters</button>
+							<div class="form__line">
+								<button data-popup="#filters" class="form__filters-button filters-button _icon-filter">Filters</button>
+							</div>
 						</div>
-						<!-- <div class="calendar__actions"></div> -->
+						<div class="form__search">
+							<input id="search" data-error="" class="input" type="text" name="form[search]" placeholder="Search" autocomplete="off" />
+							<button type="button" class="_icon-search"></button>
+							<label for="search" class="form__label"></label>
+						</div>
+						<div class="form__actions">
+							<div class="form__buttons">
+								<button type="button" class="form__button button button--down _icon-save-all">
+									Download
+								</button>
+							</div>
+						</div>
 					</form>
-					<div class="calendar__wrapper">
-						<table class="calendar__table">
-							<thead class="calendar__thead">
-								<tr class="calendar__tr">
-									<th class="calendar__boat">
-										<div>Boat</div>
+					<div class="main-admin__wrapper">
+						<table class="main-admin__inv-table">
+							<thead class="main-admin__inv-thead">
+								<tr class="main-admin__inv-road">
+									<th>
+										<div class="table-checkbox">
+											<input id="all" data-error="" class="table-checkbox__input" type="checkbox" value="all" name="form[]">
+											<label for="all" class="table-checkbox__label"></label>
+										</div>
 									</th>
-									<th class="calendar__today">
-										<p>Today, Su 11</p>
-									</th>
-									<th class="calendar__day">
-										<p>Monday <span>12</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Tuesday <span>13</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Wednesday <span>14</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Thursday <span>15</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Friday <span>16</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Saturday <span>17</span></p>
-									</th>
+									<th>Created At</th>
+									<th>Sender<button class="_icon-select-arrow"></button></th>
+									<th>Receiver<button class="_icon-select-arrow"></button></th>
+									<th>Invoice Number</th>
+									<th>Booking</th>
+									<th>Total Price</th>
 								</tr>
 							</thead>
-							<tbody class="calendar__tbody">
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury Yacht SilverCreek 61
-												Ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+							<tbody class="main-admin__inv-tbody">
+								<tr class="main-admin__inv-road">
+									<td>
+										<div class="table-checkbox">
+											<input id="inv-01" data-error="" class="table-checkbox__input" type="checkbox" value="inv-01" name="form[]">
+											<label for="inv-01" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value">
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>03.10.23 15:54:30</p>
 									</td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											<span class="_icon-plus"></span>Add
-										</button>
+									<td>
+										<p>Charterclick Leisure Yachts & Boats Rental</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--not-paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>Mr. Alex Marzell </p>
+									</td>
+									<td>
+										<p>01234</p>
+									</td>
+									<td>
+										<p>897212</p>
+									</td>
+									<td>
+										AED 24 578,44
 									</td>
 								</tr>
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury BigDaddy 88ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+								<tr class="main-admin__inv-road">
+									<td>
+										<div class="table-checkbox">
+											<input id="inv-02" data-error="" class="table-checkbox__input" type="checkbox" value="inv-02" name="form[]">
+											<label for="inv-02" class="table-checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value"></td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											<span class="_icon-plus"></span>Add
-										</button>
+									<td>
+										<p>03.10.23 15:54:30</p>
 									</td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>Charterclick Leisure Yachts & Boats Rental</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>Mr. Alex Marzell </p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
+									<td>
+										<p>01234</p>
+									</td>
+									<td>
+										<p>897212</p>
+									</td>
+									<td>
+										AED 24 578,44
+									</td>
 								</tr>
 							</tbody>
 							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
-										<nav class="calendar__pagging pagging">
+										<nav class="main-admin__pagging pagging">
 											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
 											<ul class="pagging__list">
 												<li>

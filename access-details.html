@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>Owner Price Manager</title>
+	<title>Agent's Access Details by Owner</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -210,7 +210,7 @@
 						<h3>Bookings</h3>
 						<table class="access-details__table">
 							<thead class="access-details__thead">
-								<tr>
+								<tr class="access-details__tr">
 									<th>
 										<div>ID</div><button type="button" class="_icon-burger-arrow"></button>
 									</th>
@@ -229,7 +229,7 @@
 								</tr>
 							</thead>
 							<tbody class="access-details__tbody">
-								<tr>
+								<tr class="access-details__tr">
 									<td class="access-details__id">
 										<a href="#">74967</a>
 									</td>
@@ -246,7 +246,7 @@
 										<p>Paid</p>
 									</td>
 								</tr>
-								<tr>
+								<tr class="access-details__tr">
 									<td class="access-details__id">
 										<a href="#">74967</a>
 									</td>
@@ -263,11 +263,11 @@
 										<p>Paid</p>
 									</td>
 								</tr>
-								<tr>
+								<tr class="access-details__tr">
 									<td class="access-details__id">
 										<a href="#">74967</a>
 									</td>
-									<td class="bookings__date">
+									<td class="access-details__date">
 										<p>03.10.2023</p>
 									</td>
 									<td class="access-details__boat">
@@ -281,7 +281,7 @@
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="access-details__tfoot">
+							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
 										<nav class="access-details__pagging pagging">
@@ -329,10 +329,11 @@
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">
-							<div class="notification__value">Notification<span>333</span></div>
+							<div class="notification__value">Notification
+								<div class="notification__bell _icon-notifications"><span>333</span></div>
+							</div>
 							<button type="button" class="notification__close"></button>
 						</div>
-
 						<div class="notification__maim-checkbox">
 							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
@@ -449,7 +450,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20231222210034"></script>
+	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 
 </html>

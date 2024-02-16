@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231222210034">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -107,12 +107,14 @@
 				</aside>
 				<div data-one-select class="page__agents agents">
 					<div class="agents__header header-details">
-						<h1 class="header-details__title title">
-							Agents
-						</h1>
+						<h1 class="header-details__title title">Agents</h1>
 						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications"><span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span></button>
-							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">Invite</button>
+							<button type="button" class="header-details__notifications">
+								<span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span>
+							</button>
+							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">
+								Invite
+							</button>
 						</div>
 					</div>
 					<form class="agents__form" action="#" method="POST">
@@ -120,60 +122,80 @@
 							<div class="agents__line">
 								<label for="calendar">Date Added</label>
 								<div class="agents__line-input">
-									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input">
+									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input" />
 									<span class="_icon-calendar"></span>
 								</div>
 							</div>
 							<div class="agents__select">
-								<label for="select">Added By</label>
-								<select id="select" multiple data-checkbox name="form[]" data-class-modif="agents">
-									<option value="" selected>Select</option>
-									<option value="2">Owner</option>
-									<option value="3">Agent</option>
+								<label for="selectAddedBy">Added By</label>
+								<select id="selectAddedBy" name="form[selectAddedBy]" data-class-modif="agents" multiple data-checkbox data-scroll>
+									<option value="" selected>
+										Select
+									</option>
+									<option value="Owner">Owner</option>
+									<option value="Agent">Agent</option>
 								</select>
 							</div>
-							<div class="agents__line">
+							<div class="agents__line agents__line--name">
 								<label for="name-input">Name</label>
-								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input">
+								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input" />
 							</div>
 							<div class="agents__select">
-								<label for="status-action">Status</label>
-								<select id="status-action" multiple data-checkbox name="form[]" data-class-modif="agents">
-									<option value="" selected>Select</option>
-									<option value="2">Requested</option>
-									<option value="3">Activated</option>
-									<option value="4">Rejected</option>
-									<option value="5">Revoked</option>
+								<label for="selectStatus">Status</label>
+								<select id="statusAction" name="form[statusAction]" multiple data-checkbox data-class-modif="agents">
+									<option value="" selected>
+										Select
+									</option>
+									<option value="Requested">
+										Requested
+									</option>
+									<option value="Activated">
+										Activated
+									</option>
+									<option value="Rejected">
+										Rejected
+									</option>
+									<option value="Revoked">Revoked</option>
 								</select>
 							</div>
 						</div>
 						<div class="agents__ations">
 							<div class="agents__checkbox checkbox">
-								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]">
-								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
+								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]" />
+								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve
+										Bookings</span></label>
 							</div>
-							<button type="reset" class="agents__button button _icon-close">Clear</button>
+							<button type="reset" class="agents__button button _icon-close">
+								Clear
+							</button>
 						</div>
 					</form>
 					<div class="agents__wrapper">
 						<table class="agents__table">
 							<thead class="agents__thead">
-								<tr>
+								<tr class="agents__tr">
 									<th>
-										<div>Date Added</div><button type="button" class="_icon-burger-arrow"></button>
+										<div>Date Added</div>
+										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
-									<th><img src="img/letter-status-image/close.svg" alt="letter"></th>
 									<th>
-										<div>Name</div><button type="button" class="_icon-burger-arrow"></button>
+										<img src="img/letter-status-image/close.svg" alt="letter" />
+									</th>
+									<th>
+										<div>Name</div>
+										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
 									<th>
 										<div>Contact Details</div>
 									</th>
 									<th>
-										<div>Access Status</div><button class="_icon-burger-arrow"></button>
+										<div>Access Status</div>
+										<button class="_icon-burger-arrow"></button>
 									</th>
 									<th>
-										<div>Automatically Approve Bookings</div>
+										<div>
+											Automatically Approve Bookings
+										</div>
 									</th>
 									<th>
 										<div>Actions</div>
@@ -181,12 +203,12 @@
 								</tr>
 							</thead>
 							<tbody class="agents__tbody">
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
 									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter">
+										<img src="img/letter-status-image/email-received.svg" alt="letter" />
 									</td>
 									<td class="agents__user-name">
 										<p>User Name</p>
@@ -200,27 +222,37 @@
 									</td>
 									<td>
 										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]">
+											<input id="approve" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]" />
 											<label for="approve" class="table-checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
 										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
+											<option value="" selected>
+												Actions
+											</option>
+											<option value="2">
+												Activate
+											</option>
 											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+											<option value="4">
+												Revoke
+											</option>
+											<option value="5">
+												Request
+											</option>
+											<option value="6">
+												View Details
+											</option>
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
 									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter">
+										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
 									</td>
 									<td class="agents__user-name">
 										<p>User Name</p>
@@ -234,27 +266,37 @@
 									</td>
 									<td>
 										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-02" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]">
+											<input id="approve-02" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]" />
 											<label for="approve-02" class="table-checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
 										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
+											<option value="" selected>
+												Actions
+											</option>
+											<option value="2">
+												Activate
+											</option>
 											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+											<option value="4">
+												Revoke
+											</option>
+											<option value="5">
+												Request
+											</option>
+											<option value="6">
+												View Details
+											</option>
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
 									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter">
+										<img src="img/letter-status-image/email-received.svg" alt="letter" />
 									</td>
 									<td class="agents__user-name">
 										<p>User Name</p>
@@ -268,27 +310,37 @@
 									</td>
 									<td>
 										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-03" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]">
+											<input id="approve-03" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]" />
 											<label for="approve-03" class="table-checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
 										<select id="statu3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
+											<option value="" selected>
+												Actions
+											</option>
+											<option value="2">
+												Activate
+											</option>
 											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+											<option value="4">
+												Revoke
+											</option>
+											<option value="5">
+												Request
+											</option>
+											<option value="6">
+												View Details
+											</option>
 										</select>
 									</td>
 								</tr>
-								<tr>
+								<tr class="agents__tr">
 									<td class="agents__date">
 										<p>03.10.2023</p>
 									</td>
 									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter">
+										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
 									</td>
 									<td class="agents__user-name">
 										<p>User Name</p>
@@ -302,23 +354,33 @@
 									</td>
 									<td>
 										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-04" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]">
+											<input id="approve-04" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]" />
 											<label for="approve-04" class="table-checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
 										<select id="status4" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>Actions</option>
-											<option value="2">Activate </option>
+											<option value="" selected>
+												Actions
+											</option>
+											<option value="2">
+												Activate
+											</option>
 											<option value="3">Block</option>
-											<option value="4">Revoke </option>
-											<option value="5">Request </option>
-											<option value="6">View Details</option>
+											<option value="4">
+												Revoke
+											</option>
+											<option value="5">
+												Request
+											</option>
+											<option value="6">
+												View Details
+											</option>
 										</select>
 									</td>
 								</tr>
 							</tbody>
-							<tfoot class="agents__tfoot">
+							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
 										<nav class="agents__pagging pagging">
@@ -354,10 +416,11 @@
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">
-							<div class="notification__value">Notification<span>333</span></div>
+							<div class="notification__value">Notification
+								<div class="notification__bell _icon-notifications"><span>333</span></div>
+							</div>
 							<button type="button" class="notification__close"></button>
 						</div>
-
 						<div class="notification__maim-checkbox">
 							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
@@ -488,7 +551,7 @@
 							<label for="fname">Name *</label>
 							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
 						</div>
-						<button type="submit" class="invite__button invite__button--disabled">
+						<button disabled type="submit" class="invite__button">
 							Invite
 						</button>
 					</form>
@@ -559,8 +622,8 @@
 					<h4>Filters</h4>
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
-							<label for="boatName">Boat Name</label>
-							<select name="form[]" id="boatName" data-scroll data-class-modif="boat-name">
+							<label for="boatNameFilters">Boat Name</label>
+							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -568,8 +631,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="companyPopup">Company</label>
-							<select name="form[]" data-scroll="" id="companyPopup" data-class-modif="company-filte">
+							<label for="companyFilters">Company</label>
+							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -581,8 +644,8 @@
 							</select>
 						</div>
 						<div class="filters__line">
-							<label for="locationPopup">Location</label>
-							<select name="form[]" data-scroll data-class-modif="form">
+							<label for="locationFilters">Location</label>
+							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
 								<option value="" selected>Select</option>
 								<option value="2">Пункт №1</option>
 								<option value="3">Пункт №2</option>
@@ -790,8 +853,7 @@
 			</div>
 		</div>
 	</div>
-
-	<script src="js/app.min.js?_v=20231222210034"></script>
+	<script src="js/app.min.js?_v=20240216163315"></script>
 </body>
 
 </html>
