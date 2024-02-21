@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240216163315">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240221092234">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -539,6 +539,7 @@
 			</section>
 		</main>
 	</div>
+	<!-- Invite popup -->
 	<div id="invite" aria-hidden="true" class="popup popup--invite">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -562,7 +563,8 @@
 		</div>
 	</div>
 	<!-- =================================================================== -->
-	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price">
+	<!-- Individual price popup -->
+	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price ">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
@@ -617,6 +619,7 @@
 	</div>
 
 	<!-- =================================================================== -->
+	<!-- Filters popup -->
 	<div id="filters" aria-hidden="true" class="popup popup--filters">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -671,7 +674,7 @@
 	</div>
 
 	<!-- =================================================================== -->
-
+	<!-- New booking popup -->
 	<div id="new-booking" aria-hidden="true" class="popup popup--new-booking">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -777,7 +780,7 @@
 								</select>
 							</div>
 						</div>
-						<div class="new-booking__total-price">
+						<div class="new-booking__total-price total-price">
 							<h5>Total Price:</h5>
 							<p><span>AED</span> 2205</p>
 						</div>
@@ -796,7 +799,7 @@
 	</div>
 
 	<!-- =================================================================== -->
-
+	<!-- New booking (second type) popup -->
 	<div id="new-booking-second" aria-hidden="true" class="popup popup--new-booking-second">
 		<div class="popup__wrapper">
 			<div class="popup__content">
@@ -855,7 +858,420 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240216163315"></script>
+	<!-- =================================================================== -->
+	<!-- Remove booking popup -->
+	<div id="remove-booking" aria-hidden="true" class="popup popup--remove">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__remove">
+					<h4 class="popup__title _icon-warning">Remove Booking?</h4>
+					<div class="popup__text">
+						<p>Are you sure you want to delete this item?</p>
+					</div>
+					<div class="popup__action-admin">
+						<button type="button" class="popup__button button">
+							Cancel
+						</button>
+						<button type="button" class="popup__button button button--remove _icon-letter-open">
+							Remove
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Remobe request popup -->
+	<div id="remove-request" aria-hidden="true" class="popup popup--request">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__request">
+					<h4 class="popup__title _icon-warning">Remove Request?</h4>
+					<div class="popup__text">
+						<p>Are you sure you want to Remove this item?</p>
+					</div>
+					<div class="popup__action-admin">
+						<button type="button" class="popup__button button">
+							Cancel
+						</button>
+						<button type="button" class="popup__button button">
+							Remove
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+	<!-- New Offline Booking / Additional chargeable options  popup -->
+	<div id="offline-book-options" aria-hidden="true" class="popup popup--offline-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">New Offline Booking</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop label-pop--lighter" for="boatNewOffBook">Boat</label>
+								<select id="boatNewOffBook" name="form[boatNewOffBook]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="startDate">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDate" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="durationNewOffBook">Duration *</label>
+								<select id="durationNewOffBook" name="form[durationNewOffBook]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="startTimeNewOffBook">Start Date *</label>
+								<select id="startTimeNewOffBook" name="form[startTimeNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="guestsNewOffBook">Guests *</label>
+								<select id="guestsNewOffBook" name="form[guestsNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="pricingNewOffBook">Pricing *</label>
+								<select id="pricingNewOffBook" name="form[pricingNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="priceNewOffBook">Price *</label>
+								<select id="priceNewOffBook" name="form[priceNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+						</div>
+						<div data-spollers class="popup__charg-opt charg-opt">
+							<button type="button" data-spoller data-open class="charg-opt__spoller-title">
+								<span></span> Additional chargeable options
+							</button>
+							<div class="charg-opt__body">
+								<div class="charg-opt__options">
+									<div class="charg-opt__item">
+										<input id="opt_1" class="charg-opt__input" type="checkbox" value="1" name="options" />
+										<label for="opt_1" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE BASIC</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">16 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 200</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_2" class="charg-opt__input" type="checkbox" value="2" name="options" />
+										<label for="opt_2" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">DISC JOCKEY</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">300 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 600</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_3" class="charg-opt__input" type="checkbox" value="3" name="options" />
+										<label for="opt_3" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BARBEKUE</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">300 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 300</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_4" class="charg-opt__input" type="checkbox" value="4" name="options" />
+										<label for="opt_4" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE PREMIUM</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 500</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_5" class="charg-opt__input" type="checkbox" value="5" name="options" />
+										<label for="opt_5" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE STANDARD</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 350</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_6" class="charg-opt__input" type="checkbox" value="6" name="options" />
+										<label for="opt_6" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE PREMIUM</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 500</span>
+												</span>
+											</span>
+										</label>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="popup__total-price total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button button--border-create">
+								Create
+							</button>
+							<button type="submit" class="popup__button button button--priority">
+								Create and Open
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- New Offline Booking -->
+	<div id="offline-book" aria-hidden="true" class="popup popup--offline-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">New Offline Booking</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label for="boatNewOffBookSec">Boat</label>
+								<select id="boatNewOffBookSec" name="form[boatNewOffBookSec]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="startDateSec">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDateSec" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label for="durationNewOffBookSec">Duration *</label>
+								<select id="durationNewOffBookSec" name="form[durationNewOffBookSec]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label for="startTimeNewOffBookSec">Start Date *</label>
+								<select id="startTimeNewOffBookSec" name="form[startTimeNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="guestsNewOffBookSec">Guests *</label>
+								<select id="guestsNewOffBookSec" name="form[guestsNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="pricingNewOffBookSec">Pricing *</label>
+								<select id="pricingNewOffBookSec" name="form[pricingNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="priceNewOffBookSec">Price *</label>
+								<select id="priceNewOffBookSec" name="form[priceNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__total-price total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button button--border-create">
+								Create
+							</button>
+							<button type="submit" class="popup__button button button--priority">
+								Create and Open
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Admin - Out of Services -->
+	<div id="out-of-services" aria-hidden="true" class="popup popup--out-of">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">Out of Service</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop label-pop--lighter" for="boatOutOfServices">Boat</label>
+								<select id="boatOutOfServices" name="form[boatOutOfServices]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="durationOutOfServices">Duration *</label>
+								<select id="durationOutOfServices" name="form[durationOutOfServices]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="startDateOutOfServices">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDateOutOfServices" type="text" data-datepicker name="form[startDateOutOfServices]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="startTimeOutOfServices">Start Time *</label>
+								<select id="startTimeOutOfServices" name="form[startTimeOutOfServices]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="endDateOutOfServices">End Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="endDateOutOfServices" type="text" data-datepicker name="form[endDateOutOfServices]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="endTimeOutOfServices">End Time *</label>
+								<select id="endTimeOutOfServices" name="form[endTimeOutOfServices]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button">
+								Create
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/app.min.js?_v=20240221092234"></script>
 </body>
 
 </html>

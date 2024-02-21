@@ -20622,6 +20622,38 @@
             });
             modules_flsModules.datepickerSecond = pickerSecond;
         }
+        if (document.getElementById("startDate")) {
+            const pickerSecond = datepicker_min("#startDate", {
+                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                showAllDates: true,
+                overlayButton: "Apply",
+                overlayPlaceholder: "Year (4 numbers)",
+                startDay: 0,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            modules_flsModules.datepickerSecond = pickerSecond;
+        }
+        if (document.getElementById("startDateSec")) {
+            const pickerSecond = datepicker_min("#startDateSec", {
+                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                showAllDates: true,
+                overlayButton: "Apply",
+                overlayPlaceholder: "Year (4 numbers)",
+                startDay: 0,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            modules_flsModules.datepickerSecond = pickerSecond;
+        }
         var jquery = __webpack_require__(9755);
         var moment = __webpack_require__(381);
         __webpack_require__(932);

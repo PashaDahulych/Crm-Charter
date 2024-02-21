@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Boats by Agents tab</title>
+	<title>Popup page</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -11,386 +11,45 @@
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+	.popup-page .button:not(:last-child) {
+		margin-bottom: 15px;
+	}
+</style>
 
 <body>
 	<div class="wrapper">
-		<main class="page">
-			<section class="page__container">
-				<aside data-spollers class="page__aside aside">
-					<div class="aside__header">
-						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
-							<p>Charter<span>Click</span></p>
-						</a>
-						<button type="button" class="aside__button _icon-select-arrow"></button>
-					</div>
-					<nav class="aside__menu">
-						<ul class="aside__list">
-							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-calendar">
-										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зелений кружечок буде доданий. Стилі в css -->
-										<div class="aside__link-status"></div>
-									</div>
-									<p class="aside__link-text">Calendar</p>
-									<div class="aside__link-info">
-										<span class="_icon-select-arrow"></span>
-										<p class="aside__link-value">
-											4321
-										</p>
-									</div>
-								</a>
-								<ul class="aside__sub-menu">
-									<li class="aside__sub-padding"></li>
-									<li class="aside__sub-item">
-										<a href="#" class="aside__sub-link">Bookings</a>
-									</li>
-								</ul>
-							</li>
-							<li class="aside__item">
-								<a href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-notifications"></div>
-									<p class="aside__link-text">
-										Notifications
-									</p>
-								</a>
-							</li>
-							<li class="aside__item">
-								<a href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-boast"></div>
-									<p class="aside__link-text">Boats</p>
-								</a>
-							</li>
-							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-my-company"></div>
-									<p class="aside__link-text">
-										My Company
-									</p>
-									<div class="aside__link-info">
-										<span class="_icon-select-arrow"></span>
-										<!-- <p class="aside__link-value">20</p> -->
-									</div>
-								</a>
-								<ul class="aside__sub-menu">
-									<li class="aside__sub-padding"></li>
-									<li class="aside__sub-item">
-										<a href="#" class="aside__sub-link">Agents</a>
-									</li>
-									<li class="aside__sub-item">
-										<a href="#" class="aside__sub-link">Companies</a>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<div class="aside__user user-aside">
-						<div class="user-aside__account">
-							<div class="user-aside__image">
-								<picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt="user" /></picture>
-								<div class="user-aside__status"></div>
-							</div>
-							<div class="user-aside__about">
-								<h3>Account</h3>
-								<p>Status</p>
-							</div>
-						</div>
-						<div class="user-aside__actions">
-							<button type="button" class="user-aside__button _icon-logout">
-								<span>Logout</span>
-							</button>
-							<a href="!#" class="user-aside__button _icon-edit-profile"><span>Edit profile</span></a>
-						</div>
-					</div>
-				</aside>
-				<div data-one-select class="page__bookings bookings">
-					<div class="bookings__header header-details">
-						<h1 class="header-details__title title">
-							Bookings
-						</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-							<button data-popup="#new-booking-second" type="button" class="header-details__button button button--priority">
-								Add a Booking
-							</button>
-						</div>
-					</div>
-					<form class="bookings__form form-small" action="#" method="POST">
-						<div class="form-small__body">
-							<div class="form-small__line">
-								<div class="form-small__line-input">
-									<input id="search" autocomplete="off" name="search" type="text" class="input" placeholder="Search" />
-									<button type="button" class="_icon-search"></button>
-								</div>
-							</div>
-							<button data-popup="#filters" type="button" class="form-small__filters filters-button _icon-filter">
-								Filters
-							</button>
-						</div>
-					</form>
-					<div class="bookings__wrapper">
-						<table class="bookings__table">
-							<thead class="bookings__thead">
-								<tr class="bookings__tr">
-									<th>
-										<div>Booking ID</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Boat</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Company</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Details</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Status</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Cancel</div>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="bookings__tbody">
-								<tr class="bookings__tr">
-									<td>
-										<p>56879</p>
-									</td>
-									<td>
-										<p>Blue Yonder 40 feet</p>
-									</td>
-									<td>
-										<p>Boat Owner LLC</p>
-									</td>
-									<td>
-										<p>03.10.2023</p>
-										<p>2 hours</p>
-										<p>at 12.00</p>
-										<p>AED 2 100</p>
-									</td>
-									<td>
-										<p>Paid</p>
-									</td>
-									<td>
-										<button type="button" class="bookings__button button">
-											Cancel
-										</button>
-									</td>
-								</tr>
-								<tr class="bookings__tr">
-									<td>
-										<p>56879</p>
-									</td>
-									<td>
-										<p>Sunrise</p>
-									</td>
-									<td>
-										<p>Boat Owner LLC</p>
-									</td>
-									<td>
-										<p>03.10.2023</p>
-										<p>2 hours</p>
-										<p>at 12.00</p>
-										<p>AED 2 100</p>
-									</td>
-									<td>
-										<p>Not Paid</p>
-									</td>
-									<td>
-										<button type="button" class="bookings__button button">
-											Cancel
-										</button>
-									</td>
-								</tr>
-								<tr class="bookings__tr">
-									<td>
-										<p>56879</p>
-									</td>
-									<td>
-										<p>AAA Deep Blue Sea</p>
-									</td>
-									<td>
-										<p>Boat Owner LLC</p>
-									</td>
-									<td>
-										<p>03.10.2023</p>
-										<p>2 hours</p>
-										<p>at 12.00</p>
-										<p>AED 2 100</p>
-									</td>
-									<td>
-										<p>Complete</p>
-									</td>
-									<td>
-										<button type="button" class="bookings__button button">
-											Cancel
-										</button>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
-								<tr>
-									<td>
-										<nav class="bookings__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
-											<ul class="pagging__list">
-												<li>
-													<a href="#" class="pagging__item _active">1</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">2</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">3</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">4</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item pagging__item--dots">...</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">25</a>
-												</li>
-											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
-										</nav>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</div>
-				<aside class="page__notification notification">
-					<div class="notification__header">
-						<div class="notification__header-wrapper">
-							<div class="notification__value">Notification
-								<div class="notification__bell _icon-notifications"><span>333</span></div>
-							</div>
-							<button type="button" class="notification__close"></button>
-						</div>
-						<div class="notification__maim-checkbox">
-							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
-							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
-						</div>
-					</div>
-					<div class="notification__body">
-						<article class="notification__article">
-							<div class="notification__article-head">
-								<div class="notification__checkbox">
-									<input id="article_1" data-error="Ошибка" class="notification__input" type="checkbox" value="1" name="form[]" />
-									<label for="article_1" class="notification__label"></label>
-								</div>
-								<div class="notification__labels notification__labels--invoices">
-									Invoices
-								</div>
-							</div>
-							<div class="notification__text">
-								<p>
-									User
-									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
-									changed the minimal duration to 2 hours and standard price
-									for agents
-									<span>AED 900</span> from a boat
-									<span>ALISE</span>
-								</p>
-							</div>
-						</article>
-						<article class="notification__article">
-							<div class="notification__article-head">
-								<div class="notification__checkbox">
-									<input id="article_2" data-error="Ошибка" class="notification__input" type="checkbox" value="2" name="form[]" />
-									<label for="article_2" class="notification__label"></label>
-								</div>
-							</div>
-							<div class="notification__text">
-								<p>
-									User
-									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
-									changed the minimal duration to 2 hours and standard price
-									for agents
-									<span>AED 900</span> from a boat
-									<span>ALISE</span>
-								</p>
-							</div>
-							<div class="notification__actions">
-								<button type="button" class="notification__button button-chancel">
-									Cancel
-								</button>
-								<button type="button" class="notification__button button-chancel">
-									Accept
-								</button>
-							</div>
-						</article>
-						<article class="notification__article">
-							<div class="notification__article-head">
-								<div class="notification__checkbox">
-									<input id="article_3" data-error="Ошибка" class="notification__input" type="checkbox" value="3" name="form[]" />
-									<label for="article_3" class="notification__label"></label>
-								</div>
-							</div>
-							<div class="notification__text">
-								<p>
-									User
-									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
-									changed the minimal duration to 2 hours and standard price
-									for agents
-									<span>AED 900</span> from a boat
-									<span>ALISE</span>
-								</p>
-							</div>
-						</article>
-						<article class="notification__article">
-							<div class="notification__article-head">
-								<div class="notification__checkbox">
-									<input id="article_4" data-error="Ошибка" class="notification__input" type="checkbox" value="4" name="form[]" />
-									<label for="article_4" class="notification__label"></label>
-								</div>
-								<div class="notification__labels notification__labels--user">
-									User
-								</div>
-							</div>
-							<div class="notification__text">
-								<p>
-									User
-									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
-									changed the minimal duration to 2 hours and standard price
-									for agents
-									<span>AED 900</span> from a boat
-									<span>ALISE</span>
-								</p>
-							</div>
-						</article>
-						<article class="notification__article">
-							<div class="notification__article-head">
-								<div class="notification__checkbox">
-									<input id="article_5" data-error="Ошибка" class="notification__input" type="checkbox" value="5" name="form[]" />
-									<label for="article_5" class="notification__label"></label>
-								</div>
-							</div>
-							<div class="notification__text">
-								<p>
-									User
-									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
-									changed the minimal duration to 2 hours and standard price
-									for agents
-									<span>AED 900</span> from a boat
-									<span>ALISE</span>
-								</p>
-							</div>
-						</article>
-					</div>
-				</aside>
-
-			</section>
+		<main class="popup-page">
+			<button type="button" data-popup="#invite" class="button">
+				Invite
+			</button>
+			<button type="button" data-popup="#individual-price" class="button">
+				Individual price
+			</button>
+			<button type="button" data-popup="#filters" class="button">
+				Filters
+			</button>
+			<button type="button" data-popup="#new-booking" class="button">
+				New booking
+			</button>
+			<button type="button" data-popup="#new-booking-second" class="button">
+				New booking (second)
+			</button>
+			<button type="button" data-popup="#remove-booking" class="button">
+				Remove booking
+			</button>
+			<button type="button" data-popup="#remove-request" class="button">
+				Remove request
+			</button>
+			<button type="button" data-popup="#offline-book-options" class="button">
+				Offline book (options)
+			</button>
+			<button type="button" data-popup="#offline-book" class="button">
+				Offline book
+			</button>
+			<button type="button" data-popup="#out-of-services" class="button">
+				Out of services
+			</button>
 		</main>
 	</div>
 	<!-- Invite popup -->
