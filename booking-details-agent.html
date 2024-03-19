@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240221092234">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,16 @@
 			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
-						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
-							<p>Charter<span>Click</span></p>
+						<a href="#" class="aside__logo">
+							<span class="aside__logo-icon">
+								<img src="img/icon.svg" alt="logo icon" />
+							</span>
+							<span class="aside__logo-text">
+								<img src="img/charter.svg" alt="charter" />
+							</span>
 						</a>
 						<button type="button" class="aside__button _icon-select-arrow"></button>
+						<button type="button" class="aside__mob-button _icon-select-arrow"></button>
 					</div>
 					<nav class="aside__menu">
 						<ul class="aside__list">
@@ -115,9 +121,12 @@
 								<button type="button" class="header-details__button button button--chancel">
 									Cancel
 								</button>
-								<button type="button" class="header-details__button button button--icon _icon-save-all">Save
+								<button type="button" class="header-details__button button button--icon _icon-save-all">
+									Save
 								</button>
-								<button class="header-details__button button button--icon _icon-calendar">Booking</button>
+								<button class="header-details__button button button--icon _icon-calendar">
+									Booking
+								</button>
 							</div>
 						</div>
 						<div class="booking-details__wrapper">
@@ -238,18 +247,23 @@
 							</div>
 							<div class="booking-details__price price">
 								<div class="price__options options">
-									<h2 class="option__sub-title sub-title">Price</h2>
+									<h2 class="option__sub-title sub-title">
+										Price
+									</h2>
 									<div class="options__item">
 										<input id="o_1" class="options__input" checked type="checkbox" value="1" name="option" />
 										<label for="o_1" class="options__wrapper">
 											<span class="options__icon"></span>
 											<span class="options__body">
-												<span class="options__title">Agent’s Standart Price</span>
+												<span class="options__title">Agent’s Standart
+													Price</span>
 												<span class="options__text">
-													<span>2 hours min, AED 1000/hour</span>
+													<span>2 hours min, AED
+														1000/hour</span>
 												</span>
 											</span>
-											<span class="options__price-value"><span>AED</span> 2 100</span>
+											<span class="options__price-value"><span>AED</span> 2
+												100</span>
 										</label>
 									</div>
 									<div class="options__item">
@@ -312,18 +326,22 @@
 														3600</span>
 												</span>
 											</span>
-											<span class="options__price-value"><span>AED</span> 3 600</span>
+											<span class="options__price-value"><span>AED</span> 3
+												600</span>
 										</label>
 									</div>
 								</div>
 								<div class="price__chargeable-options chargeable-options">
 									<div class="chargeable-options__header">
-										<h2 class="chargeable-options__sub-title sub-title">Chargeable Options</h2>
+										<h2 class="chargeable-options__sub-title sub-title">
+											Chargeable Options
+										</h2>
 										<div class="chargeable-options__cash-pay">
 											<input id="payByCash" data-error="Ошибка" class="chargeable-options__input-cash" type="radio" value="payByCash" name="form[payByCash]" />
 											<label for="payByCash" class="chargeable-options__wrapper-cash">
 												<span class="chargeable-options__label-cash"></span>
-												<span class="chargeable-options__text-cash">Pay by cash on board</span>
+												<span class="chargeable-options__text-cash">Pay by cash on
+													board</span>
 											</label>
 										</div>
 									</div>
@@ -332,10 +350,13 @@
 										<label for="co_1" class="chargeable-options__wrapper">
 											<span class="chargeable-options__icon"></span>
 											<span class="chargeable-options__body">
-												<span class="chargeable-options__title">BIRTHDAY PACKAGE BASIC</span>
+												<span class="chargeable-options__title">BIRTHDAY PACKAGE
+													BASIC</span>
 												<span class="chargeable-options__text">
-													<span>Cake + candles</span>
-													<span>AED 100 per booking</span>
+													<span>Cake +
+														candles</span>
+													<span>AED 100 per
+														booking</span>
 												</span>
 											</span>
 											<span class="chargeable-options__price-value"><span>AED</span> 100</span>
@@ -408,7 +429,7 @@
 			</section>
 		</main>
 	</div>
-	<script src="js/app.min.js?_v=20240221092234"></script>
+	<script src="js/app.min.js?_v=20240319104318"></script>
 </body>
 
 </html>

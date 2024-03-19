@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240221092234">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,16 @@
 			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
-						<a href="#" class="aside__logo"><span class="_icon-logo"></span>
-							<p>Charter<span>Click</span></p>
+						<a href="#" class="aside__logo">
+							<span class="aside__logo-icon">
+								<img src="img/icon.svg" alt="logo icon" />
+							</span>
+							<span class="aside__logo-text">
+								<img src="img/charter.svg" alt="charter" />
+							</span>
 						</a>
 						<button type="button" class="aside__button _icon-select-arrow"></button>
+						<button type="button" class="aside__mob-button _icon-select-arrow"></button>
 					</div>
 					<nav class="aside__menu">
 						<ul class="aside__list">
@@ -136,20 +142,31 @@
 									<option value="" selected>
 										Select
 									</option>
-									<option value="Requested">Requested</option>
-									<option value="Activated">Activated</option>
-									<option value="Rejected">Rejected</option>
+									<option value="Requested">
+										Requested
+									</option>
+									<option value="Activated">
+										Activated
+									</option>
+									<option value="Rejected">
+										Rejected
+									</option>
 									<option value="Revoked">Revoked</option>
 								</select>
 							</div>
-							<button data-popup="#filters" type="button" class="agent__filters filters-button _icon-filter">Filters</button>
+							<button data-popup="#filters" type="button" class="agent__filters filters-button _icon-filter">
+								Filters
+							</button>
 						</div>
 						<div class="agents__ations">
 							<div class="agents__checkbox checkbox">
 								<input id="approveBookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[approveBookings]" />
-								<label for="approveBookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve Bookings</span></label>
+								<label for="approveBookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve
+										Bookings</span></label>
 							</div>
-							<button type="reset" class="agents__button button button--border">Clear</button>
+							<button type="reset" class="agents__button button button--border">
+								Clear
+							</button>
 						</div>
 					</form>
 					<div class="agents__wrapper">
@@ -1130,7 +1147,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240221092234"></script>
+	<script src="js/app.min.js?_v=20240319104318"></script>
 </body>
 
 </html>
