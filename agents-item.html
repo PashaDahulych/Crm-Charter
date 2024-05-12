@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240513010852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -112,8 +112,8 @@
 					<div class="agents__header header-details">
 						<h1 class="header-details__title title">Agents</h1>
 						<div class="header-details__actions">
-							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">
-								Invite
+							<button data-popup="#invite" type="button" class="header-deatils__button button button _icon-insert-invitation">
+								<span>Invite</span>
 							</button>
 						</div>
 					</div>
@@ -123,7 +123,7 @@
 								<label for="calendar">Date Added</label>
 								<div class="agents__line-input">
 									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar"></span>
+									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
 							<div class="agents__select">
@@ -170,7 +170,7 @@
 						</div>
 					</form>
 					<div class="agents__wrapper">
-						<table class="agents__table">
+						<table class="agents__table table">
 							<thead class="agents__thead">
 								<tr class="agents__tr">
 									<th>
@@ -220,9 +220,9 @@
 										<p>Requested</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox table-checkbox--transparent">
-											<input id="approve" data-error="" class="table-checkbox__input--transparent" type="checkbox" value="1" name="form[]" />
-											<label for="approve" class="table-checkbox__label--transparent"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+											<label for="approve" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -264,9 +264,9 @@
 										<p>Activated</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox table-checkbox--transparent">
-											<input id="approve-02" data-error="" class="table-checkbox__input--transparent" type="checkbox" value="2" name="form[]" />
-											<label for="approve-02" class="table-checkbox__label--transparent"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve-02" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+											<label for="approve-02" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -308,9 +308,9 @@
 										<p>Requested</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox table-checkbox--transparent">
-											<input id="approve-03" data-error="" class="table-checkbox__input--transparent" type="checkbox" value="3" name="form[]" />
-											<label for="approve-03" class="table-checkbox__label--transparent"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve-03" data-error="" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+											<label for="approve-03" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -352,9 +352,9 @@
 										<p>Activated</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox table-checkbox--transparent">
-											<input id="approve-04" data-error="" class="table-checkbox__input--transparent" type="checkbox" value="4" name="form[]" />
-											<label for="approve-04" class="table-checkbox__label--transparent"></label>
+										<div class="agents__checkbox checkbox ">
+											<input id="approve-04" data-error="" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+											<label for="approve-04" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -745,11 +745,11 @@
 						<p>Are you sure you want to delete this item?</p>
 					</div>
 					<div class="popup__action-admin">
-						<button type="button" class="popup__button button">
-							Cancel
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
 						</button>
-						<button type="button" class="popup__button button button--remove _icon-letter-open">
-							Remove
+						<button type="button" class="popup__button button _icon-letter-open">
+							<span>Cancel</span>
 						</button>
 					</div>
 				</div>
@@ -1147,7 +1147,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240319104318"></script>
+	<script src="js/app.min.js?_v=20240513010852"></script>
 </body>
 
 </html>

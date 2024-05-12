@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240513010852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,8 +116,8 @@
 								<span class="header-details__text">Notification</span>
 								<span class="header-details__icon _icon-notifications"><span>381</span></span>
 							</button>
-							<button data-popup="#invite" type="button" class="header-details__button button button--priority">
-								Invite
+							<button data-popup="#invite" type="button" class="header-details__button button _icon-insert-invitation">
+								<span>Invite</span>
 							</button>
 						</div>
 					</div>
@@ -130,7 +130,7 @@
 								</div>
 							</div>
 							<button data-popup="#filters" type="button" class="form-small__filters filters-button _icon-filter">
-								Filters
+								<span>Filters</span>
 							</button>
 						</div>
 						<div class="form-small__ations">
@@ -140,13 +140,13 @@
 						</div>
 					</form>
 					<div class="boats__wrapper">
-						<table class="boats__table">
+						<table class="boats__table table">
 							<thead class="boats__thead">
 								<tr class="boats__tr">
 									<th>
-										<div class="boats__table-checkbox table-checkbox">
-											<input id="checked-all" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]" />
-											<label for="checked-all" class="table-checkbox__label"></label>
+										<div class="boats__checkbox checkbox">
+											<input id="checked-all" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+											<label for="checked-all" class="checkbox__label"></label>
 										</div>
 									</th>
 									<th>
@@ -179,9 +179,9 @@
 							<tbody class="boats__tbody">
 								<tr class="boats__tr">
 									<td>
-										<div class="boats__table-checkbox table-checkbox">
-											<input id="checked-1" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]" />
-											<label for="checked-1" class="table-checkbox__label"></label>
+										<div class="boats__checkbox checkbox">
+											<input id="checked-1" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+											<label for="checked-1" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td>
@@ -215,9 +215,9 @@
 								</tr>
 								<tr class="boats__tr">
 									<td>
-										<div class="boats__table-checkbox table-checkbox">
-											<input id="checked-3" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]" />
-											<label for="checked-3" class="table-checkbox__label"></label>
+										<div class="boats__checkbox checkbox">
+											<input id="checked-3" data-error="" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+											<label for="checked-3" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td>
@@ -251,9 +251,9 @@
 								</tr>
 								<tr class="boats__tr">
 									<td>
-										<div class="boats__table-checkbox table-checkbox">
-											<input id="checked-4" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]" />
-											<label for="checked-4" class="table-checkbox__label"></label>
+										<div class="boats__checkbox checkbox">
+											<input id="checked-4" data-error="" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+											<label for="checked-4" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td>
@@ -332,11 +332,11 @@
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
 						</div>
 					</div>
-					<div class="notification__body">
+					<div data-simplebar class="notification__body">
 						<article class="notification__article">
 							<div class="notification__article-head">
 								<div class="notification__checkbox">
-									<input id="article_1" data-error="Ошибка" class="notification__input" type="checkbox" value="1" name="form[]" />
+									<input id="article_1" data-error="Ошибка" checked class="notification__input" type="checkbox" value="1" name="form[]" />
 									<label for="article_1" class="notification__label"></label>
 								</div>
 								<div class="notification__labels notification__labels--invoices">
@@ -437,6 +437,7 @@
 								</p>
 							</div>
 						</article>
+
 					</div>
 				</aside>
 
@@ -773,11 +774,11 @@
 						<p>Are you sure you want to delete this item?</p>
 					</div>
 					<div class="popup__action-admin">
-						<button type="button" class="popup__button button">
-							Cancel
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
 						</button>
-						<button type="button" class="popup__button button button--remove _icon-letter-open">
-							Remove
+						<button type="button" class="popup__button button _icon-letter-open">
+							<span>Cancel</span>
 						</button>
 					</div>
 				</div>
@@ -1175,7 +1176,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240319104318"></script>
+	<script src="js/app.min.js?_v=20240513010852"></script>
 </body>
 
 </html>

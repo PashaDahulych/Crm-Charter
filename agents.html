@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240513010852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -172,12 +172,12 @@
 										Bookings</span></label>
 							</div>
 							<button type="reset" class="agents__button button _icon-close">
-								Clear
+								<span>Clear</span>
 							</button>
 						</div>
 					</form>
 					<div class="agents__wrapper">
-						<table class="agents__table">
+						<table class="agents__table table">
 							<thead class="agents__thead">
 								<tr class="agents__tr">
 									<th>
@@ -227,9 +227,9 @@
 										<p>Requested</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve" data-error="" class="table-checkbox__input" type="checkbox" value="1" name="form[]" />
-											<label for="approve" class="table-checkbox__label"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+											<label for="approve" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -271,9 +271,9 @@
 										<p>Activated</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-02" data-error="" class="table-checkbox__input" type="checkbox" value="2" name="form[]" />
-											<label for="approve-02" class="table-checkbox__label"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve-02" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+											<label for="approve-02" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -315,9 +315,9 @@
 										<p>Requested</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-03" data-error="" class="table-checkbox__input" type="checkbox" value="3" name="form[]" />
-											<label for="approve-03" class="table-checkbox__label"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve-03" data-error="" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+											<label for="approve-03" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -359,9 +359,9 @@
 										<p>Activated</p>
 									</td>
 									<td>
-										<div class="agents__table-checkbox table-checkbox">
-											<input id="approve-04" data-error="" class="table-checkbox__input" type="checkbox" value="4" name="form[]" />
-											<label for="approve-04" class="table-checkbox__label"></label>
+										<div class="agents__checkbox checkbox">
+											<input id="approve-04" data-error="" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+											<label for="approve-04" class="checkbox__label"></label>
 										</div>
 									</td>
 									<td class="agents__actions">
@@ -432,11 +432,11 @@
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
 						</div>
 					</div>
-					<div class="notification__body">
+					<div data-simplebar class="notification__body">
 						<article class="notification__article">
 							<div class="notification__article-head">
 								<div class="notification__checkbox">
-									<input id="article_1" data-error="Ошибка" class="notification__input" type="checkbox" value="1" name="form[]" />
+									<input id="article_1" data-error="Ошибка" checked class="notification__input" type="checkbox" value="1" name="form[]" />
 									<label for="article_1" class="notification__label"></label>
 								</div>
 								<div class="notification__labels notification__labels--invoices">
@@ -537,6 +537,7 @@
 								</p>
 							</div>
 						</article>
+
 					</div>
 				</aside>
 
@@ -873,11 +874,11 @@
 						<p>Are you sure you want to delete this item?</p>
 					</div>
 					<div class="popup__action-admin">
-						<button type="button" class="popup__button button">
-							Cancel
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
 						</button>
-						<button type="button" class="popup__button button button--remove _icon-letter-open">
-							Remove
+						<button type="button" class="popup__button button _icon-letter-open">
+							<span>Cancel</span>
 						</button>
 					</div>
 				</div>
@@ -1275,7 +1276,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240319104318"></script>
+	<script src="js/app.min.js?_v=20240513010852"></script>
 </body>
 
 </html>

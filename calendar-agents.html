@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240319104318">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240513010852">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,10 +24,10 @@
         > -->
 						<a href="#" class="aside__logo">
 							<span class="aside__logo-icon">
-								<img src="img/icon.svg" alt="logo icon">
+								<img src="img/icon.svg" alt="logo icon" />
 							</span>
 							<span class="aside__logo-text">
-								<img src="img/charter.svg" alt="charter">
+								<img src="img/charter.svg" alt="charter" />
 							</span>
 						</a>
 						<button type="button" class="aside__button _icon-select-arrow"></button>
@@ -36,7 +36,7 @@
 					<nav class="aside__menu">
 						<ul class="aside__list">
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
 										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
@@ -73,7 +73,7 @@
 								</a>
 							</li>
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-price">
 										<div class="aside__link-status"></div>
 									</div>
@@ -106,7 +106,7 @@
 								</a>
 							</li>
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller href="#!" class="aside__link _spoller-init">
 									<div class="aside__link-icon _icon-my-company"></div>
 									<p class="aside__link-text">My Company</p>
 									<div class="aside__link-info">
@@ -434,11 +434,11 @@
 							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
 						</div>
 					</div>
-					<div class="notification__body">
+					<div data-simplebar class="notification__body">
 						<article class="notification__article">
 							<div class="notification__article-head">
 								<div class="notification__checkbox">
-									<input id="article_1" data-error="Ошибка" class="notification__input" type="checkbox" value="1" name="form[]" />
+									<input id="article_1" data-error="Ошибка" checked class="notification__input" type="checkbox" value="1" name="form[]" />
 									<label for="article_1" class="notification__label"></label>
 								</div>
 								<div class="notification__labels notification__labels--invoices">
@@ -539,6 +539,7 @@
 								</p>
 							</div>
 						</article>
+
 					</div>
 				</aside>
 
@@ -875,11 +876,11 @@
 						<p>Are you sure you want to delete this item?</p>
 					</div>
 					<div class="popup__action-admin">
-						<button type="button" class="popup__button button">
-							Cancel
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
 						</button>
-						<button type="button" class="popup__button button button--remove _icon-letter-open">
-							Remove
+						<button type="button" class="popup__button button _icon-letter-open">
+							<span>Cancel</span>
 						</button>
 					</div>
 				</div>
@@ -1277,7 +1278,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240319104318"></script>
+	<script src="js/app.min.js?_v=20240513010852"></script>
 </body>
 
 </html>

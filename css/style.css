@@ -57,6 +57,26 @@
   display: block;
 }
 
+._icon-insert-invitation:before {
+  content: "\e927";
+}
+
+._icon-calendar-rev:before {
+  content: "\e928";
+}
+
+._icon-calendar-today:before {
+  content: "\e929";
+}
+
+._icon-restart-alt:before {
+  content: "\e92a";
+}
+
+._icon-download:before {
+  content: "\e926";
+}
+
 ._icon-letter-open:before {
   content: "\e922";
 }
@@ -117,7 +137,7 @@
   content: "\e918";
 }
 
-._icon-menu-arow:before {
+._icon-menu-arrow:before {
   content: "\e916";
 }
 
@@ -390,7 +410,7 @@ body {
   font-weight: 700;
   line-height: 1.2;
   border-radius: 0.3125rem;
-  padding: 0.7875rem 0.6875rem;
+  padding: 0.6875rem;
   background-color: #fff;
   -webkit-transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: border 0.3s ease, color 0.3s ease, background-color 0.3s ease, opacity 0.3s ease, -webkit-box-shadow 0.3s ease;
@@ -399,12 +419,17 @@ body {
 }
 
 .button:before {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
   color: #90bfdb;
   -ms-flex-item-align: center;
       align-self: center;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
+}
+
+.button span {
+  display: inline-block;
+  padding-top: 0.1875rem;
 }
 
 .button:active {
@@ -442,8 +467,15 @@ body {
 }
 
 .button--priority {
+  padding: 0.85rem 0.6875rem 0.725rem 0.6875rem;
   color: #fff;
   background-color: #109eee;
+}
+
+.button--priority::before {
+  color: #fff;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .button--priority:disabled {
@@ -472,11 +504,12 @@ body {
 
 .button--chancel {
   background-color: transparent;
+  padding: 0.85rem 0.6875rem 0.725rem 0.6875rem;
 }
 
 .button--border-create {
   border: 0.0625rem solid #109eee;
-  padding: 0.725rem 0.6875rem;
+  padding: 0.85rem 0.6875rem 0.6rem 0.6875rem;
 }
 
 .button--border-create:disabled {
@@ -540,9 +573,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   color: #109eee;
   font-weight: 700;
   line-height: 1.2;
@@ -598,6 +628,11 @@ body {
   border-radius: 3.125rem;
 }
 
+.filters-button span {
+  display: inline-block;
+  padding-top: 0.1875rem;
+}
+
 .filters-button:active {
   border: 0.0625rem solid #90bfdb;
 }
@@ -625,6 +660,7 @@ body {
 
 .checkbox__input:checked + .checkbox__label:before {
   background: url("../img/check-arrow-blue.svg") center/80% no-repeat;
+  border: 0.125rem solid #90bfdb;
 }
 
 .checkbox__label {
@@ -647,108 +683,17 @@ body {
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 0.125rem;
-  border: 0.125rem solid #90bfdb;
+  border: 0.125rem solid rgba(144, 192, 219, 0.5);
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
 .checkbox__text {
   color: #487791;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   line-height: 1.5;
   -ms-flex-item-align: center;
       align-self: center;
-}
-
-.table-checkbox {
-  position: relative;
-  height: 1.125rem;
-}
-
-.table-checkbox__input {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.table-checkbox__input:focus-visible + .table-checkbox__label:before {
-  -webkit-box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
-          box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
-}
-
-.table-checkbox__input:checked + .table-checkbox__label:before {
-  background: #90bfdb url("../img/check-arrow.svg") center/80% no-repeat;
-}
-
-.table-checkbox__input--transparent {
-  position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-}
-
-.table-checkbox__input--transparent:focus-visible + .table-checkbox__label--transparent:before {
-  -webkit-box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
-          box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
-}
-
-.table-checkbox__input--transparent:checked + .table-checkbox__label--transparent:before {
-  background: transparent url("../img/check-arrow-blue.svg") center/80% no-repeat;
-}
-
-.table-checkbox__label {
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.625rem;
-}
-
-.table-checkbox__label--transparent {
-  cursor: pointer;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  position: relative;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0.625rem;
-}
-
-.table-checkbox__label--transparent:before {
-  content: "";
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.125rem;
-          flex: 0 0 1.125rem;
-  width: 1.125rem;
-  height: 1.125rem;
-  border-radius: 0.125rem;
-  border: 0.125rem solid #90bfdb;
-}
-
-.table-checkbox__label:before {
-  content: "";
-  border-radius: 0.125rem;
-  border: 0.125rem solid #90bfdb;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 1.125rem;
-          flex: 0 0 1.125rem;
-  width: 1.125rem;
-  height: 1.125rem;
 }
 
 .options {
@@ -1303,9 +1248,9 @@ body {
   width: 1.125rem;
   height: 1.125rem;
   border-radius: 0.1875rem;
-  border: 0.125rem solid #90bfdb;
-  -webkit-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  border: 0.125rem solid rgba(144, 191, 219, 0.5);
+  -webkit-transition: border 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .select._select-checkbox .select__option:not(:last-child) {
@@ -1317,7 +1262,8 @@ body {
 }
 
 .select._select-checkbox .select__option._select-selected::before {
-  background: #90bfdb url("../img/check-arrow.svg") center/80% no-repeat;
+  border: 0.125rem solid #90bfdb;
+  background: url("../img/check-arrow-blue.svg") center/80% no-repeat;
 }
 
 ._select-tag {
@@ -1348,7 +1294,7 @@ body {
 }
 
 .select_min-duration .select__options {
-  top: calc(100% + 0.3125rem);
+  top: calc(100% + 0.0625rem);
 }
 
 .select_min-duration._select-active .select__title {
@@ -1366,7 +1312,7 @@ body {
 }
 
 .select_agents .select__value {
-  min-height: 2.375rem;
+  min-height: 2.5rem;
 }
 
 .select_agents .select__options {
@@ -1414,9 +1360,6 @@ body {
 .select_actions-table .select__options {
   border: 0.0625rem solid rgba(144, 191, 219, 0.5);
   top: calc(100% - 0.0625rem);
-  border-top: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   border-radius: 0rem 0rem 0.125rem 0.125rem;
 }
 
@@ -3188,6 +3131,14 @@ body::after {
   text-transform: capitalize;
 }
 
+.table {
+  font-size: 0.875rem;
+}
+
+.table button {
+  font-size: 1.125rem;
+}
+
 .ttl-popup {
   font-weight: 900;
   font-size: 1.5rem;
@@ -3430,10 +3381,20 @@ body::after {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .header-details__calendar span {
   font-size: 1.5rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  color: #109eee;
+}
+
+.header-details__calendar:disabled {
+  opacity: 0.3;
+  cursor: default;
 }
 
 .header-details__actions {
@@ -3577,7 +3538,7 @@ body::after {
 .form--ivoices .form__line--calendar input {
   width: 100%;
   cursor: pointer;
-  padding: 0.53125rem 3rem 0.53125rem 0.625rem;
+  padding: 0.59375rem 3rem 0.59375rem 0.625rem;
   font-size: 0.875rem;
   border-radius: 0.125rem;
   border: 0.0625rem solid rgba(144, 191, 219, 0.5);
@@ -3625,9 +3586,9 @@ body::after {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 0.625rem;
+  right: 0.375rem;
   pointer-events: none;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: #90bfdb;
 }
 
@@ -3737,24 +3698,22 @@ body::after {
   border-color: rgba(144, 191, 219, 0.5);
 }
 
+.form-small__line-input input._form-focus {
+  border: 0.0625rem solid rgba(144, 191, 219, 0.5);
+}
+
 .form-small__actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
+      -ms-flex: 0 1 48.537341%;
+          flex: 0 1 48.537341%;
+  /* 500/1098 */
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   gap: 0.625rem;
-}
-
-.form-small__ations {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-}
-
-.form-small__button {
-  width: 100%;
 }
 
 .form-small__options-comp {
@@ -3764,7 +3723,7 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.625rem;
+  gap: 1.5rem;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -4429,6 +4388,7 @@ body::after {
   z-index: 5;
   -webkit-transition: right 0.3s ease;
   transition: right 0.3s ease;
+  border-bottom: 0.0625rem solid #90bfdb;
 }
 
 ._notifications-open .notification__header {
@@ -4446,8 +4406,15 @@ body::after {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 1.25rem;
-  padding: 1.875rem 1rem 1rem 1.25rem;
-  border-bottom: 0.0625rem solid #90bfdb;
+  padding: 1.875rem 1rem 0.375rem 1.25rem;
+}
+
+.notification__maim-checkbox {
+  padding: 0.375rem 1.25rem 1.0625rem 0.9375rem;
+}
+
+.notification__maim-checkbox .notification__main-label {
+  background-color: #f2f6f8;
 }
 
 .notification__value {
@@ -4469,7 +4436,7 @@ body::after {
 
 .notification__body {
   padding-bottom: 0.625rem;
-  padding-right: 1.25rem;
+  padding-right: 2.625rem;
   padding-left: 1.25rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4478,7 +4445,7 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 0.9375rem;
+  gap: 0.625rem;
   overflow-y: auto;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -4486,8 +4453,22 @@ body::after {
   scrollbar-width: none;
 }
 
-.notification__maim-checkbox {
-  padding: 0.625rem 1.25rem 0.9375rem;
+.notification__body .simplebar-track.simplebar-vertical {
+  background-color: rgba(144, 191, 219, 0.2);
+  top: 124px;
+  right: 16px;
+  border-radius: 4px;
+  width: 6px;
+}
+
+.notification__body .simplebar-track.simplebar-vertical .simplebar-scrollbar {
+  width: 6px;
+}
+
+.notification__body .simplebar-track.simplebar-vertical .simplebar-scrollbar::before {
+  background: #90bfdb;
+  left: 0px;
+  right: 0px;
 }
 
 .notification__main-input {
@@ -4503,15 +4484,14 @@ body::after {
 }
 
 .notification__main-input:checked + .notification__main-label:before {
-  background: rgba(16, 158, 238, 0.5) url("../img/check-arrow.svg") center/70% no-repeat;
-  border: 0.0625rem solid transparent;
+  background: url("../img/check-arrow-blue.svg") center/70% no-repeat;
+  border: 0.125rem solid #90bfdb;
 }
 
 .notification__article {
   border-radius: 0.3125rem;
   background-color: #fff;
-  -webkit-box-shadow: 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14);
-          box-shadow: 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14);
+  border: 0.0625rem solid rgba(144, 191, 219, 0.5);
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4521,6 +4501,10 @@ body::after {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 0.625rem;
+}
+
+.notification__article:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .notification__article-head {
@@ -4541,10 +4525,6 @@ body::after {
   position: relative;
   -ms-flex-item-align: center;
       align-self: center;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .notification__input {
@@ -4554,14 +4534,14 @@ body::after {
   opacity: 0;
 }
 
-.notification__input:focus-visible + .notification__label:before {
+.notification__input:focus-visible ~ .notification__label:before {
   -webkit-box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
           box-shadow: 0 0 0.3125rem rgba(16, 158, 238, 0.5);
 }
 
-.notification__input:checked + .notification__label:before {
-  background: rgba(16, 158, 238, 0.5) url("../img/check-arrow.svg") center/70% no-repeat;
-  border: 0.0625rem solid transparent;
+.notification__input:checked ~ .notification__label:before {
+  background: url("../img/check-arrow-blue.svg") center/70% no-repeat;
+  border: 0.125rem solid #90bfdb;
 }
 
 .notification__labels--invoices {
@@ -4587,7 +4567,7 @@ body::after {
 /* Заглишка щоб прибрати браузерний повзунок на .aside__menu*/
 
 .notification__body::-webkit-scrollbar {
-  width: 0;
+  width: 0px;
 }
 
 .page {
@@ -4609,6 +4589,9 @@ body::after {
   position: sticky;
   top: 0;
   left: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 17.625rem;
+          flex: 0 1 17.625rem;
   -webkit-transition: left 0.3s ease, background-color 0.3s ease, -webkit-flex-basis 0.3s ease;
   transition: left 0.3s ease, background-color 0.3s ease, -webkit-flex-basis 0.3s ease;
   transition: flex-basis 0.3s ease, left 0.3s ease, background-color 0.3s ease;
@@ -4673,7 +4656,6 @@ body::after {
 
 .main-admin__tr th div {
   color: #487791;
-  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -4696,7 +4678,6 @@ body::after {
   padding: 0.9rem 0.5rem;
   -ms-flex-item-align: center;
       align-self: center;
-  font-size: 1rem;
 }
 
 .main-admin__tbody {
@@ -5511,7 +5492,7 @@ body::after {
 
 .agents__line input {
   width: 100%;
-  padding: 0.53125rem 2.375rem 0.53125rem 0.625rem;
+  padding: 0.59375rem 2.375rem 0.59375rem 0.625rem;
   border-radius: 0.125rem !important;
   border: 0.0625rem solid rgba(144, 191, 219, 0.5);
   color: #0a3647;
@@ -5532,9 +5513,9 @@ body::after {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 0.625rem;
+  right: 0.375rem;
   z-index: 2;
-  font-size: 1.125rem;
+  font-size: 1.5rem;
   color: #90bfdb;
 }
 
@@ -5564,6 +5545,12 @@ body::after {
       -ms-flex: 0 1 54.137931%;
           flex: 0 1 54.137931%;
   /* 157/290 */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .agents__ations {
@@ -6885,8 +6872,8 @@ body::after {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  right: 0.625rem;
-  font-size: 1.125rem;
+  right: 0.375rem;
+  font-size: 1.5rem;
   color: #90bfdb;
   pointer-events: none;
 }
@@ -6924,6 +6911,14 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
           flex: 0 1 auto;
+}
+
+.calendar__button {
+  padding: 0.78125rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 0.3125rem;
 }
 
 .calendar__wrapper {
@@ -7230,7 +7225,7 @@ body::after {
 
 .boats__tr {
   display: grid;
-  grid-template-columns: 3.642987% 12.021858% 15.664845% 16.939891% 12.477231% 12.386157% 18.579235% auto;
+  grid-template-columns: 3.642987% 12.021858% 15.664845% 16.939891% 12.477231% 12.386157% 18.579235% 1fr;
 }
 
 .boats__tr th {
@@ -7289,7 +7284,7 @@ body::after {
   background-color: #fff;
 }
 
-.boats__table-checkbox {
+.boats__checkbox {
   -ms-flex-item-align: center;
       align-self: center;
 }
@@ -7314,7 +7309,7 @@ body::after {
 }
 
 .boats__button {
-  padding: 0.7875rem 0.3125rem;
+  padding: 0.7875rem 0.125rem;
   font-size: 0.875rem;
 }
 
@@ -8551,6 +8546,10 @@ body::after {
     border: 0.0625rem solid rgba(144, 191, 219, 0.5);
   }
 
+  .form .form__search input._form-focus {
+    border: 0.0625rem solid rgba(144, 191, 219, 0.5);
+  }
+
   .pagging__arrow {
     font-size: 0.75rem;
     -webkit-box-flex: 0;
@@ -8851,8 +8850,6 @@ body::after {
     padding: 0.6875rem 1.1875rem;
     border-radius: 0.3125rem;
     background-color: #fff;
-    -webkit-box-shadow: 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14);
-            box-shadow: 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14);
     cursor: pointer;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -8872,9 +8869,9 @@ body::after {
     width: 1.125rem;
     height: 1.125rem;
     border-radius: 0.1875rem;
-    border: 0.125rem solid #90bfdb;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    border: 0.125rem solid rgba(144, 191, 219, 0.5);
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
   }
 
   .notification__main-text {
@@ -8903,9 +8900,9 @@ body::after {
     width: 1.125rem;
     height: 1.125rem;
     border-radius: 0.1875rem;
-    border: 0.125rem solid #90bfdb;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    border: 0.125rem solid rgba(144, 191, 219, 0.5);
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
   }
 
   .notification__labels {
@@ -8975,6 +8972,12 @@ body::after {
 
   .notification__header {
     width: 21.375rem;
+  }
+}
+
+@media (min-width: 489.98px) {
+  .form-small__options-comp {
+    margin-left: 0.625rem;
   }
 }
 
@@ -9236,10 +9239,6 @@ body::after {
     gap: 1.25rem;
   }
 
-  .boats__button {
-    padding: 0.7875rem 0.6875rem;
-  }
-
   .bookings__tr th,
   .bookings__tr td {
     padding: 0.5rem;
@@ -9261,10 +9260,6 @@ body::after {
 }
 
 @media (min-width: 1024px) {
-  .page__main-admin {
-    padding-top: 1.875rem;
-  }
-
   .main-admin__started-price form input {
     font-size: 1rem;
   }
@@ -9381,6 +9376,12 @@ body::after {
   .requests__tr th,
   .requests__tr td {
     padding: 1rem;
+  }
+}
+
+@media (min-width: 1250px) {
+  .boats__button {
+    padding: 0.7875rem 0.6875rem;
   }
 }
 
@@ -9574,7 +9575,7 @@ body::after {
   }
 
   .page__main-admin {
-    padding: 1.875rem;
+    padding: 1.25rem 1.875rem;
   }
 
   .main-admin__tr th {
@@ -9658,12 +9659,16 @@ body::after {
 
 @media (min-width: 1920px) {
   .button {
-    padding: 1.09375rem 1rem;
-    font-size: 1.125rem;
+    padding: 0.875rem 1rem;
+    font-size: 1.375rem;
   }
 
   .button::before {
     font-size: 1.375rem;
+  }
+
+  .button--chancel {
+    padding: 1.03125rem 0.6875rem 0.90625rem 0.6875rem;
   }
 
   .button--down::before {
@@ -9714,30 +9719,6 @@ body::after {
 
   .checkbox__text {
     font-size: 1.125rem;
-  }
-
-  .table-checkbox {
-    height: 1.5rem;
-  }
-
-  .table-checkbox__label {
-    gap: 0.9375rem;
-  }
-
-  .table-checkbox__label::before {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.5rem;
-            flex: 0 0 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-  }
-
-  .table-checkbox__label::before {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.75rem;
-            flex: 0 0 1.75rem;
-    width: 1.75rem;
-    height: 1.75rem;
   }
 
   .options {
@@ -9839,7 +9820,7 @@ body::after {
   }
 
   .select_agents .select__value {
-    min-height: 3.3125rem;
+    min-height: 3.4375rem;
   }
 
   .select_actions-table .select__title {
@@ -10195,6 +10176,14 @@ body::after {
     font-size: 1.875rem;
   }
 
+  .table {
+    font-size: 1.25rem;
+  }
+
+  .table button {
+    font-size: 1.5rem;
+  }
+
   .ttl-popup {
     font-size: 1.75rem;
   }
@@ -10286,12 +10275,12 @@ body::after {
   }
 
   .form--ivoices .form__line--calendar input {
-    padding: 0.875rem 3rem 0.5625rem 0.9375rem;
+    padding: 0.875rem 3rem 0.6875rem 0.9375rem;
     font-size: 1.25rem;
   }
 
   .form .form__line-input span {
-    font-size: 1.375rem;
+    font-size: 1.75rem;
     right: 0.9375rem;
   }
 
@@ -10369,8 +10358,13 @@ body::after {
     font-size: 1.125rem;
   }
 
+  .form-small__actions {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+
   .form-small__options-comp {
-    gap: 1.25rem;
+    gap: 1.75rem;
   }
 
   .pagging {
@@ -10601,25 +10595,16 @@ body::after {
 
   .page__aside {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 25rem;
-            flex: 0 1 25rem;
+        -ms-flex: 0 1 21.875rem;
+            flex: 0 1 21.875rem;
   }
 
   .main-admin__tr th {
     min-height: 5rem;
   }
 
-  .main-admin__tr th div {
-    font-size: 1.25rem;
-  }
-
-  .main-admin__tr th button {
-    font-size: 1.5rem;
-  }
-
   .main-admin__tr td {
     padding: 1rem;
-    font-size: 1.25rem;
   }
 
   .main-admin__tbody .main-admin__tr {
@@ -10787,7 +10772,7 @@ body::after {
   }
 
   .agents__line input {
-    padding: 0.875rem 3rem 0.5625rem 0.9375rem;
+    padding: 0.875rem 3rem 0.6875rem 0.9375rem;
     font-size: 1.25rem;
   }
 
@@ -10796,7 +10781,7 @@ body::after {
   }
 
   .agents__line-input span {
-    font-size: 1.375rem;
+    font-size: 1.75rem;
     right: 0.9375rem;
   }
 
@@ -10976,7 +10961,7 @@ body::after {
   }
 
   .calendar__line input {
-    padding: 0.71875rem 3rem 0.71875rem 0.9375rem;
+    padding: 0.78125rem 3rem 0.78125rem 0.9375rem;
     font-size: 1.25rem;
   }
 
@@ -10991,6 +10976,11 @@ body::after {
 
   .calendar__select label {
     font-size: 1.125rem;
+  }
+
+  .calendar__button {
+    padding: 0.95625rem 0.875rem;
+    font-size: 1.375rem;
   }
 
   .calendar__tr th {
@@ -11123,12 +11113,16 @@ body::after {
 
 @media (min-width: 2560px) {
   .button {
-    padding: 1.31875rem 1rem;
+    padding: 1.21875rem 1rem;
     font-size: 1.5rem;
   }
 
   .button::before {
     font-size: 1.625rem;
+  }
+
+  .button--chancel {
+    padding: 1.375rem 0.6875rem 1.25rem 0.6875rem;
   }
 
   .button--down::before {
@@ -11155,10 +11149,6 @@ body::after {
 
   .checkbox__text {
     font-size: 1.375rem;
-  }
-
-  .table-checkbox {
-    height: 1.75rem;
   }
 
   .options__wrapper {
@@ -11231,7 +11221,7 @@ body::after {
   }
 
   .select_agents .select__value {
-    min-height: 4.0625rem;
+    min-height: 4.3125rem;
   }
 
   .select_actions-table .select__title {
@@ -11456,6 +11446,14 @@ body::after {
     font-size: 2.25rem;
   }
 
+  .table {
+    font-size: 1.5rem;
+  }
+
+  .table button {
+    font-size: 1.75rem;
+  }
+
   .ttl-popup {
     font-size: 2rem;
   }
@@ -11511,6 +11509,10 @@ body::after {
     font-size: 2rem;
   }
 
+  .header-details__notifications {
+    padding: 0.90625rem 1.8125rem 0.90625rem 1rem;
+  }
+
   .header-details__text {
     font-size: 1.75rem;
   }
@@ -11532,7 +11534,7 @@ body::after {
   }
 
   .form--ivoices .form__line--calendar input {
-    padding: 1.0625rem 3rem 0.75rem 0.9375rem;
+    padding: 1.0625rem 3rem 1rem 0.9375rem;
     font-size: 1.5rem;
   }
 
@@ -11780,20 +11782,8 @@ body::after {
 
   .page__aside {
     -webkit-box-flex: 0;
-        -ms-flex: 0 1 28.125rem;
-            flex: 0 1 28.125rem;
-  }
-
-  .main-admin__tr th div {
-    font-size: 1.5rem;
-  }
-
-  .main-admin__tr th button {
-    font-size: 1.75rem;
-  }
-
-  .main-admin__tr td {
-    font-size: 1.5rem;
+        -ms-flex: 0 1 25rem;
+            flex: 0 1 25rem;
   }
 
   .main-admin__tbody .main-admin__tr {
@@ -11854,7 +11844,7 @@ body::after {
   }
 
   .agents__line input {
-    padding: 1.0625rem 3rem 0.75rem 0.9375rem;
+    padding: 1.0625rem 3rem 1rem 0.9375rem;
     font-size: 1.5rem;
   }
 
@@ -11994,12 +11984,17 @@ body::after {
   }
 
   .calendar__line input {
-    padding: 0.90625rem 3rem 0.90625rem 0.9375rem;
+    padding: 1.03125rem 3rem 1.03125rem 0.9375rem;
     font-size: 1.5rem;
   }
 
   .calendar__select label {
     font-size: 1.375rem;
+  }
+
+  .calendar__button {
+    font-size: 1.5rem;
+    padding: 1.3125rem 0.875rem;
   }
 
   .calendar__tr th {
@@ -13406,6 +13401,20 @@ body::after {
             flex-direction: column;
   }
 
+  .form-small {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+
+  .form-small__button {
+    width: 100%;
+  }
+
   .main-admin__wrapper {
     overflow-x: auto;
     padding-bottom: 0.625rem;
@@ -13547,16 +13556,6 @@ body::after {
 
   .form__body {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .form-small {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: stretch;
-        -ms-flex-align: stretch;
-            align-items: stretch;
   }
 
   .menu-open .aside__mob-button {
@@ -14963,6 +14962,14 @@ body::after {
     color: #90bfdb;
   }
 
+  .button--priority:hover {
+    color: #0a3647;
+  }
+
+  .button--priority:hover:before {
+    color: #90bfdb;
+  }
+
   .button--border:hover {
     color: #fff;
     background-color: #109eee;
@@ -15044,6 +15051,14 @@ body::after {
 
   .boat-cell a:hover p {
     text-decoration-color: transparent;
+  }
+
+  .header-details__calendar:hover {
+    color: #0a3647;
+  }
+
+  .header-details__calendar:hover span {
+    color: #109eee;
   }
 
   .pagging__arrow:hover {
