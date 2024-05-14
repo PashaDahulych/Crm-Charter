@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240513162420">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240514100836">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -467,6 +467,7 @@
 	<div id="invite" aria-hidden="true" class="popup popup--invite">
 		<div class="popup__wrapper">
 			<div class="popup__content">
+				<button type="button" class="popup__close"></button>
 				<div class="popup__invite">
 					<h4>Invite an Agent</h4>
 					<form action="#" method="POST" class="invite__form">
@@ -815,11 +816,11 @@
 						<p>Are you sure you want to Remove this item?</p>
 					</div>
 					<div class="popup__action-admin">
-						<button type="button" class="popup__button button">
-							Cancel
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
 						</button>
-						<button type="button" class="popup__button button">
-							Remove
+						<button type="button" class="popup__button button _icon-trash">
+							<span>Remove</span>
 						</button>
 					</div>
 				</div>
@@ -850,7 +851,7 @@
 								<label class="popup__lable-pop lable-pop" for="startDate">Start Date *</label>
 								<div class="popup__calendar-input calendar-input">
 									<input id="startDate" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
-									<span class="_icon-calendar"></span>
+									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
 							<div class="popup__line">
@@ -1050,7 +1051,7 @@
 								<label for="startDateSec">Start Date *</label>
 								<div class="popup__calendar-input calendar-input">
 									<input id="startDateSec" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
-									<span class="_icon-calendar"></span>
+									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
 							<div class="popup__line">
@@ -1155,7 +1156,7 @@
 								<label class="popup__label-pop label-pop" for="startDateOutOfServices">Start Date *</label>
 								<div class="popup__calendar-input calendar-input">
 									<input id="startDateOutOfServices" type="text" data-datepicker name="form[startDateOutOfServices]" required data-error="" placeholder="" class="input" />
-									<span class="_icon-calendar"></span>
+									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
 							<div class="popup__line">
@@ -1171,7 +1172,7 @@
 								<label class="popup__label-pop label-pop" for="endDateOutOfServices">End Date *</label>
 								<div class="popup__calendar-input calendar-input">
 									<input id="endDateOutOfServices" type="text" data-datepicker name="form[endDateOutOfServices]" required data-error="" placeholder="" class="input" />
-									<span class="_icon-calendar"></span>
+									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
 							<div class="popup__line">
@@ -1195,7 +1196,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240513162420"></script>
+	<script src="js/app.min.js?_v=20240514100836"></script>
 </body>
 
 </html>
