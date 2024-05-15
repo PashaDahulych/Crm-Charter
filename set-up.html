@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar Admin</title>
+	<title>Admin Manager Price</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,8 +14,8 @@
 
 <body>
 	<div class="wrapper">
-		<main class="period">
-			<section class="period__container">
+		<main class="page">
+			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
 						<!-- <a href="#" class="aside__logo"
@@ -183,249 +183,368 @@
 					</div>
 				</aside>
 
-				<div data-one-select class="period__calendar calendar">
-					<div class="calendar__header header-details">
+				<div class="page__main-admin main-admin">
+					<div class="main-admin__header header-details">
 						<h1 class="header-details__title title">
-							Calendar
+							Set up Notifications
 						</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
+						<div class="header-details__set-up">
+							<button type="button" class="header-details__button button button--transparent _icon-sort-mosaic">
+								<span>Set Default</span>
+							</button>
+							<button type="button" class="header-details__button button button--priority _icon-save">
+								<span>Save</span>
 							</button>
 						</div>
 					</div>
-					<form class="calendar__form" action="#" method="POST">
-						<div class="calendar__line-wrapper">
-							<div class="calendar__line">
-								<label for="period">Period</label>
-								<div class="calendar__line-input">
-									<input id="period" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar-day"></span>
+					<div data-spol class="set-up__wrapper">
+						<div class="set-up__table">
+							<header class="set-up__header">
+								<div class="set-up__line-header">
+									<div></div>
+									<div>Email</div>
+									<div>Notification Center</div>
+									<div>Mobile</div>
+								</div>
+							</header>
+							<div class="set-up__body">
+								<div class="set-up__line">
+									<div class="set-up__item">
+										<div data-spollerNew data-open class="set-up__title-wrapper">
+											<button data-spoller-btn type="button" class="set-up__title">
+												Bookings
+												<span class="_icon-select-arrow"></span>
+											</button>
+											<div class="set-up__checkbox-wrapper">
+												<div class="checkbox">
+													<input id="emailAll" class="checkbox__input" type="checkbox" value="emailAll" name="form[]" />
+													<label for="emailAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="notifCenterAll" class="checkbox__input" type="checkbox" value="notifCenterAll" name="form[]" />
+													<label for="notifCenterAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="mobAll" class="checkbox__input" type="checkbox" value="mobAll" name="form[]" />
+													<label for="mobAll" class="checkbox__label"></label>
+												</div>
+											</div>
+										</div>
+										<div class="set-up__block">
+											<div class="set-up__body">
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														New Online Booking
+													</div>
+													<div class="checkbox">
+														<input id="email-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="email-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenter-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobAll-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="mobAll-1" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Online Booking
+														Edited
+													</div>
+													<div class="checkbox">
+														<input id="email-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="email-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="notifCenter-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="mob-2" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Online Booking
+														Cancelled
+													</div>
+													<div class="checkbox">
+														<input id="email-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="email-3" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="notifCenter-3" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="mob-3" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Online Booking
+														Removed
+													</div>
+													<div class="checkbox">
+														<input id="email-4" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+														<label for="email-4" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-4" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+														<label for="notifCenter-4" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-4" class="checkbox__input" type="checkbox" value="4" name="form[]" />
+														<label for="mob-4" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														New Online Booking
+													</div>
+													<div class="checkbox">
+														<input id="email-5" class="checkbox__input" type="checkbox" value="5" name="form[]" />
+														<label for="email-5" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-5" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenter-5" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-5" class="checkbox__input" type="checkbox" value="5" name="form[]" />
+														<label for="mob-5" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Offline Booking
+														Edited
+													</div>
+													<div class="checkbox">
+														<input id="email-6" class="checkbox__input" type="checkbox" value="6" name="form[]" />
+														<label for="email-6" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-6" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenter-6" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-6" class="checkbox__input" type="checkbox" value="6" name="form[]" />
+														<label for="mob-6" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Offline Booking
+														Cancelled
+													</div>
+													<div class="checkbox">
+														<input id="email-7" class="checkbox__input" type="checkbox" value="7" name="form[]" />
+														<label for="email-7" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenter-7" class="checkbox__input" type="checkbox" value="7" name="form[]" />
+														<label for="notifCenter-7" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mob-7" class="checkbox__input" type="checkbox" value="7" name="form[]" />
+														<label for="mob-7" class="checkbox__label"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="set-up__item">
+										<div data-spollerNew data-open class="set-up__title-wrapper">
+											<button data-spoller-btn type="button" class="set-up__title">
+												Boats
+												<span class="_icon-select-arrow"></span>
+											</button>
+											<div class="set-up__checkbox-wrapper">
+												<div class="checkbox">
+													<input id="emailBoatsAll" class="checkbox__input" type="checkbox" value="emailBoatsAll" name="form[]" />
+													<label for="emailBoatsAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="notifCenterBoatsAll" class="checkbox__input" type="checkbox" value="notifCenterBoatsAll" name="form[]" />
+													<label for="notifCenterBoatsAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="mobBoatsAll" class="checkbox__input" type="checkbox" value="mobBoatsAll" name="form[]" />
+													<label for="mobBoatsAll" class="checkbox__label"></label>
+												</div>
+											</div>
+										</div>
+										<div class="set-up__block">
+											<div class="set-up__body">
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Your Boat Published
+													</div>
+													<div class="checkbox">
+														<input id="emailBoats-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="emailBoats-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterBoats-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenterBoats-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobBoats-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="mobBoats-1" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Your Boat Rejected
+													</div>
+													<div class="checkbox">
+														<input id="emailBoats-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="emailBoats-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterBoats-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="notifCenterBoats-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobBoats-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="mobBoats-2" class="checkbox__label"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="set-up__item">
+										<div data-spollerNew data-open class="set-up__title-wrapper">
+											<button data-spoller-btn type="button" class="set-up__title">
+												Agents
+												<span class="_icon-select-arrow"></span>
+											</button>
+											<div class="set-up__checkbox-wrapper">
+												<div class="checkbox">
+													<input id="emailAgentsAll" class="checkbox__input" type="checkbox" value="emailAgentsAll" name="form[]" />
+													<label for="emailAgentsAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="notifCenterAgentsAll" class="checkbox__input" type="checkbox" value="notifCenterBoatsAll" name="form[]" />
+													<label for="notifCenterAgentsAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="mobAgentsAll" class="checkbox__input" type="checkbox" value="mobAgentsAll" name="form[]" />
+													<label for="mobAgentsAll" class="checkbox__label"></label>
+												</div>
+											</div>
+										</div>
+										<div class="set-up__block">
+											<div class="set-up__body">
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														New Request From Agent
+													</div>
+													<div class="checkbox">
+														<input id="emailAgents-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="emailAgents-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterAgents-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenterAgents-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobAgents-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="mobAgents-1" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Your Invitation Accepted
+													</div>
+													<div class="checkbox">
+														<input id="emailAgents-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="emailAgents-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterAgents-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="notifCenterAgents-2" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobAgents-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
+														<label for="mobAgents-2" class="checkbox__label"></label>
+													</div>
+												</div>
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Your Invitation Rejected
+													</div>
+													<div class="checkbox">
+														<input id="emailAgents-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="emailAgents-3" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterAgents-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="notifCenterAgents-3" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobAgents-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
+														<label for="mobAgents-3" class="checkbox__label"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="set-up__item">
+										<div data-spollerNew data-open class="set-up__title-wrapper">
+											<button data-spoller-btn type="button" class="set-up__title">
+												My Company
+												<span class="_icon-select-arrow"></span>
+											</button>
+											<div class="set-up__checkbox-wrapper">
+												<div class="checkbox">
+													<input id="emailCompanyAll" class="checkbox__input" type="checkbox" value="emailCompanyAll" name="form[]" />
+													<label for="emailCompanyAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="notifCenterCompanyAll" class="checkbox__input" type="checkbox" value="notifCenterCompanyAll" name="form[]" />
+													<label for="notifCenterCompanyAll" class="checkbox__label"></label>
+												</div>
+												<div class="checkbox">
+													<input id="mobCompanyAll" class="checkbox__input" type="checkbox" value="mobCompanyAll" name="form[]" />
+													<label for="mobCompanyAll" class="checkbox__label"></label>
+												</div>
+											</div>
+										</div>
+										<div class="set-up__block">
+											<div class="set-up__body">
+												<div class="set-up__tr">
+													<div class="set-up__sub-title">
+														Trade Licence Expiration Within 30 Days
+													</div>
+													<div class="checkbox">
+														<input id="emailCompany-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="emailCompany-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="notifCenterCompany-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="notifCenterCompany-1" class="checkbox__label"></label>
+													</div>
+													<div class="checkbox">
+														<input id="mobCompany-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+														<label for="mobCompany-1" class="checkbox__label"></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="calendar__select">
-								<label for="companyCalendar">Company</label>
-								<select id="companyCalendar" name="form[companyCalendar]" data-class-modif="company">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Owner">Owner</option>
-									<option value="Agent">Agent</option>
-								</select>
-							</div>
-							<div class="calendar__filters">
-								<button data-popup="#filters" type="button" class="calendar__filter-button filters-button _icon-filter">
-									Filters
-								</button>
-							</div>
 						</div>
-						<div class="calendar__actions">
-							<button type="button" class="calendar__button button _icon-plus">
-								<span>Add a OOS</span>
-							</button>
-						</div>
-					</form>
-					<div class="calendar__wrapper">
-						<table class="calendar__table">
-							<thead class="calendar__thead">
-								<tr class="calendar__tr">
-									<th class="calendar__boat">
-										<div>Boat</div>
-									</th>
-									<th class="calendar__today">
-										<p>Today, Su 11</p>
-									</th>
-									<th class="calendar__day">
-										<p>Monday <span>12</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Tuesday <span>13</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Wednesday <span>14</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Thursday <span>15</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Friday <span>16</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Saturday <span>17</span></p>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="calendar__tbody">
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury Yacht SilverCreek 61
-												Ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
-										</div>
-									</td>
-									<td class="calendar__today-value">
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-									</td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											Add
-										</button>
-									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--not-paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-									</td>
-								</tr>
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury BigDaddy 88ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
-										</div>
-									</td>
-									<td class="calendar__today-value"></td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											Add
-										</button>
-									</td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
-								<tr>
-									<td>
-										<nav class="calendar__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
-											<ul class="pagging__list">
-												<li>
-													<a href="#" class="pagging__item _active">1</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">2</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">3</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">4</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item pagging__item--dots">...</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">25</a>
-												</li>
-											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
-										</nav>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
 					</div>
 				</div>
+
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">

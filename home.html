@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240515115221">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240515224251">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -191,7 +191,6 @@
 						<button type="button" class="header-details__notifications">
 							<span class="header-details__text">Notification</span>
 							<span class="header-details__icon _icon-notifications">
-								<!-- <span class="main-admin__nonotifications-value">381</span> -->
 								<span>381</span>
 							</span>
 						</button>
@@ -671,6 +670,60 @@
 						</div>
 						<button type="submit" class="filters__button filters-button _icon-filter">
 							Filters
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Filters popup -->
+	<div id="filters-notif" aria-hidden="true" class="popup popup--filters-notif">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-one-select class="filters__popup">
+					<h4>Filters</h4>
+					<form action="#" method="POST" class="filters__form">
+						<div class="filters__line">
+							<label for="notifCompanyName">Company name</label>
+							<select name="form[notifCompanyName]" id="notifCompanyName" data-scroll data-class-modif="boat-name">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="notifBoatName">Boat Name</label>
+							<select name="form[notifBoatName]" data-scroll id="notifBoatName" data-class-modif="company-filte">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="notifAccessStatus">Access Status</label>
+							<select name="form[notifAccessStatus]" data-scroll data-class-modif="form" id="notifAccessStatus">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+								<option value="9">Пункт №8</option>
+								<option value="10">Пункт №9</option>
+								<option value="11">Пункт №10</option>
+							</select>
+						</div>
+						<button type="submit" class="filters__button filters-button _icon-filter">
+							Apply Filters
 						</button>
 					</form>
 				</div>
@@ -1276,7 +1329,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240515115221"></script>
+	<script src="js/app.min.js?_v=20240515224251"></script>
 </body>
 
 </html>

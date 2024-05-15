@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Calendar Admin</title>
+	<title>Admin Manager Price</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,8 +14,8 @@
 
 <body>
 	<div class="wrapper">
-		<main class="period">
-			<section class="period__container">
+		<main class="page">
+			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
 						<!-- <a href="#" class="aside__logo"
@@ -183,221 +183,114 @@
 					</div>
 				</aside>
 
-				<div data-one-select class="period__calendar calendar">
-					<div class="calendar__header header-details">
+				<div class="page__main-admin main-admin">
+					<div class="main-admin__header header-details">
 						<h1 class="header-details__title title">
-							Calendar
+							Notification
 						</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
+						<div class="header-details__notif">
+							<button type="button" class="header-details__button button button--transparent _icon-letter-open">
+								<span>Mark As Not Unread</span>
+							</button>
+							<button type="button" class="header-details__button button button--transparent _icon-button-letter"><span>Mark As Unread</span>
 							</button>
 						</div>
 					</div>
-					<form class="calendar__form" action="#" method="POST">
-						<div class="calendar__line-wrapper">
-							<div class="calendar__line">
-								<label for="period">Period</label>
-								<div class="calendar__line-input">
-									<input id="period" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar-day"></span>
+					<form action="#" method="POST" class="notif__form" data-one-select>
+						<div class="notif__body">
+							<div class="notif__line">
+								<label for="calemdarNotif">Period</label>
+								<div class="notif__line-input">
+									<input id="calemdarNotif" autocomplete="off" name="calemdarNotif" type="text" class="input" data-datepicker />
+									<span class="_icon-notif-cal"></span>
 								</div>
 							</div>
-							<div class="calendar__select">
-								<label for="companyCalendar">Company</label>
-								<select id="companyCalendar" name="form[companyCalendar]" data-class-modif="company">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Owner">Owner</option>
-									<option value="Agent">Agent</option>
+							<div class="notif__line">
+								<label for="category">Category</label>
+								<select id="category" name="form[]" data-show-selected data-scroll data-class-modif="form">
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
 								</select>
 							</div>
-							<div class="calendar__filters">
-								<button data-popup="#filters" type="button" class="calendar__filter-button filters-button _icon-filter">
+							<div class="notif__filters">
+								<button data-popup="#filters-notif" type="button" class="notif__filter-button filters-button _icon-filter">
 									Filters
 								</button>
 							</div>
 						</div>
-						<div class="calendar__actions">
-							<button type="button" class="calendar__button button _icon-plus">
-								<span>Add a OOS</span>
-							</button>
+						<div class="notif__action">
+							<div class="notif__checkbox checkbox">
+								<input id="s_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[s_1]" />
+								<label for="s_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
+							</div>
+
 						</div>
 					</form>
-					<div class="calendar__wrapper">
-						<table class="calendar__table">
-							<thead class="calendar__thead">
-								<tr class="calendar__tr">
-									<th class="calendar__boat">
-										<div>Boat</div>
+					<div class="notif__wrapper">
+						<table class="notif__table table">
+							<thead class="notif__thead">
+								<tr class="notif__tr">
+									<th>
+										<div class="notif__checkbox checkbox">
+											<input id="notifAll" data-error="" class="checkbox__input" type="checkbox" value="all" name="form[notifAll]" />
+											<label for="notifAll" class="checkbox__label"></label>
+										</div>
 									</th>
-									<th class="calendar__today">
-										<p>Today, Su 11</p>
-									</th>
-									<th class="calendar__day">
-										<p>Monday <span>12</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Tuesday <span>13</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Wednesday <span>14</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Thursday <span>15</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Friday <span>16</span></p>
-									</th>
-									<th class="calendar__day">
-										<p>Saturday <span>17</span></p>
-									</th>
+									<th>Date</th>
+									<th>Category <button class="_icon-select-arrow"></button></th>
+									<th>Notes</th>
+									<th>Actions</th>
 								</tr>
 							</thead>
-							<tbody class="calendar__tbody">
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury Yacht SilverCreek 61
-												Ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+							<tbody class="notif__tbody">
+								<tr class="notif__tr read">
+									<td>
+										<div class="notif__checkbox checkbox">
+											<input id="notif-1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[notif-1]" />
+											<label for="notif-1" class="checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value">
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>23.10.2023 10:16</p>
 									</td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											Add
-										</button>
+									<td>
+										<p>Invoices</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--not-paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>User <a href="mailto:admin@myprojects.company">admin@myprojects.company</a> changed the minimal duration to 2 hours and standard price for agents AED 900 from a boat ALISE</p>
+									</td>
+									<td>
+										<div class="notif__mark read _icon-letter-open"><span>Mark As Read</span></div>
 									</td>
 								</tr>
-								<tr class="calendar__tr">
-									<td class="calendar__boat-about boat-about">
-										<div class="boat-about__wrapper">
-											<a href="#" class="boat-about__image"><picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="boat" /></picture></a>
-											<a href="#" class="boat-about__ship-name">Luxury BigDaddy 88ft</a>
-											<p class="boat-about__rent-company">
-												Neptune Yacht Rental LLC
-											</p>
-											<p class="boat-about__max-people">
-												65 people max
-											</p>
+								<tr class="notif__tr unread">
+									<td>
+										<div class="notif__checkbox checkbox">
+											<input id="notif-2" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[notif-2]" />
+											<label for="notif-2" class="checkbox__label"></label>
 										</div>
 									</td>
-									<td class="calendar__today-value"></td>
-									<td class="calendar__day-value">
-										<button type="button" class="calendar__add">
-											Add
-										</button>
+									<td>
+										<p>23.10.2023 10:16</p>
 									</td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
-										<div class="calendar__booking-status">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>Invoices</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value">
-										<div class="calendar__booking-status calendar__booking-status--paid">
-											<h3>
-												Neptune Yacht Rental LLC
-											</h3>
-											<div class="calendar__about-booking">
-												<p class="calendar__start-time">
-													18:00 - 22.00
-												</p>
-												<p class="calendar__total-price">
-													<span>AED</span> 6720
-												</p>
-											</div>
-											<div class="calendar__options">
-												<p>+ 30 min prep</p>
-											</div>
-										</div>
+									<td>
+										<p>User <a href="mailto:admin@myprojects.company">admin@myprojects.company</a> changed the minimal duration to 2 hours and standard price for agents AED 900 from a boat ALISE</p>
 									</td>
-									<td class="calendar__day-value"></td>
-									<td class="calendar__day-value"></td>
+									<td>
+										<div class="notif__mark unread _icon-button-letter"><span>Mark As Unread</span></div>
+									</td>
 								</tr>
 							</tbody>
-							<tfoot class="main-admin__tfoot">
+							<tfoot class="notif__tfoot">
 								<tr>
 									<td>
-										<nav class="calendar__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
+										<nav class="notif__pagging pagging">
+											<a href="#" class="pagging__arrow pagging__arrow--left _icon-menu-arrow"></a>
 											<ul class="pagging__list">
 												<li>
 													<a href="#" class="pagging__item _active">1</a>
