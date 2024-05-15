@@ -3519,7 +3519,7 @@ body::after {
 
 .header-details__calendar::before {
   font-size: 1.125rem;
-  color: #109eee;
+  color: #90BFDB;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
@@ -3535,6 +3535,10 @@ body::after {
   opacity: 0.3;
   cursor: default;
   color: #109eee;
+}
+
+.header-details__calendar:disabled::before {
+  color: #90BFDB;
 }
 
 .header-details__actions {
