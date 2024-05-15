@@ -3508,25 +3508,33 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 0.3125rem;
+  gap: 0.5rem;
   color: #109eee;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-.header-details__calendar span {
-  font-size: 1.5rem;
+.header-details__calendar::before {
+  font-size: 1.125rem;
+  color: #109eee;
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
-  color: #109eee;
+}
+
+.header-details__calendar span {
+  display: inline-block;
+  padding-top: 0.1875rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .header-details__calendar:disabled {
   opacity: 0.3;
   cursor: default;
+  color: #109eee;
 }
 
 .header-details__actions {
@@ -7150,6 +7158,10 @@ body::after {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 3.875rem;
   -ms-flex-item-align: start;
       align-self: flex-start;
   font-weight: 500;
@@ -10329,11 +10341,10 @@ body::after {
 
   .header-details__calendar {
     font-size: 1.25rem;
-    gap: 0.5625rem;
   }
 
-  .header-details__calendar span {
-    font-size: 1.75rem;
+  .header-details__calendar::before {
+    font-size: 1.375rem;
   }
 
   .header-details__text {
@@ -11586,8 +11597,8 @@ body::after {
     gap: 0.8125rem;
   }
 
-  .header-details__calendar span {
-    font-size: 2rem;
+  .header-details__calendar::before {
+    font-size: 1.625rem;
   }
 
   .header-details__notifications {
@@ -15234,7 +15245,7 @@ body::after {
     color: #0a3647;
   }
 
-  .header-details__calendar:hover span {
+  .header-details__calendar:hover::before {
     color: #109eee;
   }
 
