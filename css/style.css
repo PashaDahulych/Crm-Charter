@@ -57,6 +57,18 @@
   display: block;
 }
 
+._icon-delete-forever:before {
+  content: "\e933";
+}
+
+._icon-create:before {
+  content: "\e931";
+}
+
+._icon-post-add:before {
+  content: "\e932";
+}
+
 ._icon-booking:before {
   content: "\e930";
 }
@@ -468,6 +480,7 @@ body {
 }
 
 .button:disabled {
+  cursor: default;
   color: rgba(16, 158, 238, 0.5);
 }
 
@@ -491,7 +504,7 @@ body {
 }
 
 .button--priority {
-  padding: 0.85rem 1rem 0.725rem 1rem;
+  padding: 0.625rem 1rem;
   color: #fff;
   background-color: #109eee;
 }
@@ -509,6 +522,15 @@ body {
   cursor: default;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.button--priority:active {
+  color: #fff;
+  background-color: #109eee;
+}
+
+.button--priority:active::before {
+  color: #fff;
 }
 
 .button--border {
@@ -537,7 +559,7 @@ body {
 
 .button--border-create {
   border: 0.0625rem solid #109eee;
-  padding: 0.85rem 0.6875rem 0.6rem 0.6875rem;
+  padding: 0.625rem 1rem;
 }
 
 .button--border-create:disabled {
@@ -546,6 +568,15 @@ body {
   border: 0.0625rem solid #109eee;
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.button--border-create:active {
+  background-color: #109eee;
+  color: #fff;
+}
+
+.button--border-create:active::before {
+  color: #fff;
 }
 
 .button--down::before {
@@ -2174,18 +2205,47 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 1.12rem 0.625rem;
+  padding: 0.625rem 1rem;
   width: 100%;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
-  -webkit-transition: opacity 0.3s ease, background-color 0.3s ease, margin 0.3s ease;
-  transition: opacity 0.3s ease, background-color 0.3s ease, margin 0.3s ease;
+  -webkit-transition: color 0.3s ease opacity 0.3s ease, background-color 0.3s ease, margin 0.3s ease;
+  transition: color 0.3s ease opacity 0.3s ease, background-color 0.3s ease, margin 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.popup--invite .invite__button::before {
+  font-size: 1.125rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.popup--invite .invite__button span {
+  display: inline-block;
+  padding-top: 0.1875rem;
 }
 
 .popup--invite .invite__button:disabled {
   opacity: 0.3;
   cursor: not-allowed;
+}
+
+.popup--invite .invite__button:active {
+  background-color: #109eee;
+  -webkit-box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+          box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+  color: #fff;
+}
+
+.popup--invite .invite__button:active:before {
+  color: #fff;
 }
 
 .popup--individual-price .popup__content {
@@ -2345,11 +2405,16 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.725rem 1rem;
+  padding: 0.6625rem 1rem;
   color: #109eee;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
   background-color: #fff;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, -webkit-box-shadow 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, -webkit-box-shadow 0.3s ease;
@@ -2357,9 +2422,27 @@ body::after {
   transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 
+.popup--individual-price .individual-price__delite-btn span {
+  display: inline-block;
+  padding-top: 2px;
+}
+
+.popup--individual-price .individual-price__delite-btn::before {
+  font-size: 1.125rem;
+  color: #90bfdb;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
 .popup--individual-price .individual-price__delite-btn:active {
-  color: #fff;
   background-color: #109eee;
+  -webkit-box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+          box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+  color: #fff;
+}
+
+.popup--individual-price .individual-price__delite-btn:active:before {
+  color: #fff;
 }
 
 .popup--individual-price .individual-price__delite-btn:disabled {
@@ -2382,14 +2465,39 @@ body::after {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0.725rem 1rem;
+  padding: 0.63125rem 1rem;
   color: #fff;
   background-color: #109eee;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.2;
-  -webkit-transition: background-color 0.3s ease, color 0.3s ease;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup--individual-price .individual-price__button span {
+  display: inline-block;
+  padding-top: 0.1875rem;
+}
+
+.popup--individual-price .individual-price__button::before {
+  font-size: 1.125rem;
+}
+
+.popup--individual-price .individual-price__button:disabled {
+  cursor: default;
+  color: rgba(16, 158, 238, 0.5);
+}
+
+.popup--individual-price .individual-price__button:disabled::before {
+  color: rgba(144, 191, 219, 0.5);
 }
 
 .popup--new-booking .popup__content,
@@ -5096,7 +5204,7 @@ body::after {
           justify-content: space-between;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr minmax(3.875rem, 18%);
+  grid-template-columns: 1fr 3.875rem;
 }
 
 .individual__body-line {
@@ -5156,47 +5264,23 @@ body::after {
 }
 
 .individual__add-button {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 0.125rem;
   color: #90bfdb;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   line-height: 1.2;
   font-weight: 500;
-  padding: 0.3125rem 0.53125rem;
-  font-size: 0.75rem;
+  padding: 0.625rem 0.3125rem;
+  font-size: 0.875rem;
   border-radius: 1.3125rem;
   -ms-flex-item-align: center;
       align-self: center;
+  text-align: center;
   -webkit-transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
   transition: background-color 0.3s ease, color 0.3s ease, border-radius 0.3s ease;
-}
-
-.individual__add-button::before {
-  font-size: 1.125rem;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-
-.individual__add-button span {
-  display: inline-block;
-  padding-top: 5px;
 }
 
 .individual__add-button:active {
   color: #fff;
   background-color: #109eee;
   border-radius: 1.3125rem;
-}
-
-.individual__add-button:active span {
-  color: #fff;
 }
 
 .form__line-owner {
@@ -7070,8 +7154,7 @@ body::after {
       align-self: flex-start;
   font-weight: 500;
   line-height: 1.2;
-  padding: 0.3125rem;
-  border-radius: 0.125rem;
+  border-radius: 1.3125rem;
   padding: 0.625rem 0.3125rem;
   position: absolute;
   top: 50%;
@@ -7085,10 +7168,6 @@ body::after {
 
 .calendar__add:focus {
   background-color: #109eee;
-  color: #fff;
-}
-
-.calendar__add:focus span {
   color: #fff;
 }
 
@@ -9660,8 +9739,16 @@ body::after {
     font-size: 1.375rem;
   }
 
+  .button--priority {
+    padding: 0.8125rem 1rem;
+  }
+
   .button--chancel {
     padding: 0.96875rem 1rem 0.84375rem 1rem;
+  }
+
+  .button--border-create {
+    padding: 0.8125rem 1rem;
   }
 
   .button--down::before {
@@ -9887,6 +9974,10 @@ body::after {
     font-size: 1.375rem;
   }
 
+  .popup--invite .invite__button::before {
+    font-size: 1.375rem;
+  }
+
   .popup--individual-price .popup__content {
     max-width: 33.25rem;
     padding: 2.5rem;
@@ -9959,19 +10050,35 @@ body::after {
   }
 
   .popup--individual-price .individual-price__delite-btn {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
+  }
+
+  .popup--individual-price .individual-price__delite-btn::before {
+    font-size: 1.375rem;
   }
 
   .popup--individual-price .individual-price__delite-btn {
     font-size: 1.5rem;
   }
 
+  .popup--individual-price .individual-price__delite-btn::before {
+    font-size: 1.625rem;
+  }
+
   .popup--individual-price .individual-price__button {
-    font-size: 1.125rem;
+    font-size: 1.375rem;
+  }
+
+  .popup--individual-price .individual-price__button::before {
+    font-size: 1.375rem;
   }
 
   .popup--individual-price .individual-price__button {
     font-size: 1.5rem;
+  }
+
+  .popup--individual-price .individual-price__button::before {
+    font-size: 1.625rem;
   }
 
   .popup--new-booking .popup__content,
@@ -10666,18 +10773,8 @@ body::after {
   }
 
   .individual__add-button {
-    gap: 0.3125rem;
-    padding: 0.625rem 0.53125rem;
+    padding: 0.625rem;
     font-size: 1rem;
-  }
-
-  .individual__add-button span {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.5rem;
-            flex: 0 0 1.5rem;
-    width: 1.5rem;
-    height: 1.5rem;
-    font-size: 0.875rem;
   }
 
   .access-details__agent {
@@ -11238,7 +11335,11 @@ body::after {
   }
 
   .popup--invite .invite__button {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .popup--invite .invite__button::before {
+    font-size: 1.625rem;
   }
 
   .popup--individual-price .popup__content {
@@ -11803,6 +11904,10 @@ body::after {
     gap: 1.25rem;
   }
 
+  .individual__add-button {
+    font-size: 1.25rem;
+  }
+
   .access-details__tr th div {
     font-size: 1.5rem;
   }
@@ -11999,17 +12104,7 @@ body::after {
   }
 
   .calendar__add {
-    gap: 0.625rem;
     font-size: 1.25rem;
-  }
-
-  .calendar__add span {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.625rem;
-            flex: 0 0 1.625rem;
-    width: 1.625rem;
-    height: 1.625rem;
-    font-size: 1.0625rem;
   }
 
   .calendar__booking-status {
@@ -12407,21 +12502,6 @@ body::after {
 
   .individual__changes-btn {
     font-size: 1.75rem;
-  }
-
-  .individual__add-button {
-    padding: 0.625rem 0.53125rem;
-    font-size: 1.25rem;
-    gap: 0.5rem;
-  }
-
-  .individual__add-button span {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 1.75rem;
-            flex: 0 0 1.75rem;
-    width: 1.75rem;
-    height: 1.75rem;
-    font-size: 1.1875rem;
   }
 
   .booking-details__sub-title span {
@@ -15054,6 +15134,10 @@ body::after {
     border: 0.0625rem solid transparent;
   }
 
+  .button--border-create:hover::before {
+    color: #90bfdb;
+  }
+
   .button--down:hover::before {
     color: #90bfdb;
   }
@@ -15109,6 +15193,17 @@ body::after {
     background-color: #90bfdb;
   }
 
+  .popup--invite .invite__button:hover {
+    background-color: #fff;
+    color: #0a3647;
+    -webkit-box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+            box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+  }
+
+  .popup--invite .invite__button:hover::before {
+    color: #90bfdb;
+  }
+
   .popup--individual-price .individual-price__delite-btn:hover {
     color: #0a3647;
     -webkit-box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
@@ -15117,8 +15212,11 @@ body::after {
   }
 
   .popup--individual-price .individual-price__button:hover {
+    border: 0.0625rem solid transparent;
     color: #109eee;
     background-color: #fff;
+    -webkit-box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
+            box-shadow: 0rem 0rem 1.125rem 0rem rgba(72, 119, 145, 0.2);
   }
 
   .popup--new-booking .popup__close:hover::before,
@@ -15218,10 +15316,6 @@ body::after {
     color: #109eee;
   }
 
-  .individual__add-button:hover span {
-    color: #109eee;
-  }
-
   .access-details__agent-about a:hover {
     color: #0a3647;
   }
@@ -15289,10 +15383,6 @@ body::after {
   .calendar__add:hover {
     color: #109eee;
     background-color: #f2f6f8;
-  }
-
-  .calendar__add:hover span {
-    color: #109eee;
   }
 
   .boats__tr th button:hover {
