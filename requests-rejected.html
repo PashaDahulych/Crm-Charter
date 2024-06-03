@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Bookongs Admin</title>
+	<title>Requests Admin</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,8 +14,8 @@
 
 <body>
 	<div class="wrapper">
-		<main class="period">
-			<section class="period__container">
+		<main class="requests">
+			<section class="requests__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
 						<!-- <a href="#" class="aside__logo"
@@ -183,10 +183,10 @@
 					</div>
 				</aside>
 
-				<div data-one-select class="period__calendar calendar">
-					<div class="calendar__header header-details">
+				<div data-one-select class="requests__body">
+					<div class="requests__header header-details">
 						<h1 class="header-details__title title">
-							Bookings
+							Requests
 						</h1>
 						<div class="header-details__actions">
 							<button type="button" class="header-details__notifications">
@@ -199,24 +199,49 @@
 						<div class="form-small__body">
 							<div class="form-small__line">
 								<div class="form-small__line-input">
-									<input id="searchComp" autocomplete="off" name="searchBookings" type="text" class="input" placeholder="Search" />
+									<input id="searchComp" autocomplete="off" name="searchCopm" type="text" class="input" placeholder="Search" />
 									<button type="button" class="_icon-search"></button>
 								</div>
 							</div>
-							<button type="button" class="form-small__filters-button filters-button _icon-filter">Filters</button>
+							<div class="form-small__options-comp options-comp">
+								<div class="options-comp__item">
+									<input id="o_1" class="options-comp__input" type="radio" value="New" name="requests" />
+									<label for="o_1" class="options-comp__label">
+										<span class="options-comp__icon"></span>
+										<span class="options-comp__text">New</span>
+									</label>
+								</div>
+								<div class="options-comp__item">
+									<input id="o_2" class="options-comp__input" type="radio" value="Accepted" name="requests" />
+									<label for="o_2" class="options-comp__label">
+										<span class="options-comp__icon"></span>
+										<span class="options-comp__text">Accepted</span>
+									</label>
+								</div>
+								<div class="options-comp__item">
+									<input id="o_3" class="options-comp__input" type="radio" value="Rejected" name="requests" checked />
+									<label for="o_3" class="options-comp__label">
+										<span class="options-comp__icon"></span>
+										<span class="options-comp__text">Rejected</span>
+									</label>
+								</div>
+							</div>
 						</div>
 						<div class="form-small__actions">
-							<button data-popup="#remove-booking" type="button" class="form-small__button button _icon-trash"><span>Remove</span></button>
-							<button data-popup="#offline-book-options" type="button" class="form-small__button button button--priority _icon-calendar"><span>Add a Booking</span></button>
-							<button data-popup="#offline-book" type="button" class="form-small__button button button--priority _icon-edit"><span>Add a OOS</span></button>
+							<button type="reset" class="form-small__button button _icon-restart-alt">
+								<span>Reset</span>
+							</button>
+							<button type="button" class="form-small__button button button--priority _icon-trash">
+								<span>Remove</span>
+							</button>
 						</div>
 					</form>
-					<div class="bookings-admin__wrapper">
-						<table class="bookings-admin__table table">
-							<thead class="bookings-admin__thead">
-								<tr class="bookings-admin__tr">
+					<div class="requests__wrapper">
+						<table class="requests__table table">
+							<thead class="requests__thead">
+								<tr class="requests__tr">
 									<th>
-										<div class="bookings-admin__checkbox checkbox">
+										<div class="requests__checkbox checkbox">
 											<input id="checkedAll" data-error="" class="checkbox__input" type="checkbox" value="all" name="form[checkedAll]" />
 											<label for="checkedAll" class="checkbox__label"></label>
 										</div>
@@ -231,24 +256,18 @@
 										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
 									<th>
-										Company<button type="button" class="_icon-burger-arrow"></button>
+										Client<button type="button" class="_icon-burger-arrow"></button>
 									</th>
-									<th>Date</th>
-									<th>Duration</th>
 									<th>Price</th>
 									<th>Created at</th>
-									<th>
-										Created By
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
 									<th>
 										Status
 										<button type="button" class="_icon-burger-arrow"></button>
 									</th>
 								</tr>
 							</thead>
-							<tbody class="bookings-admin__tbody">
-								<tr class="bookings-admin__tr">
+							<tbody class="requests__tbody">
+								<tr class="requests__tr">
 									<td>
 										<div class="bookings-admin__checkbox checkbox">
 											<input id="checked-1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-1]" />
@@ -259,20 +278,14 @@
 									<td>Offline</td>
 									<td>Blue Yonder 40 feet</td>
 									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
 									<td>146 800.00</td>
 									<td>
 										<p>10.11.23</p>
 										<p>13:06</p>
 									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
+									<td>New</td>
 								</tr>
-								<tr class="bookings-admin__tr">
+								<tr class="requests__tr">
 									<td>
 										<div class="bookings-admin__checkbox checkbox">
 											<input id="checked-2" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-2]" />
@@ -283,20 +296,14 @@
 									<td>Offline</td>
 									<td>Blue Yonder 40 feet</td>
 									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
 									<td>146 800.00</td>
 									<td>
 										<p>10.11.23</p>
 										<p>13:06</p>
 									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
+									<td>Rejected</td>
 								</tr>
-								<tr class="bookings-admin__tr">
+								<tr class="requests__tr">
 									<td>
 										<div class="bookings-admin__checkbox checkbox">
 											<input id="checked-3" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-3]" />
@@ -307,20 +314,14 @@
 									<td>Offline</td>
 									<td>Blue Yonder 40 feet</td>
 									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
 									<td>146 800.00</td>
 									<td>
 										<p>10.11.23</p>
 										<p>13:06</p>
 									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
+									<td>Rejected</td>
 								</tr>
-								<tr class="bookings-admin__tr">
+								<tr class="requests__tr">
 									<td>
 										<div class="bookings-admin__checkbox checkbox">
 											<input id="checked-4" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-4]" />
@@ -331,96 +332,18 @@
 									<td>Offline</td>
 									<td>Blue Yonder 40 feet</td>
 									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
 									<td>146 800.00</td>
 									<td>
 										<p>10.11.23</p>
 										<p>13:06</p>
 									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
-								</tr>
-								<tr class="bookings-admin__tr">
-									<td>
-										<div class="bookings-admin__checkbox checkbox">
-											<input id="checked-5" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-5]" />
-											<label for="checked-5" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td>56879</td>
-									<td>Offline</td>
-									<td>Blue Yonder 40 feet</td>
-									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
-									<td>146 800.00</td>
-									<td>
-										<p>10.11.23</p>
-										<p>13:06</p>
-									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
-								</tr>
-								<tr class="bookings-admin__tr">
-									<td>
-										<div class="bookings-admin__checkbox checkbox">
-											<input id="checked-6" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-6]" />
-											<label for="checked-6" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td>56879</td>
-									<td>Offline</td>
-									<td>Blue Yonder 40 feet</td>
-									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
-									<td>146 800.00</td>
-									<td>
-										<p>10.11.23</p>
-										<p>13:06</p>
-									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
-								</tr>
-								<tr class="bookings-admin__tr">
-									<td>
-										<div class="bookings-admin__checkbox checkbox">
-											<input id="checked-7" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[checked-7]" />
-											<label for="checked-7" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td>56879</td>
-									<td>Offline</td>
-									<td>Blue Yonder 40 feet</td>
-									<td>Boat Owner LLC</td>
-									<td>
-										<p>03.10.23</p>
-										<p>12:00</p>
-									</td>
-									<td>6 hours</td>
-									<td>146 800.00</td>
-									<td>
-										<p>10.11.23</p>
-										<p>13:06</p>
-									</td>
-									<td>CharterCLick</td>
-									<td>Paid</td>
+									<td>Accepted</td>
 								</tr>
 							</tbody>
 							<tfoot class="main-admin__tfoot">
 								<tr>
 									<td>
-										<nav class="calendar__pagging pagging">
+										<nav class="main-admin__pagging pagging">
 											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
 											<ul class="pagging__list">
 												<li>

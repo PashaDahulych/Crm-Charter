@@ -512,7 +512,6 @@ body {
 }
 
 .button--priority {
-  padding: 0.625rem 1rem;
   color: #fff;
   background-color: #109eee;
 }
@@ -4040,6 +4039,16 @@ body::after {
       flex-wrap: wrap;
 }
 
+.form-small__edit {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 35%;
+          flex: 0 1 35%;
+  /* 358/1098 */
+  gap: 0.625rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
 .pagging {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
@@ -7386,6 +7395,11 @@ body::after {
 
 .calendar__booking-status-hold {
   background-color: #bdc4c7;
+}
+
+.calendar__filter-button::before {
+  color: #fff;
+  background-color: #109eee;
 }
 
 .boat-about {
@@ -11047,10 +11061,6 @@ body::after {
     font-size: 1.375rem;
   }
 
-  .button--priority {
-    padding: 0.875rem 1rem;
-  }
-
   .button--chancel {
     padding: 0.96875rem 1rem 0.84375rem 1rem;
   }
@@ -12719,10 +12729,6 @@ body::after {
 
   .button::before {
     font-size: 1.625rem;
-  }
-
-  .button--priority {
-    padding: 1.21875rem 1rem;
   }
 
   .button--chancel {
@@ -15381,6 +15387,10 @@ body::after {
   .form-small__line-input input {
     border: 0.0625rem solid transparent;
     background-color: rgba(242, 246, 248, 0.5);
+  }
+
+  .form-small__edit {
+    grid-template-columns: 1fr;
   }
 
   .menu-open .aside__mob-button {
