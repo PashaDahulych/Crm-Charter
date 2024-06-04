@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Companies by Agents tab</title>
+	<title>Admin Manager Price</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -18,6 +18,10 @@
 			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
+						<!-- <a href="#" class="aside__logo"
+            ><span class="_icon-logo"></span>
+            <p>Charter<span>Click</span></p></a
+        > -->
 						<a href="#" class="aside__logo">
 							<span class="aside__logo-icon">
 								<img src="img/icon.svg" alt="logo icon" />
@@ -32,17 +36,15 @@
 					<nav class="aside__menu">
 						<ul class="aside__list">
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
-										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зелений кружечок буде доданий. Стилі в css -->
+										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
 									</div>
 									<p class="aside__link-text">Calendar</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
-										<p class="aside__link-value">
-											4321
-										</p>
+										<p class="aside__link-value">4321</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -54,11 +56,48 @@
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-notifications"></div>
-									<p class="aside__link-text">
-										Notifications
-									</p>
+									<div class="aside__link-icon _icon-invoices"></div>
+									<p class="aside__link-text">Invoices</p>
 								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-requests"></div>
+									<p class="aside__link-text">Requests</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-notifications"></div>
+									<p class="aside__link-text">Notifications</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-price">
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Price Manager</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">2030</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Chargeable Options
+											<span class="aside__sub-value">2010</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<!--! Якщо хочете додати значення долінків sub-menu - то потрібно додати <span class="aside__sub-value">20</span>. Вище спеціально зробив значення з великою цифро, що Ви почачили, що нічого не зламається. -->
+										<a href="#" class="aside__sub-link">Special Offers
+											<span class="aside__sub-value">20</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Promo Codes</a>
+									</li>
+								</ul>
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
@@ -67,11 +106,9 @@
 								</a>
 							</li>
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller href="#!" class="aside__link _spoller-init">
 									<div class="aside__link-icon _icon-my-company"></div>
-									<p class="aside__link-text">
-										My Company
-									</p>
+									<p class="aside__link-text">My Company</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<!-- <p class="aside__link-value">20</p> -->
@@ -80,10 +117,47 @@
 								<ul class="aside__sub-menu">
 									<li class="aside__sub-padding"></li>
 									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Users</a>
+									</li>
+									<li class="aside__sub-item">
 										<a href="#" class="aside__sub-link">Agents</a>
 									</li>
 									<li class="aside__sub-item">
 										<a href="#" class="aside__sub-link">Companies</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-reports"></div>
+									<p class="aside__link-text">Reports</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-manage"></div>
+									<p class="aside__link-text">Manage</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Locations</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Portal</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Blog</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Pages</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Feedback</a>
 									</li>
 								</ul>
 							</li>
@@ -108,186 +182,79 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="page__companies companies">
-					<div class="companies__header header-details">
+
+				<div class="page__main-admin main-admin">
+					<div class="main-admin__header header-details">
 						<h1 class="header-details__title title">
-							Companies
+							Price Manager
 						</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-						</div>
+						<button type="button" class="header-details__notifications">
+							<span class="header-details__text">Notification</span>
+							<span class="header-details__icon _icon-notifications">
+								<span>381</span>
+							</span>
+						</button>
 					</div>
-					<form class="companies__form form-small" action="#" method="POST">
-						<div class="form-small__body">
-							<div class="form-small__line">
-								<div class="form-small__line-input">
-									<input id="searchComp" autocomplete="off" name="searchCopm" type="text" class="input" placeholder="Search" />
-									<button type="button" class="_icon-search"></button>
-								</div>
+					<form action="#" method="POST" class="main-admin__form form" data-one-select>
+						<div class="form__body">
+							<div class="form__line">
+								<label for="boat">Boat</label>
+								<select id="boat" name="form[]" data-show-selected data-scroll data-class-modif="form">
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
 							</div>
-							<button data-popup="#filters" type="button" class="form-small__filters filters-button _icon-filter">
-								Filters
-							</button>
-							<div class="form-small__options-comp options-comp">
-								<div class="options-comp__item">
-									<input id="o_1" class="options-comp__input" type="radio" value="1" name="companies" />
-									<label for="o_1" class="options-comp__label">
-										<span class="options-comp__icon"></span>
-										<span class="options-comp__text">All Companies</span>
-									</label>
-								</div>
-								<div class="options-comp__item">
-									<input id="o_2" class="options-comp__input" type="radio" value="2" name="companies" />
-									<label for="o_2" class="options-comp__label">
-										<span class="options-comp__icon"></span>
-										<span class="options-comp__text">My Companies</span>
-									</label>
-								</div>
+							<div class="form__line">
+								<label for="location">Location</label>
+								<select id="location" name="form[]" data-show-selected data-scroll data-class-modif="form">
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="form__line">
+								<label for="company-name">Company</label>
+								<select id="company-name" name="form[]" data-show-selected data-scroll data-class-modif="form" data-speed>
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+									<option value="12">Пункт №11</option>
+								</select>
+							</div>
+						</div>
+						<div class="form__actions">
+							<div class="form__checkbox checkbox">
+								<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
+							</div>
+							<div class="form__buttons">
+								<button type="reset" class="form__button button _icon-close">
+									<span>Clear</span>
+								</button>
+								<button type="submit" class="form__button button _icon-check">
+									<span>Apply</span>
+								</button>
 							</div>
 						</div>
 					</form>
-					<div class="companies__wrapper">
-						<table class="companies__table">
-							<thead class="companies__thead">
-								<tr class="companies__tr">
-									<th>
-										<div>Company name</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Contry</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Contact Details</div>
-									</th>
-									<th>
-										<div>Boats</div>
-									</th>
-									<th>
-										<div>Access Status</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="companies__tbody">
-								<tr class="companies__tr">
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td class="companies__contacts">
-										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
-										<a href="tel:9178909654">(917) 890 9654</a>
-									</td>
-									<td class="companies__boats-info">
-										<p>AAA Deep Blue Sea</p>
-										<p>S1-Luxury Boat</p>
-										<p>50 people max</p>
-									</td>
-									<td class="companies__access-status">
-										<select id="status1" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Status
-											</option>
-											<option value="Request">
-												Request
-											</option>
-											<option value="Activated">
-												Activated
-											</option>
-											<option value="Rejected">
-												Rejected
-											</option>
-											<option value="Revoked">
-												Revoked
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="companies__tr">
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td class="companies__contacts">
-										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
-										<a href="tel:9178909654">(917) 890 9654</a>
-									</td>
-									<td class="companies__boats-info">
-										<p>AAA Deep Blue Sea</p>
-										<p>S1-Luxury Boat</p>
-										<p>50 people max</p>
-									</td>
-									<td class="companies__access-status">
-										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Status
-											</option>
-											<option value="Request">
-												Request
-											</option>
-											<option value="Activated">
-												Activated
-											</option>
-											<option value="Rejected">
-												Rejected
-											</option>
-											<option value="Revoked">
-												Revoked
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="companies__tr">
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td>
-										<p>Clarence Polkawitz LLC</p>
-									</td>
-									<td class="companies__contacts">
-										<a href="mailto:garet81@zlcolors.com">garet81@zlcolors.com</a>
-										<a href="tel:9178909654">(917) 890 9654</a>
-									</td>
-									<td class="companies__boats-info">
-										<p>AAA Deep Blue Sea</p>
-										<p>S1-Luxury Boat</p>
-										<p>50 people max</p>
-									</td>
-									<td class="companies__access-status">
-										<select id="status3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Status
-											</option>
-											<option value="Request">
-												Request
-											</option>
-											<option value="Activated">
-												Activated
-											</option>
-											<option value="Rejected">
-												Rejected
-											</option>
-											<option value="Revoked">
-												Revoked
-											</option>
-										</select>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
+					<div class="main-admin__wrapper">
+						<table class="table-test">
+							<thead class="table-test__thead">
 								<tr>
-									<td>
-										<nav class="companies__pagging pagging">
-											<button disabled type="button" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></button>
+									<td colspan="6">
+										<nav class="table-test__pagging pagging">
+											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
 											<ul class="pagging__list">
 												<li>
 													<a href="#" class="pagging__item _active">1</a>
@@ -308,7 +275,476 @@
 													<a href="#" class="pagging__item">25</a>
 												</li>
 											</ul>
-											<button type="button" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></button>
+											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
+										</nav>
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<th>
+										<div>
+											Boat
+											<button type="button" class="_icon-burger-arrow"></button>
+										</div>
+									</th>
+									<th>
+										<div>Lication</div>
+									</th>
+									<th>
+										<div>Company</div>
+									</th>
+									<th>
+										<div>Minimal Duration</div>
+									</th>
+									<th>
+										<div>
+											Lowest Price for Agent (Hour)
+											<button class="_icon-burger-arrow"></button>
+										</div>
+									</th>
+									<th>
+										<div>
+											Standard Price for Clients
+											(Hour)
+										</div>
+									</th>
+								</tr>
+							</thead>
+							<tbody class="table-test__tbody">
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span>900</span></p> <button type="button" class="_icon-update"></button> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC</a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span></span></p> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price main-admin__started-price--only">
+										<div class="main-admin__agent-only">
+											Agents only
+											<button data-show-modal type="button" class="_icon-info">
+												<span data-modal>
+													This boat is not posted
+													online
+												</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span>900</span></p> <button type="button" class="_icon-update"></button> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC</a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span></span></p> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price main-admin__started-price--only">
+										<div class="main-admin__agent-only">
+											Agents only
+											<button data-show-modal type="button" class="_icon-info">
+												<span data-modal>
+													This boat is not posted
+													online
+												</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span>900</span></p> <button type="button" class="_icon-update"></button> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC</a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span></span></p> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price main-admin__started-price--only">
+										<div class="main-admin__agent-only">
+											Agents only
+											<button data-show-modal type="button" class="_icon-info">
+												<span data-modal>
+													This boat is not posted
+													online
+												</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span>900</span></p> <button type="button" class="_icon-update"></button> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC</a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price">
+										<form action="#" method="POST">
+											<p>AED</p>
+											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
+											<button type="reset" class="_icon-update"></button>
+										</form>
+										<!-- <p>AED <span></span></p> -->
+									</td>
+								</tr>
+								<tr colspan="6" class="table-test__tr">
+									<td class="main-admin__boat boat-cell">
+										<a href="#">
+											<div>
+												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
+											</div>
+											<p>
+												Luxury Yacht SilverCreek 61
+												Ft
+											</p>
+										</a>
+									</td>
+									<td class="main-admin__lication">
+										<p>UAE Dubai</p>
+									</td>
+									<td class="main-admin__company">
+										<a href="#">Boat Owner LLC </a>
+									</td>
+									<td class="main-admin__duration">
+										<p>1 hour</p>
+									</td>
+									<td class="main-admin__agent-price">
+										<p><span>1 000</span> AED</p>
+									</td>
+									<td class="main-admin__started-price main-admin__started-price--only">
+										<div class="main-admin__agent-only">
+											Agents only
+											<button data-show-modal type="button" class="_icon-info">
+												<span data-modal>
+													This boat is not posted
+													online
+												</span>
+											</button>
+										</div>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot class="table-test__tfoot">
+								<tr>
+									<td colspan="6">
+										<nav class="table-test__pagging pagging">
+											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
+											<ul class="pagging__list">
+												<li>
+													<a href="#" class="pagging__item _active">1</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">2</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">3</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">4</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item pagging__item--dots">...</a>
+												</li>
+												<li>
+													<a href="#" class="pagging__item">25</a>
+												</li>
+											</ul>
+											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
 										</nav>
 									</td>
 								</tr>

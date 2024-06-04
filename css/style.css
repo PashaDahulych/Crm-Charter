@@ -371,14 +371,17 @@ td:not(:last-child) {
 
 /* Стилі для семантичних тегів таблиці */
 
+table {
+  width: 100%;
+}
+
 table,
 caption,
 th,
 td {
   margin: 0;
   padding: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+  vertical-align: middle;
 }
 
 th,
@@ -3756,6 +3759,9 @@ body::after {
   padding: 0.625rem;
   -webkit-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 20;
 }
 
 .form__body {
@@ -4180,6 +4186,39 @@ body::after {
   gap: 1.25rem;
   font-size: 0.875rem;
   line-height: 1.5;
+}
+
+.table-test {
+  background-color: #fcfcfc;
+}
+
+.table-test__thead tr {
+  border-bottom: 0.0625rem solid #90bfdb;
+}
+
+.table-test__tr th {
+  padding: 1rem;
+}
+
+.table-test__tr th div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table-test__tr td {
+  padding: 1rem;
+}
+
+.table-test__tbody {
+  background-color: #fff;
 }
 
 /*
@@ -10916,6 +10955,10 @@ body::after {
     padding-left: 1rem;
   }
 
+  .main-admin__agent-only {
+    padding-right: 1rem;
+  }
+
   .booking-details__top:not(:last-child) {
     margin-bottom: 0.625rem;
   }
@@ -15169,6 +15212,10 @@ body::after {
     width: 100%;
   }
 
+  .table-test {
+    width: 68.625rem;
+  }
+
   .main-admin__wrapper {
     overflow-x: auto;
     padding-bottom: 0.625rem;
@@ -15681,6 +15728,10 @@ body::after {
 
   .main-admin__agent-only {
     padding-left: 0.5rem;
+  }
+
+  .main-admin__agent-only {
+    padding-right: 0.5rem;
   }
 
   .page__owner {
@@ -16754,6 +16805,18 @@ body::after {
 @supports not (padding-left: clamp( 0.5rem , -9.2857142857rem  +  11.4285714286vw , 1rem )) {
     .main-admin__agent-only {
       padding-left: calc(0.5rem + 0.5 * (100vw - 85.625rem) / 4.375);
+    }
+}
+
+@supports (padding-right: clamp( 0.5rem , -9.2857142857rem  +  11.4285714286vw , 1rem )) {
+    .main-admin__agent-only {
+      padding-right: clamp( 0.5rem , -9.2857142857rem  +  11.4285714286vw , 1rem );
+    }
+}
+
+@supports not (padding-right: clamp( 0.5rem , -9.2857142857rem  +  11.4285714286vw , 1rem )) {
+    .main-admin__agent-only {
+      padding-right: calc(0.5rem + 0.5 * (100vw - 85.625rem) / 4.375);
     }
 }
 }
