@@ -21478,6 +21478,32 @@
             });
         }));
         let addWindowScrollEvent = false;
+        function headerScroll() {
+            addWindowScrollEvent = true;
+            const header = document.querySelector("div.scroll__wrapper");
+            const headerShow = header.hasAttribute("data-scroll-show");
+            const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
+            const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
+            let scrollDirection = 0;
+            let timer;
+            document.addEventListener("windowScroll", (function(e) {
+                const scrollTop = window.scrollY;
+                clearTimeout(timer);
+                if (scrollTop >= startPoint) {
+                    !header.classList.contains("_sticky") ? header.classList.add("_sticky") : null;
+                    if (headerShow) {
+                        if (scrollTop > scrollDirection) header.classList.contains("_sticky-show") ? header.classList.remove("_sticky-show") : null; else !header.classList.contains("_sticky-show") ? header.classList.add("_sticky-show") : null;
+                        timer = setTimeout((() => {
+                            !header.classList.contains("_sticky-show") ? header.classList.add("_sticky-show") : null;
+                        }), headerShowTimer);
+                    }
+                } else {
+                    header.classList.contains("_sticky") ? header.classList.remove("_sticky") : null;
+                    if (headerShow) header.classList.contains("_sticky-show") ? header.classList.remove("_sticky-show") : null;
+                }
+                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
+            }));
+        }
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
@@ -21589,5 +21615,6 @@
             autoHeight: false
         });
         formQuantity();
+        headerScroll();
     })();
 })();

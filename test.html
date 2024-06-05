@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240604194434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240605143139">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,80 +184,112 @@
 				</aside>
 
 				<div class="page__main-admin main-admin">
-					<div class="main-admin__header header-details">
-						<h1 class="header-details__title title">
-							Price Manager
-						</h1>
-						<button type="button" class="header-details__notifications">
-							<span class="header-details__text">Notification</span>
-							<span class="header-details__icon _icon-notifications">
-								<span>381</span>
-							</span>
-						</button>
+					<div class="scroll__wrapper">
+						<div class="main-admin__header header-details">
+							<h1 class="header-details__title title">
+								Price Manager
+							</h1>
+							<button type="button" class="header-details__notifications">
+								<span class="header-details__text">Notification</span>
+								<span class="header-details__icon _icon-notifications">
+									<span>381</span>
+								</span>
+							</button>
+						</div>
+						<form action="#" method="POST" class="main-admin__form form" data-one-select>
+							<div class="form__body">
+								<div class="form__line">
+									<label for="boat">Boat</label>
+									<div class="form__select">
+										<select id="boat" name="Boat">
+											<option value="">Select</option>
+											<option value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="location">Location</label>
+									<div class="form__select">
+										<select id="location" name="Location">
+											<option value="">Select</option>
+											<option value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="companyName">Company</label>
+									<div class="form__select">
+										<select id="companyName" name="Company name">
+											<option value="">Select</option>
+											<option value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+											<option value="5">
+												Пункт №4
+											</option>
+											<option value="6">
+												Пункт №5
+											</option>
+											<option value="7">
+												Пункт №6
+											</option>
+											<option value="8">
+												Пункт №7
+											</option>
+											<option value="9">
+												Пункт №8
+											</option>
+											<option value="10">
+												Пункт №9
+											</option>
+											<option value="11">
+												Пункт №10
+											</option>
+											<option value="12">
+												Пункт №11
+											</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form__actions">
+								<div class="form__checkbox checkbox">
+									<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
+								</div>
+								<div class="form__buttons">
+									<button type="reset" class="form__button button _icon-close">
+										<span>Clear</span>
+									</button>
+									<button type="submit" class="form__button button _icon-check">
+										<span>Apply</span>
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
-					<form action="#" method="POST" class="main-admin__form form" data-one-select>
-						<div class="form__body">
-							<div class="form__line">
-								<label for="boat">Boat</label>
-								<div class="form__select">
-									<select id="boat" name="Boat">
-										<option value="">Select</option>
-										<option value="2">Пункт №1</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-									</select>
-								</div>
-							</div>
-							<div class="form__line">
-								<label for="location">Location</label>
-								<div class="form__select">
-									<select id="location" name="Location">
-										<option value="">Select</option>
-										<option value="2">Пункт №1</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-									</select>
-								</div>
-							</div>
-							<div class="form__line">
-								<label for="companyName">Company</label>
-								<div class="form__select">
-									<select id="companyName" name="Company name">
-										<option value="">Select</option>
-										<option value="2">Пункт №1</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-										<option value="5">Пункт №4</option>
-										<option value="6">Пункт №5</option>
-										<option value="7">Пункт №6</option>
-										<option value="8">Пункт №7</option>
-										<option value="9">Пункт №8</option>
-										<option value="10">Пункт №9</option>
-										<option value="11">
-											Пункт №10
-										</option>
-										<option value="12">
-											Пункт №11
-										</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="form__actions">
-							<div class="form__checkbox checkbox">
-								<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
-								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
-							</div>
-							<div class="form__buttons">
-								<button type="reset" class="form__button button _icon-close">
-									<span>Clear</span>
-								</button>
-								<button type="submit" class="form__button button _icon-check">
-									<span>Apply</span>
-								</button>
-							</div>
-						</div>
-					</form>
 					<div class="main-admin__wrapper">
 						<table class="table-test table">
 							<thead class="table-test__thead">
@@ -1674,7 +1706,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240604194434"></script>
+	<script src="js/app.min.js?_v=20240605143139"></script>
 </body>
 
 </html>
