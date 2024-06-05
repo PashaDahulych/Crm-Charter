@@ -3642,8 +3642,8 @@ body::after {
 }
 
 .scroll__wrapper._sticky {
-  -webkit-box-shadow: 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2);
-          box-shadow: 0rem 0.75rem 1.0625rem 0rem rgba(72, 119, 145, 0.14), 0rem 0.3125rem 1.375rem 0rem rgba(72, 119, 145, 0.12), 0rem 0.4375rem 0.5rem 0rem rgba(72, 119, 145, 0.2);
+  -webkit-box-shadow: 0rem 0.25rem 0.9375rem 0rem rgba(10, 54, 71, 0.15);
+          box-shadow: 0rem 0.25rem 0.9375rem 0rem rgba(10, 54, 71, 0.15);
 }
 
 .header-details {
