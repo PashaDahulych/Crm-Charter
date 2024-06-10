@@ -1,0 +1,3779 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Edit Location Admin</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240610121740">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="page__container">
+				<aside data-spollers class="page__aside aside">
+					<div class="aside__header">
+						<!-- <a href="#" class="aside__logo"
+            ><span class="_icon-logo"></span>
+            <p>Charter<span>Click</span></p></a
+        > -->
+						<a href="#" class="aside__logo">
+							<span class="aside__logo-icon">
+								<img src="img/icon.svg" alt="logo icon" />
+							</span>
+							<span class="aside__logo-text">
+								<img src="img/charter.svg" alt="charter" />
+							</span>
+						</a>
+						<button type="button" class="aside__button _icon-select-arrow"></button>
+						<button type="button" class="aside__mob-button _icon-select-arrow"></button>
+					</div>
+					<nav class="aside__menu">
+						<ul class="aside__list">
+							<li class="aside__item">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-calendar">
+										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Calendar</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">4321</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Bookings</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-invoices"></div>
+									<p class="aside__link-text">Invoices</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-requests"></div>
+									<p class="aside__link-text">Requests</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-notifications"></div>
+									<p class="aside__link-text">Notifications</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-price">
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Price Manager</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">2030</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Chargeable Options
+											<span class="aside__sub-value">2010</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<!--! Якщо хочете додати значення долінків sub-menu - то потрібно додати <span class="aside__sub-value">20</span>. Вище спеціально зробив значення з великою цифро, що Ви почачили, що нічого не зламається. -->
+										<a href="#" class="aside__sub-link">Special Offers
+											<span class="aside__sub-value">20</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Promo Codes</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-boast"></div>
+									<p class="aside__link-text">Boats</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link _spoller-init">
+									<div class="aside__link-icon _icon-my-company"></div>
+									<p class="aside__link-text">My Company</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Users</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Agents</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Companies</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-reports"></div>
+									<p class="aside__link-text">Reports</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-manage"></div>
+									<p class="aside__link-text">Manage</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Locations</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Portal</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Blog</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Pages</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Feedback</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="aside__user user-aside">
+						<div class="user-aside__account">
+							<div class="user-aside__image">
+								<picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt="user" /></picture>
+								<div class="user-aside__status"></div>
+							</div>
+							<div class="user-aside__about">
+								<h3>Account</h3>
+								<p>Status</p>
+							</div>
+						</div>
+						<div class="user-aside__actions">
+							<button type="button" class="user-aside__button _icon-logout">
+								<span>Logout</span>
+							</button>
+							<a href="!#" class="user-aside__button _icon-edit-profile"><span>Edit profile</span></a>
+						</div>
+					</div>
+				</aside>
+
+				<div class="page__main-admin main-admin" data-spollers>
+					<div class="scroll__wrapper">
+						<div class="main-admin__header header-details">
+							<h1 class="header-details__title title">
+								Edit UAE
+							</h1>
+							<div class="header-details__actions">
+								<button type="button" class="header-details__notifications">
+									<span class="header-details__text">Notification</span>
+									<span class="header-details__icon _icon-notifications"><span>381</span></span>
+								</button>
+								<button data-popup="#offline-book-options" type="button" class="form-small__button button button--transparent _icon-trash">
+									<span>Remove</span>
+								</button>
+								<button data-popup="#offline-book" type="button" class="form-small__button button button--priority _icon-save-alt">
+									<span>Save</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="main-admin__block">
+						<div class="main-admin__body body-admin">
+							<!-- Edit Location -->
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>Main Info</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="country">Country *</label>
+											<input id="country" autocomplete="off" type="text" required name="Country" data-error="Error" placeholder="UEA" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="internationalKey">International Key*</label>
+											<input id="internationalKey" autocomplete="off" type="text" required name="internationalKey" data-error="Error" placeholder="UEA" class="input" />
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Regional settings</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="defaultCurrency">Default Currency *</label>
+											<input id="defaultCurrency" autocomplete="off" type="text" required name="defaultCurrency" data-error="Error" placeholder="UEA" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="VAT">VAT %</label>
+											<div data-quantity class="body-admin__quantity quantity">
+												<div class="quantity__input">
+													<input id="VAT" data-quantity-value autocomplete="off" type="text" name="VAT" value="1" />
+												</div>
+												<div class="quantity__actions">
+													<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+													<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+												</div>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultTimezone">Default timezone *</label>
+											<div class="body-admin__select">
+												<select required id="defaultTimezone" name="defaultTimezone">
+													<option value="1" selected>
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="2">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="3">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="4">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+												</select>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultStartDay">Default start day *</label>
+											<div class="body-admin__select">
+												<select required id="defaultStartDay" name="defaultStartDay">
+													<option value="Monday" selected>
+														Monday
+													</option>
+													<option value="Tuesday">
+														Tuesday
+													</option>
+													<option value="Wednesday">
+														Wednesday
+													</option>
+													<option value="Thursday">
+														Thursday
+													</option>
+													<option value="Friday">
+														Friday
+													</option>
+													<option value="Saturday">
+														Saturday
+													</option>
+													<option value="Sunday">
+														Sunday
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Boat booking periods</h2>
+									<div class="body-admin__options">
+										<div class="body-admin__checkbox checkbox">
+											<input id="hourBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="hourBooking" />
+											<label for="hourBooking" class="checkbox__label">
+												<span class="checkbox__text">Hour Booking
+													<span>(i.e. 2 hour, 5
+														hour, 10 hour trips,
+														etc)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="dailyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="dailyBooking" />
+											<label for="dailyBooking" class="checkbox__label">
+												<span class="checkbox__text">Daily Booking
+													<span>(i.e. 1 day, 2 day,
+														3 day, etc. -
+														overnight, 24 hour
+														trips)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="weeklyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="weeklyBooking" />
+											<label for="weeklyBooking" class="checkbox__label">
+												<span class="checkbox__text">Weekly Booking
+													<span>(i.e. 1 week, 2
+														week, 3 week trips,
+														etc.)</span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Blog</h2>
+									<div class="body-admin__line">
+										<label for="tag">Tag *</label>
+										<input id="tag" autocomplete="off" type="text" required name="tag" data-error="Error" placeholder="UEA" class="input" />
+									</div>
+								</div>
+							</div>
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>SEO Settings</h2>
+									<div class="body-admin__line">
+										<label for="metaTitle">Meta Title *</label>
+										<input id="metaTitle" autocomplete="off" type="text" required name="metaTitle" data-error="Error" placeholder="Yacht Charters in UAE. CharterClick – Rent your boat online" class="input" />
+									</div>
+									<div class="body-admin__line">
+										<label for="metaDescription">Meta Description *</label>
+										<textarea id="metaDescription" autocomplete="off" required name="metaDescription" data-error="Error" placeholder="" class="input"></textarea>
+									</div>
+									<div class="body-admin__line">
+										<label for="title">Title *</label>
+										<input id="title" autocomplete="off" type="text" required name="title" data-error="Error" placeholder="UAE" class="input" />
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+									<div class="body-admin__line">
+										<!-- <label for="aboutLocation">About this location *</label> -->
+										<!-- Тут фукціонал wp має бути. В дизайні була тілька картинка, тому і я вставлю картинку, але лейбл буде підготований на майбутнє у стилях -->
+										<h3 class="body-admin__not-label">
+											About this location *
+										</h3>
+										<div class="body-admin__img-textarea">
+											<picture><source srcset="img/textarea.webp" type="image/webp"><img src="img/textarea.png" alt="img" /></picture>
+										</div>
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Photos</h2>
+									<div class="body-admin__gallery">
+										<figure type="button" class="body-admin__image-wrapper">
+											<button class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<figure class="body-admin__image-wrapper">
+											<button type="button" class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<figure class="body-admin__image-wrapper">
+											<button type="button" class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<button type="button" class="body-admin__add-btn">
+											<span class="icon _icon-camera">
+												<img src="img/icons/camera.svg" alt="icon" />
+											</span>
+											<span class="text">Click to upload
+												picture</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- Edit SubLocation -->
+							<div class="body-admin__column">
+								<div class="body-admin__item edit">
+									<h2>Main Info</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="countryEdit">Country *</label>
+											<input id="countryEdit" autocomplete="off" required type="text" name="countryEdit" data-error="Error" placeholder="UAE" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="cityEdit">City *</label>
+											<input id="cityEdit" autocomplete="off" required type="text" name="cityEdit" data-error="Error" placeholder="Dubai" class="input" />
+										</div>
+									</div>
+									<div class="body-admin__checkbox checkbox">
+										<input id="isCapital" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="isCapital" />
+										<label for="isCapital" class="checkbox__label">
+											<span class="checkbox__text">Is Capital</span>
+										</label>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Blog</h2>
+									<div class="body-admin__line">
+										<label for="tagEdit">Tag *</label>
+										<input id="tagEdit" autocomplete="off" required type="text" name="tagEdit" data-error="Error" placeholder="UAE" class="input" />
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<div class="body-admin__header">
+										<h2>Marinas</h2>
+										<button class="body-admin__button button button--transparent _icon-plus">
+											<span>Add a Marina</span>
+										</button>
+									</div>
+									<div class="body-admin__add-line">
+										<p>Palazzo Versace Marina</p>
+										<button type="button" class="_icon-trash"></button>
+									</div>
+									<div class="body-admin__add-line">
+										<p>Mamzar Harbour</p>
+										<button type="button" class="_icon-trash"></button>
+									</div>
+									<div class="body-admin__add-line">
+										<p>Marasi Marina</p>
+										<button type="button" class="_icon-trash"></button>
+									</div>
+									<div class="body-admin__add-line">
+										<p>
+											Dubai Canal Marine Transport
+											Station 1
+										</p>
+										<button type="button" class="_icon-trash"></button>
+									</div>
+									<div class="body-admin__add-line">
+										<p>Dubai Harbour</p>
+										<button type="button" class="_icon-trash"></button>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Geo cordinates</h2>
+									<div class="body-admin__map">
+										<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3613.8073542448806!2d55.1406664!3d25.0745178!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sua!4v1717758935110!5m2!1sen!2sua" width="600" height="450" style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+								</div>
+							</div>
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>SEO Settings</h2>
+									<div class="body-admin__line">
+										<label for="metaTitleEdit">Meta Title *</label>
+										<input id="metaTitleEdit" autocomplete="off" type="text" required name="metaTitleEdit" data-error="Error" placeholder="Yacht Charters in UAE. CharterClick – Rent your boat online" class="input" />
+									</div>
+									<div class="body-admin__line">
+										<label for="metaDescriptionEdit">Meta Description *</label>
+										<textarea id="metaDescriptionEdit" autocomplete="off" required name="metaDescriptionEdit" data-error="Error" placeholder="" class="input"></textarea>
+									</div>
+									<div class="body-admin__line">
+										<label for="titleEdit">Title *</label>
+										<input id="titleEdit" autocomplete="off" type="text" required name="titleEdit" data-error="Error" placeholder="UAE" class="input" />
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+									<div class="body-admin__line">
+										<label for="aboutLocationEdit">
+											About this location *
+										</label>
+										<textarea data-error="Error" required autocomplete="off" name="aboutLocationEdit" id="aboutLocationEdit" class="input"></textarea>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Photos</h2>
+									<div class="body-admin__gallery">
+										<figure type="button" class="body-admin__image-wrapper">
+											<button class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<figure class="body-admin__image-wrapper">
+											<button type="button" class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<figure class="body-admin__image-wrapper">
+											<button type="button" class="body-admin__del-btn _icon-trash"></button>
+											<div class="body-admin__image">
+												<picture><source srcset="img/gallery/image_01.webp" type="image/webp"><img src="img/gallery/image_01.png" alt="image" /></picture>
+											</div>
+											<figcaption>
+												Set as cover
+											</figcaption>
+										</figure>
+										<button type="button" class="body-admin__add-btn">
+											<span class="icon _icon-camera">
+												<img src="img/icons/camera.svg" alt="icon" />
+											</span>
+											<span class="text">Click to upload
+												picture</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<!-- Edit County -->
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>Main Info</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="country">Country *</label>
+											<input id="country" autocomplete="off" type="text" required name="Country" data-error="Error" placeholder="" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="internationalKey">International Key*</label>
+											<input id="internationalKey" autocomplete="off" type="text" required name="internationalKey" data-error="Error" placeholder="" class="input" />
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Regional settings</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="defaultCurrency">Default Currency *</label>
+											<input id="defaultCurrency" autocomplete="off" type="text" required name="defaultCurrency" data-error="Error" placeholder="" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="VAT">VAT %</label>
+											<div data-quantity class="body-admin__quantity quantity">
+												<div class="quantity__input">
+													<input id="VAT" data-quantity-value autocomplete="off" type="text" name="VAT" value="0" />
+												</div>
+												<div class="quantity__actions">
+													<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+													<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+												</div>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultTimezone">Default timezone *</label>
+											<div class="body-admin__select">
+												<select required id="defaultTimezone" name="defaultTimezone">
+													<option value="1" selected>
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="2">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="3">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="4">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+												</select>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultStartDay">Default start day *</label>
+											<div class="body-admin__select">
+												<select required id="defaultStartDay" name="defaultStartDay">
+													<option value="Monday" selected>
+														Monday
+													</option>
+													<option value="Tuesday">
+														Tuesday
+													</option>
+													<option value="Wednesday">
+														Wednesday
+													</option>
+													<option value="Thursday">
+														Thursday
+													</option>
+													<option value="Friday">
+														Friday
+													</option>
+													<option value="Saturday">
+														Saturday
+													</option>
+													<option value="Sunday">
+														Sunday
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Boat booking periods</h2>
+									<div class="body-admin__options">
+										<div class="body-admin__checkbox checkbox">
+											<input id="hourBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="hourBooking" />
+											<label for="hourBooking" class="checkbox__label">
+												<span class="checkbox__text">Hour Booking
+													<span>(i.e. 2 hour, 5
+														hour, 10 hour trips,
+														etc)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="dailyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="dailyBooking" />
+											<label for="dailyBooking" class="checkbox__label">
+												<span class="checkbox__text">Daily Booking
+													<span>(i.e. 1 day, 2 day,
+														3 day, etc. -
+														overnight, 24 hour
+														trips)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="weeklyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="weeklyBooking" />
+											<label for="weeklyBooking" class="checkbox__label">
+												<span class="checkbox__text">Weekly Booking
+													<span>(i.e. 1 week, 2
+														week, 3 week trips,
+														etc.)</span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Blog</h2>
+									<div class="body-admin__line">
+										<label for="tag">Tag *</label>
+										<input id="tag" autocomplete="off" type="text" required name="tag" data-error="Error" placeholder="" class="input" />
+									</div>
+								</div>
+							</div>
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>SEO Settings</h2>
+									<div class="body-admin__line">
+										<label for="metaTitle">Meta Title *</label>
+										<input id="metaTitle" autocomplete="off" type="text" required name="metaTitle" data-error="Error" class="input" />
+									</div>
+									<div class="body-admin__line">
+										<label for="metaDescription">Meta Description *</label>
+										<textarea id="metaDescription" autocomplete="off" required name="metaDescription" data-error="Error" class="input"></textarea>
+									</div>
+									<div class="body-admin__line">
+										<label for="title">Title *</label>
+										<input id="title" autocomplete="off" type="text" required name="title" data-error="Error" class="input" />
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+									<div class="body-admin__line">
+										<!-- <label for="aboutLocation">About this location *</label> -->
+										<!-- Тут фукціонал wp має бути. В дизайні була тілька картинка, тому і я вставлю картинку, але лейбл буде підготований на майбутнє у стилях -->
+										<h3 class="body-admin__not-label">
+											About this location *
+										</h3>
+										<div class="body-admin__img-textarea">
+											<picture><source srcset="img/textarea.webp" type="image/webp"><img src="img/textarea.png" alt="img" /></picture>
+										</div>
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Photos</h2>
+									<div class="body-admin__gallery">
+										<button type="button" class="body-admin__add-btn">
+											<span class="icon _icon-camera">
+												<img src="img/icons/camera.svg" alt="icon" />
+											</span>
+											<span class="text">Click to upload
+												picture</span>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Checkbox -->
+					<div class="checkbox checkbox">
+						<input id="noId" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="noId" />
+						<label for="noId" class="checkbox__label">
+							<span class="checkbox__text">Is Capital</span>
+						</label>
+					</div>
+					<!-- select -->
+					<div class="select">
+						<label for="defaultCurrency">Default Currency *</label>
+						<div class="select__line">
+							<select id="defaultCurrency" name="defaultCurrency" required>
+								<option value="AED" selected>AED</option>
+								<option value="USD">USD</option>
+							</select>
+						</div>
+					</div>
+					<!-- Tabs -->
+					<div data-tabs class="new-boat__tabs">
+						<nav data-tabs-titles class="new-boat__navigation">
+							<button type="button" class="new-boat__btn _tab-active">
+								1. Boat Info
+							</button>
+							<button type="button" class="new-boat__btn">
+								2. Features
+							</button>
+							<button type="button" class="new-boat__btn">
+								3. Navigation License
+							</button>
+						</nav>
+						<div data-tabs-body class="new-boat__content">
+							<div class="new-boat__about">
+								<div class="new-boat__wrapper">
+									<div class="new-boat__left">
+										<div class="new-boat__info">
+											<h2 class="new-boat__title">
+												Boat Info
+											</h2>
+											<div class="new-boat__line">
+												<label for="newBoatName">Boat name *</label>
+												<input id="newBoatName" autocomplete="off" type="text" required name="New Boat Name" data-error="Error" class="input" placeholder="" />
+											</div>
+											<div class="select">
+												<label for="newBoatCompany">Company *</label>
+												<div class="select__line">
+													<select id="newBoatCompany">
+														<option value="" selected>
+															Select Company
+														</option>
+														<option value="2">
+															Select Company 1
+														</option>
+														<option value="3">
+															Select Company 2
+														</option>
+														<option value="4">
+															Select Company 3
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="new-boat__item">
+											<button data-open type="button" data-spoller class="new-boat__title">
+												Technical information
+												<i class="_icon-select-arrow"></i>
+											</button>
+											<div class="new-boat__body">
+												<div class="select">
+													<label for="boatType">
+														Boat type
+													</label>
+													<div class="select__line">
+														<select required id="boatType">
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="select">
+													<label for="engineType">
+														Engine Type
+													</label>
+													<div class="select__line">
+														<select required id="engineType" name="Engine Type" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="select">
+													<label for="boatBrand">
+														Brand
+													</label>
+													<div class="select__line">
+														<select required id="boatBrand" name="Boat brand" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed Brand
+															</option>
+															<option value="1">
+																Brand 1
+															</option>
+															<option value="2">
+																Brand 2
+															</option>
+															<option value="3">
+																Brand 3
+															</option>
+															<option value="4">
+																Brand 4
+															</option>
+															<option value="5">
+																Brand 5
+															</option>
+															<option value="6">
+																Brand 6
+															</option>
+															<option value="7">
+																Brand 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="new-boat__selects">
+													<div class="new-boat__line">
+														<label for="boatYear">Year</label>
+														<input autocomplete="off" type="tel" required name="Boat year" data-error="Error" placeholder="Typed Year" class="input" />
+													</div>
+													<div class="new-boat__line">
+														<label for="boatBerths">Berths(sleeps)</label>
+														<select required id="boatBerths" name="Berths(sleeps)" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatCabins">Cabins</label>
+														<select required id="boatCabins" name="Cabins" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatCrew">Crew</label>
+														<select required id="boatCrew" name="Crew" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatEngine">Engine,
+															HP</label>
+														<select required id="boatEngine" name="Engine, HP" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatCapacity">Capacity,
+															persons</label>
+														<select required id="boatCapacity" name="Capacity, persons" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatFeet">Length,
+															feet</label>
+														<select required id="boatFeet" name="Length, feet" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed
+															</option>
+															<option value="1">
+																Typed 1
+															</option>
+															<option value="2">
+																Typed 2
+															</option>
+															<option value="3">
+																Typed 3
+															</option>
+															<option value="4">
+																Typed 4
+															</option>
+															<option value="5">
+																Typed 5
+															</option>
+															<option value="6">
+																Typed 6
+															</option>
+															<option value="7">
+																Typed 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatBeam">Beam</label>
+														<select required id="boatBeam" name="Beam" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed
+															</option>
+															<option value="1">
+																Typed 1
+															</option>
+															<option value="2">
+																Typed 2
+															</option>
+															<option value="3">
+																Typed 3
+															</option>
+															<option value="4">
+																Typed 4
+															</option>
+															<option value="5">
+																Typed 5
+															</option>
+															<option value="6">
+																Typed 6
+															</option>
+															<option value="7">
+																Typed 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatDraft">Draft</label>
+														<select required id="boatDraft" name="Draft" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed
+															</option>
+															<option value="1">
+																Typed 1
+															</option>
+															<option value="2">
+																Typed 2
+															</option>
+															<option value="3">
+																Typed 3
+															</option>
+															<option value="4">
+																Typed 4
+															</option>
+															<option value="5">
+																Typed 5
+															</option>
+															<option value="6">
+																Typed 6
+															</option>
+															<option value="7">
+																Typed 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatToilets">Toilets</label>
+														<select required id="boatToilets" name="Toilets" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatFuelTank">Fuel
+															Tank</label>
+														<select required id="boatFuelTank" name="Fuel Tank" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed
+															</option>
+															<option value="1">
+																Typed 1
+															</option>
+															<option value="2">
+																Typed 2
+															</option>
+															<option value="3">
+																Typed 3
+															</option>
+															<option value="4">
+																Typed 4
+															</option>
+															<option value="5">
+																Typed 5
+															</option>
+															<option value="6">
+																Typed 6
+															</option>
+															<option value="7">
+																Typed 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="boatWaterTank">Water
+															Tank</label>
+														<select required id="boatWaterTank" name="Water Tank" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Typed
+															</option>
+															<option value="1">
+																Typed 1
+															</option>
+															<option value="2">
+																Typed 2
+															</option>
+															<option value="3">
+																Typed 3
+															</option>
+															<option value="4">
+																Typed 4
+															</option>
+															<option value="5">
+																Typed 5
+															</option>
+															<option value="6">
+																Typed 6
+															</option>
+															<option value="7">
+																Typed 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="new-boat__line">
+													<label for="typeOfFuel">
+														Type Of Fuel
+													</label>
+													<select required id="typeOfFuel" name="Type Of Fuel" data-class-modif="new-boat" data-scroll>
+														<option value="" selected>
+															Select
+														</option>
+														<option value="1">
+															Select 1
+														</option>
+														<option value="2">
+															Select 2
+														</option>
+														<option value="3">
+															Select 3
+														</option>
+														<option value="4">
+															Select 4
+														</option>
+														<option value="5">
+															Select 5
+														</option>
+														<option value="6">
+															Select 6
+														</option>
+														<option value="7">
+															Select 7
+														</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="new-boat__item">
+											<button data-open type="button" data-spoller class="new-boat__title">
+												Skipper settings
+												<i class="_icon-select-arrow"></i>
+											</button>
+											<div class="new-boat__body">
+												<div class="new-boat__checkbox checkbox">
+													<input id="provide" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="provide" />
+													<label for="provide" class="checkbox__label"><span class="checkbox__text">I provide a
+															skipper</span></label>
+												</div>
+												<div class="new-boat__options-comp options-comp">
+													<div class="options-comp__item">
+														<input id="nb_1" class="options-comp__input" checked type="radio" value="1" name="skipper" />
+														<label for="nb_1" class="options-comp__label">
+															<span class="options-comp__icon"></span>
+															<span class="options-comp__text">Skipper is
+																included in
+																charter
+																price</span>
+														</label>
+													</div>
+													<div class="options-comp__item">
+														<input id="nb_2" class="options-comp__input" type="radio" value="2" name="skipper" />
+														<label for="nb_2" class="options-comp__label">
+															<span class="options-comp__icon"></span>
+															<span class="options-comp__text">Skipper
+																charged as
+																extra</span>
+														</label>
+													</div>
+												</div>
+												<div class="new-boat__line">
+													<label for="skipperPrice">Skipper
+														Price</label>
+													<div class="new-boat__inp-line">
+														<span>Aed</span>
+														<input autocomplete="off" type="tel" name="form[]" data-error="Error" class="input" />
+													</div>
+												</div>
+												<div class="new-boat__line">
+													<label for="pricingType">Pricing Type
+														*</label>
+													<select id="pricingType" required name="fPricing Type" data-class-modif="new-boat" data-scroll>
+														<option value="" selected>
+															Select
+														</option>
+														<option value="1">
+															Select 1
+														</option>
+														<option value="2">
+															Select 2
+														</option>
+														<option value="3">
+															Select 3
+														</option>
+														<option value="4">
+															Select 4
+														</option>
+														<option value="5">
+															Select 5
+														</option>
+														<option value="6">
+															Select 6
+														</option>
+														<option value="7">
+															Select 7
+														</option>
+													</select>
+												</div>
+												<div class="new-boat__info">
+													<h2 class="new-boat__title">
+														Bareboat
+													</h2>
+													<div class="new-boat__checkbox checkbox">
+														<input id="bareboat" checked data-error="Error" class="checkbox__input" type="checkbox" value="1" name="Bareboat" />
+														<label for="bareboat" class="checkbox__label"><span class="checkbox__text">I rent out
+																Bareboat</span></label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="new-boat__right">
+										<div class="new-boat__photos photos">
+											<h2 class="photos__title">
+												Photos
+												<button type="button" class="_icon-info"></button>
+											</h2>
+											<p class="photos__text">
+												Please upload at least 4
+												photos with a minimal image
+												size of 1600 pixels wide to
+												900 pixels high
+											</p>
+											<div class="photos__drop-wrapper">
+												<div class="photos__icon">
+													<img src="img/icons/camera.svg" alt="icon" />
+												</div>
+												<p class="photos__drop-text">
+													Drag and drop pictures
+													here or just click and
+													choose from your
+													computer
+												</p>
+											</div>
+											<h2 class="photos__title">
+												Video Review
+												<button type="button" class="_icon-info"></button>
+											</h2>
+											<input autocomplete="off" type="text" name="link for Video Review" id="videoReview" data-error="Error" placeholder="Specify the link to the video review" class="input" />
+										</div>
+										<div class="new-boat__item">
+											<button data-open type="button" data-spoller class="new-boat__title">
+												Location and currency
+												<i class="_icon-select-arrow"></i>
+											</button>
+											<div class="new-boat__body">
+												<div class="new-boat__line">
+													<label for="region">Region</label>
+													<select required id="region" name="Region" data-class-modif="new-boat" data-scroll>
+														<option value="" selected>
+															Select
+														</option>
+														<option value="1">
+															Select 1
+														</option>
+														<option value="2">
+															Select 2
+														</option>
+														<option value="3">
+															Select 3
+														</option>
+														<option value="4">
+															Select 4
+														</option>
+														<option value="5">
+															Select 5
+														</option>
+														<option value="6">
+															Select 6
+														</option>
+														<option value="7">
+															Select 7
+														</option>
+													</select>
+												</div>
+												<div class="new-boat__lines">
+													<div class="new-boat__line">
+														<label for="city">City</label>
+														<select required id="city" name="City" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="harbour">Harbour</label>
+														<select required id="harbour" name="Harbour" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="new-boat__line">
+													<label for="countryOfCaptain">Country of
+														Captain</label>
+													<select required id="countryOfCaptain" name="Country of Captain" data-class-modif="new-boat" data-scroll>
+														<option value="" selected>
+															Select
+														</option>
+														<option value="1">
+															Select 1
+														</option>
+														<option value="2">
+															Select 2
+														</option>
+														<option value="3">
+															Select 3
+														</option>
+														<option value="4">
+															Select 4
+														</option>
+														<option value="5">
+															Select 5
+														</option>
+														<option value="6">
+															Select 6
+														</option>
+														<option value="7">
+															Select 7
+														</option>
+													</select>
+												</div>
+												<div class="new-boat__lines">
+													<div class="new-boat__line">
+														<label for="countryOfCommandFirst">Country of
+															Command
+															№1</label>
+														<select required id="countryOfCommandFirst" name="Country of Command №1" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+													<div class="new-boat__line">
+														<label for="countryOfCommandSecond">Country of
+															Command
+															№2</label>
+														<select required id="countryOfCommandSecond" name="Country of Command №2" data-class-modif="new-boat" data-scroll>
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
+												</div>
+												<div class="new-boat__line">
+													<label for="meetingPointMessage">Meeting
+														Point</label>
+													<input id="meetingPointMessage" autocomplete="off" type="text" name="Meeting Point" data-error="Error" placeholder="Specify the link" class="input" />
+													<!-- <textarea
+                                                            id="meetingPointMessage"
+                                                            autocomplete="off"
+                                                            type="text"
+                                                            name="Meeting Point"
+                                                            data-error="Error"
+                                                            placeholder="Specify the link"
+                                                            class="input"
+                                                        ></textarea> -->
+													<p>
+														Please fill in an
+														exact location, i.e.
+														pier number or a
+														nearby landmark.
+													</p>
+												</div>
+												<div class="new-boat__map">
+													<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3613.7812470587105!2d55.13725027704338!3d25.075402436620106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sUnited%20Arab%20Emirates%2C%20Office%20802%2C%20Marina%20Plaza%2C%20Dubai%2C%20UAE.!5e0!3m2!1sru!2sua!4v1717012406933!5m2!1sru!2sua" style="border: 0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+												</div>
+												<div class="new-boat__checkbox checkbox">
+													<input id="needTime" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="needTime" />
+													<label for="needTime" class="checkbox__label">
+														<span class="checkbox__text">
+															I need 30
+															minutes to
+															prepare a boat
+															(applicable only
+															for hourly
+															bookings without
+															a fixed start
+															time)
+														</span>
+													</label>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="new-boat__about">
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										What is included<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="ch_1" class="check-new__input" type="checkbox" value="1" name="Safety equipment" />
+													<label for="ch_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Safety
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_2" class="check-new__input" type="checkbox" value="2" name="Barometer" />
+													<label for="ch_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Barometer</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_3" class="check-new__input" type="checkbox" value="3" name="Cutlery & Crockery" />
+													<label for="ch_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cutlery &
+															Crockery</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_4" class="check-new__input" type="checkbox" value="4" name="Lifejackets" />
+													<label for="ch_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Lifejackets</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_5" class="check-new__input" type="checkbox" value="5" name="Nautic charts/guides" />
+													<label for="ch_5" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Nautic
+															charts/guides</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_6" class="check-new__input" type="checkbox" value="6" name="Bathroom amenities" />
+													<label for="ch_6" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bathroom
+															amenities</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_7" class="check-new__input" type="checkbox" value="7" name="Drinking water" />
+													<label for="ch_7" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Drinking
+															water</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_8" class="check-new__input" type="checkbox" value="8" name="Insurance" />
+													<label for="ch_8" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Insurance</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_9" class="check-new__input" type="checkbox" value="9" name="Compass" />
+													<label for="ch_9" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Compass</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_10" class="check-new__input" type="checkbox" value="10" name="Snorkeling equipment" />
+													<label for="ch_10" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Snorkeling
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_11" class="check-new__input" type="checkbox" value="11" name="Fishing rods" />
+													<label for="ch_11" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Fishing
+															rods</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_12" class="check-new__input" type="checkbox" value="12" name="Outboard engine" />
+													<label for="ch_12" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Outboard
+															engine</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_13" class="check-new__input" type="checkbox" value="13" name="Towels" />
+													<label for="ch_13" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Towels</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_14" class="check-new__input" type="checkbox" value="14" name="Ice box (upon request)" />
+													<label for="ch_14" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Ice box (upon
+															request)</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_15" class="check-new__input" type="checkbox" value="15" name="Snacks" />
+													<label for="ch_15" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Snacks</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="ch_16" class="check-new__input" type="checkbox" value="16" name="Barbecue/Grill" />
+													<label for="ch_16" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Barbecue/Grill</span>
+													</label>
+												</div>
+											</li>
+											<li class="new-boat__list-item">
+												<label for="otherCheck">Other</label>
+												<input id="otherCheck" autocomplete="off" type="text" name="What is included other" data-error="Error" placeholder="Type additional" class="input" />
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Outdoor equipment
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="out_1" class="check-new__input" type="checkbox" value="1" name="Bimini top" />
+													<label for="out_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bimini
+															top</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_2" class="check-new__input" type="checkbox" value="2" name="Bosun's chair" />
+													<label for="out_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bosun's
+															chair</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_3" class="check-new__input" type="checkbox" value="3" name="Electric anchor windlass" />
+													<label for="out_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Electric anchor
+															windlass</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_4" class="check-new__input" type="checkbox" value="4" name="Bar counter" />
+													<label for="out_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bar
+															counter</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_5" class="check-new__input" type="checkbox" value="5" name="Fridge" />
+													<label for="out_5" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Fridge</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_6" class="check-new__input" type="checkbox" value="6" name="Bathing platform" />
+													<label for="out_6" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bathing
+															platform</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_7" class="check-new__input" type="checkbox" value="7" name="Aft sundeck" />
+													<label for="out_7" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Aft
+															sundeck</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_8" class="check-new__input" type="checkbox" value="8" name="Hydraulic Gangway" />
+													<label for="out_8" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Hydraulic
+															Gangway</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_9" class="check-new__input" type="checkbox" value="9" name="Anchor" />
+													<label for="out_9" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Anchor</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_10" class="check-new__input" type="checkbox" value="10" name="Deck shower" />
+													<label for="out_10" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Deck
+															shower</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_11" class="check-new__input" type="checkbox" value="11" name="Full bateen main sail" />
+													<label for="out_11" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Full bateen
+															main sail</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_12" class="check-new__input" type="checkbox" value="12" name="Cockpit table" />
+													<label for="out_12" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cockpit
+															table</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_13" class="check-new__input" type="checkbox" value="13" name="Swimming pool" />
+													<label for="out_13" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Swimming
+															pool</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_14" class="check-new__input" type="checkbox" value="14" name="Ice maker" />
+													<label for="out_14" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Ice maker</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_15" class="check-new__input" type="checkbox" value="15" name="Horseshoe buoy" />
+													<label for="out_15" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Horseshoe
+															buoy</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_16" class="check-new__input" type="checkbox" value="16" name="Bow thruster" />
+													<label for="out_16" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bow
+															thruster</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_17" class="check-new__input" type="checkbox" value="17" name="Cockpit speakers" />
+													<label for="out_17" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cockpit
+															speakers</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_18" class="check-new__input" type="checkbox" value="18" name="Winch Handle" />
+													<label for="out_18" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Winch
+															Handle</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_19" class="check-new__input" type="checkbox" value="19" name="Sprayhood" />
+													<label for="out_19" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Sprayhood</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_20" class="check-new__input" type="checkbox" value="20" name="Bathing ladder" />
+													<label for="out_20" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bathing
+															ladder</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_21" class="check-new__input" type="checkbox" value="21" name="Cockpit helm" />
+													<label for="out_21" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cockpit
+															helm</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_22" class="check-new__input" type="checkbox" value="22" name="Electric winch" />
+													<label for="out_22" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Electric
+															winch</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_23" class="check-new__input" type="checkbox" value="23" name="Bow sundeck" />
+													<label for="out_23" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bow
+															sundeck</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_24" class="check-new__input" type="checkbox" value="24" name="Gaming console" />
+													<label for="out_24" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Gaming
+															console</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_25" class="check-new__input" type="checkbox" value="25" name="Lazy bag" />
+													<label for="out_25" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Lazy bag</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_26" class="check-new__input" type="checkbox" value="26" name="Tanning area" />
+													<label for="out_26" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Tanning
+															area</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_27" class="check-new__input" type="checkbox" value="27" name="Lazy jack" />
+													<label for="out_27" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Lazy jack</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_28" class="check-new__input" type="checkbox" value="28" name="Cockpit stern" />
+													<label for="out_28" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cockpit
+															stern</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_29" class="check-new__input" type="checkbox" value="29" name="Jacuzzi" />
+													<label for="out_29" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Jacuzzi</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_30" class="check-new__input" type="checkbox" value="30" name="Inverter" />
+													<label for="out_30" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Inverter</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_31" class="check-new__input" type="checkbox" value="31" name="Fenders" />
+													<label for="out_31" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Fenders</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_32" class="check-new__input" type="checkbox" value="32" name="Sun beds" />
+													<label for="out_32" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Sun beds</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_33" class="check-new__input" type="checkbox" value="33" name="Flybridge" />
+													<label for="out_33" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Flybridge</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_34" class="check-new__input" type="checkbox" value="34" name="Mooring equipment" />
+													<label for="out_34" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Mooring
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="out_35" class="check-new__input" type="checkbox" value="35" name="Dinghy" />
+													<label for="out_35" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Dinghy</span>
+													</label>
+												</div>
+											</li>
+											<li class="new-boat__list-item">
+												<label for="outOther">Other</label>
+												<input id="outOther" autocomplete="off" type="text" name="Outdoor equipment other" data-error="Error" placeholder="Type additional" class="input" />
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Electronic equipment
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="elec_1" class="check-new__input" type="checkbox" value="1" name="TV" />
+													<label for="elec_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">TV</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_2" class="check-new__input" type="checkbox" value="2" name="VHF" />
+													<label for="elec_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">VHF</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_3" class="check-new__input" type="checkbox" value="3" name="Fish Finder" />
+													<label for="elec_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Fish
+															Finder</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_4" class="check-new__input" type="checkbox" value="4" name="SONAR" />
+													<label for="elec_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">SONAR</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_5" class="check-new__input" type="checkbox" value="5" name="Autopilot" />
+													<label for="elec_5" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Autopilot</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_6" class="check-new__input" type="checkbox" value="6" name="12v socket" />
+													<label for="elec_6" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">12v
+															socket</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_7" class="check-new__input" type="checkbox" value="7" name="USB socket" />
+													<label for="elec_7" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">USB
+															socket</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_8" class="check-new__input" type="checkbox" value="8" name="GPS" />
+													<label for="elec_8" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">GPS</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_9" class="check-new__input" type="checkbox" value="9" name="Batteries/battery equipment" />
+													<label for="elec_9" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Batteries/battery
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_10" class="check-new__input" type="checkbox" value="10" name="DVD player" />
+													<label for="elec_10" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">DVD
+															player</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_11" class="check-new__input" type="checkbox" value="11" name="Radar" />
+													<label for="elec_11" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Radar</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_12" class="check-new__input" type="checkbox" value="12" name="Shore connection 220 V" />
+													<label for="elec_12" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Shore
+															connection 220
+															V</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_13" class="check-new__input" type="checkbox" value="13" name="Satellite system" />
+													<label for="elec_13" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Satellite
+															system</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_14" class="check-new__input" type="checkbox" value="14" name="Echosounder/Depthsounder" />
+													<label for="elec_14" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Echosounder/Depthsounder</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_15" class="check-new__input" type="checkbox" value="15" name="Navigation equipment" />
+													<label for="elec_15" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Navigation
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_16" class="check-new__input" type="checkbox" value="16" name="220V socket" />
+													<label for="elec_16" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">220V
+															socket</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_17" class="check-new__input" type="checkbox" value="17" name="Solar panels" />
+													<label for="elec_17" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Solar
+															panels</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_18" class="check-new__input" type="checkbox" value="18" name="Teak deck" />
+													<label for="elec_18" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Teak deck</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_19" class="check-new__input" type="checkbox" value="19" name="Sound system" />
+													<label for="elec_19" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Sound
+															system</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_20" class="check-new__input" type="checkbox" value="20" name="Generator" />
+													<label for="elec_20" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Generator</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_21" class="check-new__input" type="checkbox" value="21" name="Snorkelling equipment" />
+													<label for="elec_21" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Snorkelling
+															equipment</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_22" class="check-new__input" type="checkbox" value="22" name="WIFI" />
+													<label for="elec_22" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">WIFI</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_23" class="check-new__input" type="checkbox" value="23" name="Tridata" />
+													<label for="elec_23" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Tridata</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_24" class="check-new__input" type="checkbox" value="24" name="Stand up paddle" />
+													<label for="elec_24" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Stand up
+															paddle</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_25" class="check-new__input" type="checkbox" value="25" name="AUX cable" />
+													<label for="elec_25" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">AUX cable</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_26" class="check-new__input" type="checkbox" value="26" name="Wind instrument/Anemometer" />
+													<label for="elec_26" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Wind
+															instrument/Anemometer</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_27" class="check-new__input" type="checkbox" value="27" name="Spinaker" />
+													<label for="elec_27" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Spinaker</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_28" class="check-new__input" type="checkbox" value="28" name="AC" />
+													<label for="elec_28" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">AC</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="elec_29" class="check-new__input" type="checkbox" value="29" name="CD Player" />
+													<label for="elec_29" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">CD Player</span>
+													</label>
+												</div>
+											</li>
+											<li class="new-boat__list-item">
+												<label for="elEqOther">Other</label>
+												<input id="elEqOther" autocomplete="off" type="text" name="Electronic equipment other" data-error="Error" placeholder="Type additional" class="input" />
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Sanitary facilities
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list-sanitary">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="san_1" class="check-new__input" type="checkbox" value="1" name="Bathroom" />
+													<label for="san_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bathroom</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="san_2" class="check-new__input" type="checkbox" value="2" name="Toilet" />
+													<label for="san_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Toilet</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="san_3" class="check-new__input" type="checkbox" value="3" name="Hot water" />
+													<label for="san_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Hot water</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="san_4" class="check-new__input" type="checkbox" value="4" name="Cold water" />
+													<label for="san_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cold
+															water</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Indoor Equipment
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="indoor_1" class="check-new__input" type="checkbox" value="1" name="Cooker" />
+													<label for="indoor_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cooker</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_2" class="check-new__input" type="checkbox" value="2" name="Blidge pump" />
+													<label for="indoor_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Blidge
+															pump</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_3" class="check-new__input" type="checkbox" value="3" name="Distress box/tools" />
+													<label for="indoor_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Distress
+															box/tools</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_4" class="check-new__input" type="checkbox" value="4" name="Refrigerator" />
+													<label for="indoor_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Refrigerator</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_5" class="check-new__input" type="checkbox" value="5" name="Heating" />
+													<label for="indoor_5" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Heating</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_6" class="check-new__input" type="checkbox" value="6" name="Microwave" />
+													<label for="indoor_6" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Microwave</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_7" class="check-new__input" type="checkbox" value="7" name="Bar counter" />
+													<label for="indoor_7" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bar
+															counter</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_8" class="check-new__input" type="checkbox" value="8" name="Gennaker" />
+													<label for="indoor_8" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Gennaker</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_9" class="check-new__input" type="checkbox" value="9" name="Washing machine" />
+													<label for="indoor_9" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Washing
+															machine</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_10" class="check-new__input" type="checkbox" value="10" name="Towels" />
+													<label for="indoor_10" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Towels</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_11" class="check-new__input" type="checkbox" value="11" name="Over" />
+													<label for="indoor_11" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Over</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_12" class="check-new__input" type="checkbox" value="12" name="Air fans" />
+													<label for="indoor_12" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Air fans</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_13" class="check-new__input" type="checkbox" value="13" name="Dish washer" />
+													<label for="indoor_13" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Dish
+															washer</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_14" class="check-new__input" type="checkbox" value="14" name="Freezer" />
+													<label for="indoor_14" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Freezer</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_15" class="check-new__input" type="checkbox" value="15" name="Distress System" />
+													<label for="indoor_15" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Distress
+															System</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_16" class="check-new__input" type="checkbox" value="16" name="Gas Bottles" />
+													<label for="indoor_16" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Gas
+															Bottles</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_17" class="check-new__input" type="checkbox" value="17" name="Bed linen" />
+													<label for="indoor_17" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Bed linen</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_18" class="check-new__input" type="checkbox" value="18" name="Water maker" />
+													<label for="indoor_18" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Water
+															maker</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_19" class="check-new__input" type="checkbox" value="19" name="Tool box/repair tools" />
+													<label for="indoor_19" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Tool box/repair
+															tools</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="indoor_20" class="check-new__input" type="checkbox" value="20" name="Coffee machine" />
+													<label for="indoor_20" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Coffee
+															machine</span>
+													</label>
+												</div>
+											</li>
+											<li class="new-boat__list-item">
+												<label for="indEqOther">Other</label>
+												<input id="indEqOther" autocomplete="off" type="text" name="Indoor Equipmentother" data-error="Error" placeholder="Type additional" class="input" />
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Suitable for
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<ul class="new-boat__list">
+											<li>
+												<div class="new-boat__check check-new">
+													<input id="suit_1" class="check-new__input" type="checkbox" value="1" name="Fishing" />
+													<label for="suit_1" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Fishing</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_2" class="check-new__input" type="checkbox" value="2" name="Snorkeling" />
+													<label for="suit_2" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Snorkeling</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_3" class="check-new__input" type="checkbox" value="3" name="Sailing" />
+													<label for="suit_3" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Sailing</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_4" class="check-new__input" type="checkbox" value="4" name="Cruising or sightseeing" />
+													<label for="suit_4" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Cruising or
+															sightseeing</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_5" class="check-new__input" type="checkbox" value="5" name="Dining" />
+													<label for="suit_5" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Dining</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_6" class="check-new__input" type="checkbox" value="6" name="Party or celebration" />
+													<label for="suit_6" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Party or
+															celebration</span>
+													</label>
+												</div>
+											</li>
+											<li>
+												<div class="new-boat__check-new check-new">
+													<input id="suit_7" class="check-new__input" type="checkbox" value="7" name="Water skiing" />
+													<label for="suit_7" class="check-new__label">
+														<span class="check-new__icon"></span>
+														<span class="check-new__text">Water
+															skiing</span>
+													</label>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Drinks
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<div class="checkbox">
+											<input id="includeDrinks" class="checkbox__input" type="checkbox" value="1" name="Include drinks" />
+											<label for="includeDrinks" class="checkbox__label">
+												<span class="checkbox__text">Include drinks</span>
+											</label>
+										</div>
+										<div class="new-boat__list-item">
+											<input id="typeNameDrinks" autocomplete="off" type="text" name="Type name drinks" data-error="Error" placeholder="Type name drinks" class="input" />
+										</div>
+									</div>
+								</div>
+								<div class="new-boat__item">
+									<button data-open type="button" data-spoller class="new-boat__title">
+										Fishing Types
+										<i class="_icon-select-arrow"></i>
+									</button>
+									<div class="new-boat__body">
+										<div class="checkbox">
+											<input id="deepSeaFishing" class="checkbox__input" type="checkbox" value="1" name="Deep sea fishing" />
+											<label for="deepSeaFishing" class="checkbox__label">
+												<span class="checkbox__text">Deep sea fishing</span>
+											</label>
+										</div>
+										<div class="new-boat__lines">
+											<div class="new-boat__line">
+												<label for="min_1">Min hours
+													recommended</label>
+												<input id="min_1" autocomplete="off" type="text" name="min_1" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+											<div class="new-boat__line">
+												<label for="fishes_1">Fishes</label>
+												<input id="fishes_1" autocomplete="off" type="text" name="fishes_1" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+										</div>
+										<div class="checkbox">
+											<input id="bigGame" class="checkbox__input" type="checkbox" value="1" name="Big game" />
+											<label for="bigGame" class="checkbox__label">
+												<span class="checkbox__text">Big game</span>
+											</label>
+										</div>
+										<div class="new-boat__lines">
+											<div class="new-boat__line">
+												<label for="min_2">Min hours
+													recommended</label>
+												<input id="min_2" autocomplete="off" type="text" name="min_2" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+											<div class="new-boat__line">
+												<label for="fishes_2">Fishes</label>
+												<input id="fishes_2" autocomplete="off" type="text" name="fishes_2" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+										</div>
+										<div class="checkbox">
+											<input id="trolling" class="checkbox__input" type="checkbox" value="1" name="Trolling" />
+											<label for="trolling" class="checkbox__label">
+												<span class="checkbox__text">Trolling</span>
+											</label>
+										</div>
+										<div class="new-boat__lines">
+											<div class="new-boat__line">
+												<label for="min_3">Min hours
+													recommended</label>
+												<input id="min_3" autocomplete="off" type="text" name="min_3" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+											<div class="new-boat__line">
+												<label for="fishes_3">Fishes</label>
+												<input id="fishes_3" autocomplete="off" type="text" name="fishes_3" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+										</div>
+										<div class="checkbox">
+											<input id="bottomFishing" class="checkbox__input" type="checkbox" value="1" name="Bottom fishing" />
+											<label for="bottomFishing" class="checkbox__label">
+												<span class="checkbox__text">Bottom fishing</span>
+											</label>
+										</div>
+										<div class="new-boat__lines">
+											<div class="new-boat__line">
+												<label for="min_4">Min hours
+													recommended</label>
+												<input id="min_4" autocomplete="off" type="text" name="min_4" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+											<div class="new-boat__line">
+												<label for="fishes_4">Fishes</label>
+												<input id="fishes_4" autocomplete="off" type="text" name="fishes_4" data-error="Error" placeholder="Typed" class="input" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="new-boat__gallery">
+								<div class="new-boat__item">
+									<h2 class="new-boat__title">
+										Navigation License
+									</h2>
+									<div class="photos__drop-wrapper">
+										<div class="photos__icon">
+											<img src="img/icons/camera.svg" alt="icon" />
+										</div>
+										<p class="photos__drop-text">
+											Drag and drop pictures here or
+											just click and choose from your
+											computer
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Quantity -->
+					<div data-quantity class="booking-details__quantity quantity">
+						<div class="quantity__input">
+							<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1" id="bookingGuests" />
+						</div>
+						<div class="quantity__actions">
+							<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+							<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+						</div>
+					</div>
+				</div>
+				<aside class="page__notification notification">
+					<div class="notification__header">
+						<div class="notification__header-wrapper">
+							<div class="notification__value">Notification
+								<div class="notification__bell _icon-notifications"><span>333</span></div>
+							</div>
+							<button type="button" class="notification__close"></button>
+						</div>
+						<div class="notification__maim-checkbox">
+							<input id="allRead" data-error="" class="notification__main-input" type="checkbox" value="1" name="form[]" />
+							<label for="allRead" class="notification__main-label"><span class="notification__main-text">Mark All As Read</span></label>
+						</div>
+					</div>
+					<div data-simplebar class="notification__body">
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_1" data-error="Ошибка" checked class="notification__input" type="checkbox" value="1" name="form[]" />
+									<label for="article_1" class="notification__label"></label>
+								</div>
+								<div class="notification__labels notification__labels--invoices">
+									Invoices
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_2" data-error="Ошибка" class="notification__input" type="checkbox" value="2" name="form[]" />
+									<label for="article_2" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+							<div class="notification__actions">
+								<button type="button" class="notification__button button-chancel">
+									Cancel
+								</button>
+								<button type="button" class="notification__button button-chancel">
+									Accept
+								</button>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_3" data-error="Ошибка" class="notification__input" type="checkbox" value="3" name="form[]" />
+									<label for="article_3" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_4" data-error="Ошибка" class="notification__input" type="checkbox" value="4" name="form[]" />
+									<label for="article_4" class="notification__label"></label>
+								</div>
+								<div class="notification__labels notification__labels--user">
+									User
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+						<article class="notification__article">
+							<div class="notification__article-head">
+								<div class="notification__checkbox">
+									<input id="article_5" data-error="Ошибка" class="notification__input" type="checkbox" value="5" name="form[]" />
+									<label for="article_5" class="notification__label"></label>
+								</div>
+							</div>
+							<div class="notification__text">
+								<p>
+									User
+									<a href="mailto:admin@myprojects.company">admin@myprojects.company</a>
+									changed the minimal duration to 2 hours and standard price
+									for agents
+									<span>AED 900</span> from a boat
+									<span>ALISE</span>
+								</p>
+							</div>
+						</article>
+
+					</div>
+				</aside>
+
+			</section>
+		</main>
+	</div>
+	<!-- Invite popup -->
+	<div id="invite" aria-hidden="true" class="popup popup--invite">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button type="button" class="popup__close"></button>
+				<div class="popup__invite">
+					<h4>Invite an Agent</h4>
+					<form action="#" method="POST" class="invite__form">
+						<div class="invite__line">
+							<label for="email">Email *</label>
+							<input id="email" type="email" name="form[email]" required data-error="" placeholder="" class="input" />
+						</div>
+						<div class="invite__line">
+							<label for="fname">Name *</label>
+							<input id="fname" type="text" name="form[fname]" required data-error="" placeholder="" class="input" />
+						</div>
+						<button type="submit" class="invite__button _icon-save">
+							<span>Invite</span>
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Individual price popup -->
+	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__individual-price">
+					<form action="#" method="POST" class="individual-price__form">
+						<h4>Individual Price For Agents</h4>
+						<div class="individual-price__line">
+							<label for="price">Price, AED</label>
+							<input id="price" type="tel" name="form[price]" required data-error="" placeholder="" class="input" />
+						</div>
+						<div class="individual-price__agents">
+							<h5>Available To Agents</h5>
+							<div data-simplebar class="individual-price__body">
+								<div class="individual-price__agents-name">
+									<input id="name_1" data-error="" class="individual-price__input-name" type="checkbox" value="1" name="form[]" />
+									<label for="name_1" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_2" data-error="" class="individual-price__input-name" type="checkbox" value="2" name="form[]" />
+									<label for="name_2" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_3" data-error="" class="individual-price__input-name" type="checkbox" value="3" name="form[]" />
+									<label for="name_3" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_4" data-error="" class="individual-price__input-name" type="checkbox" value="4" name="form[]" />
+									<label for="name_4" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_5" data-error="" class="individual-price__input-name" type="checkbox" value="5" name="form[]" />
+									<label for="name_5" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+								<div class="individual-price__agents-name">
+									<input id="name_6" data-error="" class="individual-price__input-name" type="checkbox" value="6" name="form[]" />
+									<label for="name_6" class="individual-price__label-name"><span class="individual-price__text-name">Agent Name</span></label>
+								</div>
+							</div>
+						</div>
+						<div class="individual-price__actions">
+							<button type="reset" class="individual-price__delite-btn _icon-delete-forever">
+								<span>Delete</span>
+							</button>
+							<button type="submit" class="individual-price__button _icon-save">
+								<span>Save</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+	<!-- Filters popup -->
+	<div id="filters" aria-hidden="true" class="popup popup--filters">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-one-select class="filters__popup">
+					<h4>Filters</h4>
+					<form action="#" method="POST" class="filters__form">
+						<div class="filters__line">
+							<label for="boatNameFilters">Boat Name</label>
+							<div class="select">
+								<select id="boatNameFilters" name="boatNameFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="filters__line">
+							<label for="companyFilters">Company</label>
+							<div class="select">
+								<select name="companyFilters" id="companyFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+								</select>
+							</div>
+						</div>
+						<div class="filters__line">
+							<label for="locationFilters">Location</label>
+							<div class="select">
+								<select name="locationFilters" id="locationFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
+						</div>
+						<button type="submit" class="filters__button filters-button _icon-filter">
+							Filters
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Filters popup -->
+	<div id="filters-notif" aria-hidden="true" class="popup popup--filters-notif">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-one-select class="filters__popup">
+					<h4>Filters</h4>
+					<form action="#" method="POST" class="filters__form">
+						<div class="filters__line">
+							<label for="notifCompanyName">Company name</label>
+							<select name="form[notifCompanyName]" id="notifCompanyName" data-scroll data-class-modif="boat-name">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="notifBoatName">Boat Name</label>
+							<select name="form[notifBoatName]" data-scroll id="notifBoatName" data-class-modif="company-filte">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+							</select>
+						</div>
+						<div class="filters__line">
+							<label for="notifAccessStatus">Access Status</label>
+							<select name="form[notifAccessStatus]" data-scroll data-class-modif="form" id="notifAccessStatus">
+								<option value="" selected>Select</option>
+								<option value="2">Пункт №1</option>
+								<option value="3">Пункт №2</option>
+								<option value="4">Пункт №3</option>
+								<option value="5">Пункт №4</option>
+								<option value="6">Пункт №5</option>
+								<option value="7">Пункт №6</option>
+								<option value="8">Пункт №7</option>
+								<option value="9">Пункт №8</option>
+								<option value="10">Пункт №9</option>
+								<option value="11">Пункт №10</option>
+							</select>
+						</div>
+						<button type="submit" class="filters__button filters-button _icon-filter">
+							Apply Filters
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+	<!-- New booking popup -->
+	<div id="new-booking" aria-hidden="true" class="popup popup--new-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-one-select class="new-booking__popup">
+					<h4>New Booking</h4>
+					<form data-one-select action="#" method="POST" class="new-booking__form">
+						<div class="new-booking__top">
+							<div class="new-booking__line">
+								<label for="boatCreate">Boat</label>
+								<select name="form[]" data-show-selected data-scroll data-class-modif="boat-list">
+									<option value="">Search boat</option>
+									<option value="2">
+										Search boat lorem lorem lorem №2
+									</option>
+									<option value="3">
+										Search boat lorem lorem lorem №3
+									</option>
+									<option value="4">
+										Search boat lorem lorem lorem №4
+									</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="dateCreate">Start Date *</label>
+								<div class="new-booking__input-calendar">
+									<input id="dateCreate" autocomplete="off" type="text" required disabled data-datepicker name="form[dateCreate]" data-error="" placeholder="" class="input" />
+									<span class="new-booking__icon-calendar _icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="new-booking__line">
+								<label for="durationCreate">Duration *</label>
+								<select name="form[]" id="durationCreate" required data-scroll data-show-selected disabled data-class-modif="new-booking">
+									<option value=""></option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+									<option value="6">6</option>
+									<option value="7">7</option>
+									<option value="8">8</option>
+									<option value="9">9</option>
+									<option value="10">10</option>
+									<option value="11">11</option>
+									<option value="12">12</option>
+								</select>
+							</div>
+						</div>
+						<div class="new-booking__body">
+							<div class="new-booking__line">
+								<label for="startTimeCreate">Start Time *</label>
+								<select name="form[]" id="startTimeCreate" data-scroll data-show-selecte data-class-modif="new-booking" required disabled>
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="guestsCreate">Guests *</label>
+								<select name="form[guestsCreate]" data-scroll required data-show-selecte id="guestsCreate" data-class-modif="new-booking" disabled>
+									<option value="">Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="pricingCreate">Pricing *</label>
+								<select name="form[pricingCreate]" data-scroll data-show-selected data-class-modif="new-booking" required id="pricingCreate" disabled>
+									<option value="">Automaticaly</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
+							<div class="new-booking__line">
+								<label for="priceCreate">Price *</label>
+								<select name="form[priceCreate]" data-scroll data-show-selected data-class-modif="new-booking" required id="priceCreate" disabled>
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
+						</div>
+						<div class="new-booking__total-price total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="new-booking__actions">
+							<button type="submit" class="new-booking__button button button--border-create _icon-create">
+								<span>Create</span>
+							</button>
+							<button type="submit" class="new-booking__button button button--priority _icon-post-add">
+								<span>Create and Open</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+	<!-- New booking (second type) popup -->
+	<div id="new-booking-second" aria-hidden="true" class="popup popup--new-booking-second">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div data-one-select class="new-booking__popup">
+					<h4>New Booking</h4>
+					<form data-one-select action="#" method="POST" class="new-booking__form">
+						<div class="new-booking__top new-booking__top--second">
+							<div class="new-booking__line new-booking__line--second">
+								<label for="boatCreateSecond">Boat</label>
+								<input id="boatCreateSecond" autocomplete="off" type="text" name="form[dateCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+						</div>
+						<div class="new-booking__body new-booking__body--second">
+							<div class="new-booking__line">
+								<label for="guestsCreateSecond">Guests *</label>
+								<div data-quantity class="new-booking__quantity quantity">
+									<div class="quantity__input">
+										<input data-quantity-value autocomplete="off" type="text" required name="form[guestsCreateSecond]" value="1" id="guestsCreateSecond" />
+									</div>
+									<div class="quantity__actions">
+										<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+										<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+									</div>
+								</div>
+							</div>
+							<div class="new-booking__line">
+								<label for="dateCreateSecond">Start Date *</label>
+								<div class="new-booking__input-calendar--second">
+									<input id="dateCreateSecond" autocomplete="off" type="text" required data-datepicker name="form[dateCreateSecond]" data-error="" placeholder="" class="input" />
+									<span class="new-booking__icon-calendar _icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="new-booking__line new-booking__line--second">
+								<label for="durationCreateSecond">Duration *</label>
+								<input id="durationdCreateSecond" autocomplete="off" type="text" required name="form[durationCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+							<div class="new-booking__line new-booking__line--second">
+								<label for="startTimeCreateSecond">Start Time *</label>
+								<input id="startTimeCreateSecond" autocomplete="off" type="text" required name="form[startTimeCreateSecond]" data-error="" placeholder="" class="input" />
+							</div>
+						</div>
+						<div class="new-booking__price">
+							<p>
+								Price:
+								<span>AED 2205 per hour (proceed to edit).</span>
+							</p>
+						</div>
+						<div class="new-booking__actions new-booking__actions--second">
+							<button type="submit" class="new-booking__button button button--border-create _icon-create">
+								<span>Create</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Remove booking popup -->
+	<div id="remove-booking" aria-hidden="true" class="popup popup--remove">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__remove">
+					<h4 class="popup__title _icon-warning">Remove Booking?</h4>
+					<div class="popup__text">
+						<p>Are you sure you want to delete this item?</p>
+					</div>
+					<div class="popup__action-admin">
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
+						</button>
+						<button type="button" class="popup__button button _icon-letter-open">
+							<span>Cancel</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Remove request popup -->
+	<div id="remove-request" aria-hidden="true" class="popup popup--request">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__request">
+					<h4 class="popup__title _icon-warning">Remove Request?</h4>
+					<div class="popup__text">
+						<p>Are you sure you want to Remove this item?</p>
+					</div>
+					<div class="popup__action-admin">
+						<button type="button" class="popup__button button _icon-cancel">
+							<span>Cancel</span>
+						</button>
+						<button type="button" class="popup__button button _icon-trash">
+							<span>Remove</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- =================================================================== -->
+	<!-- New Offline Booking / Additional chargeable options  popup -->
+	<div id="offline-book-options" aria-hidden="true" class="popup popup--offline-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">New Offline Booking</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop label-pop--lighter" for="boatNewOffBook">Boat</label>
+								<select id="boatNewOffBook" name="form[boatNewOffBook]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="startDate">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDate" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="durationNewOffBook">Duration *</label>
+								<select id="durationNewOffBook" name="form[durationNewOffBook]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="startTimeNewOffBook">Start Date *</label>
+								<select id="startTimeNewOffBook" name="form[startTimeNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="guestsNewOffBook">Guests *</label>
+								<select id="guestsNewOffBook" name="form[guestsNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="pricingNewOffBook">Pricing *</label>
+								<select id="pricingNewOffBook" name="form[pricingNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__lable-pop lable-pop" for="priceNewOffBook">Price *</label>
+								<select id="priceNewOffBook" name="form[priceNewOffBook]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+						</div>
+						<div data-spollers class="popup__charg-opt charg-opt">
+							<button type="button" data-spoller data-open class="charg-opt__spoller-title">
+								<span></span> Additional chargeable options
+							</button>
+							<div class="charg-opt__body">
+								<div class="charg-opt__options">
+									<div class="charg-opt__item">
+										<input id="opt_1" class="charg-opt__input" type="checkbox" value="1" name="options" />
+										<label for="opt_1" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE BASIC</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">16 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 200</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_2" class="charg-opt__input" type="checkbox" value="2" name="options" />
+										<label for="opt_2" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">DISC JOCKEY</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">300 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 600</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_3" class="charg-opt__input" type="checkbox" value="3" name="options" />
+										<label for="opt_3" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BARBEKUE</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">300 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 300</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_4" class="charg-opt__input" type="checkbox" value="4" name="options" />
+										<label for="opt_4" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE PREMIUM</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 500</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_5" class="charg-opt__input" type="checkbox" value="5" name="options" />
+										<label for="opt_5" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE STANDARD</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 350</span>
+												</span>
+											</span>
+										</label>
+									</div>
+									<div class="charg-opt__item">
+										<input id="opt_6" class="charg-opt__input" type="checkbox" value="6" name="options" />
+										<label for="opt_6" class="charg-opt__wrapper">
+											<span class="charg-opt__top">
+												<span class="charg-opt__label">BIRTHDAY PACKAGE PREMIUM</span>
+												<span class="charg-opt__icon"></span>
+											</span>
+											<span class="charg-opt__price-item">
+												<span class="charg-opt__price-title">Price</span>
+												<span class="charg-opt__price-value">
+													<span class="charg-opt__per-book">29 per booking</span>
+													<span class="charg-opt__price"><span>Aed</span> 500</span>
+												</span>
+											</span>
+										</label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="popup__total-price total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button button--border-create _icon-create">
+								<span>Create</span>
+							</button>
+							<button type="submit" class="popup__button button button--priority _icon-post-add">
+								<span>Create and Open</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- New Offline Booking -->
+	<div id="offline-book" aria-hidden="true" class="popup popup--offline-booking">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">New Offline Booking</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label for="boatNewOffBookSec">Boat</label>
+								<select id="boatNewOffBookSec" name="form[boatNewOffBookSec]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="startDateSec">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDateSec" type="text" data-datepicker name="form[startDate]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label for="durationNewOffBookSec">Duration *</label>
+								<select id="durationNewOffBookSec" name="form[durationNewOffBookSec]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label for="startTimeNewOffBookSec">Start Date *</label>
+								<select id="startTimeNewOffBookSec" name="form[startTimeNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="guestsNewOffBookSec">Guests *</label>
+								<select id="guestsNewOffBookSec" name="form[guestsNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="pricingNewOffBookSec">Pricing *</label>
+								<select id="pricingNewOffBookSec" name="form[pricingNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label for="priceNewOffBookSec">Price *</label>
+								<select id="priceNewOffBookSec" name="form[priceNewOffBookSec]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="1">Пункт №1</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__total-price total-price">
+							<h5>Total Price:</h5>
+							<p><span>AED</span> 2205</p>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button button--border-create _icon-create">
+								<span>Create</span>
+							</button>
+							<button type="submit" class="popup__button button button--priority _icon-post-add">
+								<span>Create and Open</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- =================================================================== -->
+	<!-- Admin - Out of Services -->
+	<div id="out-of-services" aria-hidden="true" class="popup popup--out-of">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__offline-booking">
+					<h4 class="popup__ttl ttl-popup">Out of Service</h4>
+					<form data-one-select action="#" method="POST" class="popup__form">
+						<div class="popup__top-line">
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop label-pop--lighter" for="boatOutOfServices">Boat</label>
+								<select id="boatOutOfServices" name="form[boatOutOfServices]" data-class-modif="search-boat">
+									<option value="" selected>Search boat</option>
+									<option value="2">Пункт №2</option>
+									<option value="3">Пункт №3</option>
+									<option value="4">Пункт №4</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="durationOutOfServices">Duration *</label>
+								<select id="durationOutOfServices" name="form[durationOutOfServices]" data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__foot-line">
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="startDateOutOfServices">Start Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="startDateOutOfServices" type="text" data-datepicker name="form[startDateOutOfServices]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="startTimeOutOfServices">Start Time *</label>
+								<select id="startTimeOutOfServices" name="form[startTimeOutOfServices]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="endDateOutOfServices">End Date *</label>
+								<div class="popup__calendar-input calendar-input">
+									<input id="endDateOutOfServices" type="text" data-datepicker name="form[endDateOutOfServices]" required data-error="" placeholder="" class="input" />
+									<span class="_icon-calendar-day"></span>
+								</div>
+							</div>
+							<div class="popup__line">
+								<label class="popup__label-pop label-pop" for="endTimeOutOfServices">End Time *</label>
+								<select id="endTimeOutOfServices" name="form[endTimeOutOfServices]" required data-class-modif="offline-booking">
+									<option value=""></option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
+						</div>
+						<div class="popup__action">
+							<button type="submit" class="popup__button button button--priority _icon-create">
+								<span>Create</span>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="js/app.min.js?_v=20240610121740"></script>
+</body>
+
+</html>
