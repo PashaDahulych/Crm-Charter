@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-	<title>Admin Manager Price</title>
+	<title>User Set up</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240604153033">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240610213427">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,19 +184,22 @@
 				</aside>
 
 				<div class="page__main-admin main-admin">
-					<div class="main-admin__header header-details">
-						<h1 class="header-details__title title">
-							Set up Notifications
-						</h1>
-						<div class="header-details__set-up">
-							<button type="button" class="header-details__button button button--transparent _icon-sort-mosaic">
-								<span>Set Default</span>
-							</button>
-							<button type="button" class="header-details__button button button--priority _icon-save">
-								<span>Save</span>
-							</button>
+					<div class="scroll__wrapper">
+						<div class="main-admin__header header-details">
+							<h1 class="header-details__title title">
+								Set up Notifications
+							</h1>
+							<div class="header-details__set-up">
+								<button type="button" class="header-details__button button button--transparent _icon-sort-mosaic">
+									<span>Set Default</span>
+								</button>
+								<button type="button" class="header-details__button button button--priority _icon-save">
+									<span>Save</span>
+								</button>
+							</div>
 						</div>
 					</div>
+
 					<div data-spol class="set-up__wrapper">
 						<div class="set-up__table">
 							<header class="set-up__header">
@@ -210,7 +213,7 @@
 							<div class="set-up__body">
 								<div class="set-up__line">
 									<div class="set-up__item">
-										<div data-spollerNew data-open class="set-up__title-wrapper">
+										<div data-spollernew data-open class="set-up__title-wrapper">
 											<button data-spoller-btn type="button" class="set-up__title">
 												Bookings
 												<span class="_icon-select-arrow"></span>
@@ -360,7 +363,7 @@
 										</div>
 									</div>
 									<div class="set-up__item">
-										<div data-spollerNew data-open class="set-up__title-wrapper">
+										<div data-spollernew data-open class="set-up__title-wrapper">
 											<button data-spoller-btn type="button" class="set-up__title">
 												Boats
 												<span class="_icon-select-arrow"></span>
@@ -444,7 +447,8 @@
 											<div class="set-up__body">
 												<div class="set-up__tr">
 													<div class="set-up__sub-title">
-														New Request From Agent
+														New Request From
+														Agent
 													</div>
 													<div class="checkbox">
 														<input id="emailAgents-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
@@ -461,7 +465,8 @@
 												</div>
 												<div class="set-up__tr">
 													<div class="set-up__sub-title">
-														Your Invitation Accepted
+														Your Invitation
+														Accepted
 													</div>
 													<div class="checkbox">
 														<input id="emailAgents-2" class="checkbox__input" type="checkbox" value="2" name="form[]" />
@@ -478,7 +483,8 @@
 												</div>
 												<div class="set-up__tr">
 													<div class="set-up__sub-title">
-														Your Invitation Rejected
+														Your Invitation
+														Rejected
 													</div>
 													<div class="checkbox">
 														<input id="emailAgents-3" class="checkbox__input" type="checkbox" value="3" name="form[]" />
@@ -497,7 +503,7 @@
 										</div>
 									</div>
 									<div class="set-up__item">
-										<div data-spollerNew data-open class="set-up__title-wrapper">
+										<div data-spollernew data-open class="set-up__title-wrapper">
 											<button data-spoller-btn type="button" class="set-up__title">
 												My Company
 												<span class="_icon-select-arrow"></span>
@@ -521,7 +527,9 @@
 											<div class="set-up__body">
 												<div class="set-up__tr">
 													<div class="set-up__sub-title">
-														Trade Licence Expiration Within 30 Days
+														Trade Licence
+														Expiration Within 30
+														Days
 													</div>
 													<div class="checkbox">
 														<input id="emailCompany-1" class="checkbox__input" type="checkbox" value="1" name="form[]" />
@@ -696,7 +704,7 @@
 	</div>
 	<!-- =================================================================== -->
 	<!-- Individual price popup -->
-	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price ">
+	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
@@ -760,41 +768,47 @@
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
 							<label for="boatNameFilters">Boat Name</label>
-							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-							</select>
+							<div class="select">
+								<select id="boatNameFilters" name="boatNameFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
 						</div>
 						<div class="filters__line">
 							<label for="companyFilters">Company</label>
-							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-								<option value="5">Пункт №4</option>
-								<option value="6">Пункт №5</option>
-								<option value="7">Пункт №6</option>
-								<option value="8">Пункт №7</option>
-							</select>
+							<div class="select">
+								<select name="companyFilters" id="companyFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+								</select>
+							</div>
 						</div>
 						<div class="filters__line">
 							<label for="locationFilters">Location</label>
-							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-								<option value="5">Пункт №4</option>
-								<option value="6">Пункт №5</option>
-								<option value="7">Пункт №6</option>
-								<option value="8">Пункт №7</option>
-								<option value="9">Пункт №8</option>
-								<option value="10">Пункт №9</option>
-								<option value="11">Пункт №10</option>
-							</select>
+							<div class="select">
+								<select name="locationFilters" id="locationFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
 						</div>
 						<button type="submit" class="filters__button filters-button _icon-filter">
 							Filters
@@ -1268,7 +1282,6 @@
 											</span>
 										</label>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -1445,7 +1458,6 @@
 									<option value="4">Пункт №3</option>
 								</select>
 							</div>
-
 						</div>
 						<div class="popup__action">
 							<button type="submit" class="popup__button button button--priority _icon-create">
@@ -1457,7 +1469,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240604153033"></script>
+
+
+	<script src="js/app.min.js?_v=20240610213427"></script>
 </body>
 
 </html>

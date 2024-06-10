@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240610121740">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240610213427">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -766,7 +766,7 @@
 											<div class="select">
 												<label for="newBoatCompany">Company *</label>
 												<div class="select__line">
-													<select id="newBoatCompany">
+													<select id="newBoatCompany" required name="newBoatCompany">
 														<option value="" selected>
 															Select Company
 														</option>
@@ -794,7 +794,7 @@
 														Boat type
 													</label>
 													<div class="select__line">
-														<select required id="boatType">
+														<select required id="boatType" name="boatType">
 															<option value="" selected>
 																Select
 															</option>
@@ -827,7 +827,7 @@
 														Engine Type
 													</label>
 													<div class="select__line">
-														<select required id="engineType" name="Engine Type" data-class-modif="new-boat" data-scroll>
+														<select required id="engineType" name="Engine Type">
 															<option value="" selected>
 																Select
 															</option>
@@ -860,7 +860,7 @@
 														Brand
 													</label>
 													<div class="select__line">
-														<select required id="boatBrand" name="Boat brand" data-class-modif="new-boat" data-scroll>
+														<select id="boatBrand" required>
 															<option value="" selected>
 																Typed Brand
 															</option>
@@ -893,361 +893,385 @@
 														<label for="boatYear">Year</label>
 														<input autocomplete="off" type="tel" required name="Boat year" data-error="Error" placeholder="Typed Year" class="input" />
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatBerths">Berths(sleeps)</label>
-														<select required id="boatBerths" name="Berths(sleeps)" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatBerths">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatCabins">Cabins</label>
-														<select required id="boatCabins" name="Cabins" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatCabins" name="boatCabins">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatCrew">Crew</label>
-														<select required id="boatCrew" name="Crew" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatCrew" name="boatCrew">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatEngine">Engine,
 															HP</label>
-														<select required id="boatEngine" name="Engine, HP" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatEngine" name="Engine, HP" data-class-modif="new-boat" data-scroll>
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatCapacity">Capacity,
 															persons</label>
-														<select required id="boatCapacity" name="Capacity, persons" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatCapacity" name="Capacity, persons" data-class-modif="new-boat" data-scroll>
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatFeet">Length,
 															feet</label>
-														<select required id="boatFeet" name="Length, feet" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Typed
-															</option>
-															<option value="1">
-																Typed 1
-															</option>
-															<option value="2">
-																Typed 2
-															</option>
-															<option value="3">
-																Typed 3
-															</option>
-															<option value="4">
-																Typed 4
-															</option>
-															<option value="5">
-																Typed 5
-															</option>
-															<option value="6">
-																Typed 6
-															</option>
-															<option value="7">
-																Typed 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatFeet" name="Length, feet">
+																<option value="" selected>
+																	Typed
+																</option>
+																<option value="1">
+																	Typed 1
+																</option>
+																<option value="2">
+																	Typed 2
+																</option>
+																<option value="3">
+																	Typed 3
+																</option>
+																<option value="4">
+																	Typed 4
+																</option>
+																<option value="5">
+																	Typed 5
+																</option>
+																<option value="6">
+																	Typed 6
+																</option>
+																<option value="7">
+																	Typed 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatBeam">Beam</label>
-														<select required id="boatBeam" name="Beam" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Typed
-															</option>
-															<option value="1">
-																Typed 1
-															</option>
-															<option value="2">
-																Typed 2
-															</option>
-															<option value="3">
-																Typed 3
-															</option>
-															<option value="4">
-																Typed 4
-															</option>
-															<option value="5">
-																Typed 5
-															</option>
-															<option value="6">
-																Typed 6
-															</option>
-															<option value="7">
-																Typed 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatBeam" name="Beam">
+																<option value="" selected>
+																	Typed
+																</option>
+																<option value="1">
+																	Typed 1
+																</option>
+																<option value="2">
+																	Typed 2
+																</option>
+																<option value="3">
+																	Typed 3
+																</option>
+																<option value="4">
+																	Typed 4
+																</option>
+																<option value="5">
+																	Typed 5
+																</option>
+																<option value="6">
+																	Typed 6
+																</option>
+																<option value="7">
+																	Typed 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatDraft">Draft</label>
-														<select required id="boatDraft" name="Draft" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Typed
-															</option>
-															<option value="1">
-																Typed 1
-															</option>
-															<option value="2">
-																Typed 2
-															</option>
-															<option value="3">
-																Typed 3
-															</option>
-															<option value="4">
-																Typed 4
-															</option>
-															<option value="5">
-																Typed 5
-															</option>
-															<option value="6">
-																Typed 6
-															</option>
-															<option value="7">
-																Typed 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatDraft" name="Draft">
+																<option value="" selected>
+																	Typed
+																</option>
+																<option value="1">
+																	Typed 1
+																</option>
+																<option value="2">
+																	Typed 2
+																</option>
+																<option value="3">
+																	Typed 3
+																</option>
+																<option value="4">
+																	Typed 4
+																</option>
+																<option value="5">
+																	Typed 5
+																</option>
+																<option value="6">
+																	Typed 6
+																</option>
+																<option value="7">
+																	Typed 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatToilets">Toilets</label>
-														<select required id="boatToilets" name="Toilets" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatToilets" name="Toilets" data-class-modif="new-boat" data-scroll>
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatFuelTank">Fuel
 															Tank</label>
-														<select required id="boatFuelTank" name="Fuel Tank" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Typed
-															</option>
-															<option value="1">
-																Typed 1
-															</option>
-															<option value="2">
-																Typed 2
-															</option>
-															<option value="3">
-																Typed 3
-															</option>
-															<option value="4">
-																Typed 4
-															</option>
-															<option value="5">
-																Typed 5
-															</option>
-															<option value="6">
-																Typed 6
-															</option>
-															<option value="7">
-																Typed 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatFuelTank" name="Fuel Tank">
+																<option value="" selected>
+																	Typed
+																</option>
+																<option value="1">
+																	Typed 1
+																</option>
+																<option value="2">
+																	Typed 2
+																</option>
+																<option value="3">
+																	Typed 3
+																</option>
+																<option value="4">
+																	Typed 4
+																</option>
+																<option value="5">
+																	Typed 5
+																</option>
+																<option value="6">
+																	Typed 6
+																</option>
+																<option value="7">
+																	Typed 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="boatWaterTank">Water
 															Tank</label>
-														<select required id="boatWaterTank" name="Water Tank" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Typed
-															</option>
-															<option value="1">
-																Typed 1
-															</option>
-															<option value="2">
-																Typed 2
-															</option>
-															<option value="3">
-																Typed 3
-															</option>
-															<option value="4">
-																Typed 4
-															</option>
-															<option value="5">
-																Typed 5
-															</option>
-															<option value="6">
-																Typed 6
-															</option>
-															<option value="7">
-																Typed 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="boatWaterTank" name="Water Tank">
+																<option value="" selected>
+																	Typed
+																</option>
+																<option value="1">
+																	Typed 1
+																</option>
+																<option value="2">
+																	Typed 2
+																</option>
+																<option value="3">
+																	Typed 3
+																</option>
+																<option value="4">
+																	Typed 4
+																</option>
+																<option value="5">
+																	Typed 5
+																</option>
+																<option value="6">
+																	Typed 6
+																</option>
+																<option value="7">
+																	Typed 7
+																</option>
+															</select>
+														</div>
 													</div>
 												</div>
-												<div class="new-boat__line">
+												<div class="select">
 													<label for="typeOfFuel">
 														Type Of Fuel
 													</label>
-													<select required id="typeOfFuel" name="Type Of Fuel" data-class-modif="new-boat" data-scroll>
-														<option value="" selected>
-															Select
-														</option>
-														<option value="1">
-															Select 1
-														</option>
-														<option value="2">
-															Select 2
-														</option>
-														<option value="3">
-															Select 3
-														</option>
-														<option value="4">
-															Select 4
-														</option>
-														<option value="5">
-															Select 5
-														</option>
-														<option value="6">
-															Select 6
-														</option>
-														<option value="7">
-															Select 7
-														</option>
-													</select>
+													<div class="select__line">
+														<select required id="typeOfFuel" name="Type Of Fuel">
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1291,35 +1315,37 @@
 														<input autocomplete="off" type="tel" name="form[]" data-error="Error" class="input" />
 													</div>
 												</div>
-												<div class="new-boat__line">
+												<div class="select">
 													<label for="pricingType">Pricing Type
 														*</label>
-													<select id="pricingType" required name="fPricing Type" data-class-modif="new-boat" data-scroll>
-														<option value="" selected>
-															Select
-														</option>
-														<option value="1">
-															Select 1
-														</option>
-														<option value="2">
-															Select 2
-														</option>
-														<option value="3">
-															Select 3
-														</option>
-														<option value="4">
-															Select 4
-														</option>
-														<option value="5">
-															Select 5
-														</option>
-														<option value="6">
-															Select 6
-														</option>
-														<option value="7">
-															Select 7
-														</option>
-													</select>
+													<div class="select__line">
+														<select id="pricingType" required name="fPricing Type">
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
 												</div>
 												<div class="new-boat__info">
 													<h2 class="new-boat__title">
@@ -1369,202 +1395,206 @@
 												<i class="_icon-select-arrow"></i>
 											</button>
 											<div class="new-boat__body">
-												<div class="new-boat__line">
+												<div class="select">
 													<label for="region">Region</label>
-													<select required id="region" name="Region" data-class-modif="new-boat" data-scroll>
-														<option value="" selected>
-															Select
-														</option>
-														<option value="1">
-															Select 1
-														</option>
-														<option value="2">
-															Select 2
-														</option>
-														<option value="3">
-															Select 3
-														</option>
-														<option value="4">
-															Select 4
-														</option>
-														<option value="5">
-															Select 5
-														</option>
-														<option value="6">
-															Select 6
-														</option>
-														<option value="7">
-															Select 7
-														</option>
-													</select>
+													<div class="select__line">
+														<select required id="region" name="Region">
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
 												</div>
 												<div class="new-boat__lines">
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="city">City</label>
-														<select required id="city" name="City" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="city" name="City">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="harbour">Harbour</label>
-														<select required id="harbour" name="Harbour" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="harbour" name="Harbour" data-class-modif="new-boat" data-scroll>
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
 												</div>
-												<div class="new-boat__line">
+												<div class="select">
 													<label for="countryOfCaptain">Country of
 														Captain</label>
-													<select required id="countryOfCaptain" name="Country of Captain" data-class-modif="new-boat" data-scroll>
-														<option value="" selected>
-															Select
-														</option>
-														<option value="1">
-															Select 1
-														</option>
-														<option value="2">
-															Select 2
-														</option>
-														<option value="3">
-															Select 3
-														</option>
-														<option value="4">
-															Select 4
-														</option>
-														<option value="5">
-															Select 5
-														</option>
-														<option value="6">
-															Select 6
-														</option>
-														<option value="7">
-															Select 7
-														</option>
-													</select>
+													<div class="select__line">
+														<select required id="countryOfCaptain" name="Country of Captain">
+															<option value="" selected>
+																Select
+															</option>
+															<option value="1">
+																Select 1
+															</option>
+															<option value="2">
+																Select 2
+															</option>
+															<option value="3">
+																Select 3
+															</option>
+															<option value="4">
+																Select 4
+															</option>
+															<option value="5">
+																Select 5
+															</option>
+															<option value="6">
+																Select 6
+															</option>
+															<option value="7">
+																Select 7
+															</option>
+														</select>
+													</div>
 												</div>
 												<div class="new-boat__lines">
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="countryOfCommandFirst">Country of
 															Command
 															№1</label>
-														<select required id="countryOfCommandFirst" name="Country of Command №1" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="countryOfCommandFirst" name="Country of Command №1">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
-													<div class="new-boat__line">
+													<div class="select">
 														<label for="countryOfCommandSecond">Country of
 															Command
 															№2</label>
-														<select required id="countryOfCommandSecond" name="Country of Command №2" data-class-modif="new-boat" data-scroll>
-															<option value="" selected>
-																Select
-															</option>
-															<option value="1">
-																Select 1
-															</option>
-															<option value="2">
-																Select 2
-															</option>
-															<option value="3">
-																Select 3
-															</option>
-															<option value="4">
-																Select 4
-															</option>
-															<option value="5">
-																Select 5
-															</option>
-															<option value="6">
-																Select 6
-															</option>
-															<option value="7">
-																Select 7
-															</option>
-														</select>
+														<div class="select__line">
+															<select required id="countryOfCommandSecond" name="Country of Command №2">
+																<option value="" selected>
+																	Select
+																</option>
+																<option value="1">
+																	Select 1
+																</option>
+																<option value="2">
+																	Select 2
+																</option>
+																<option value="3">
+																	Select 3
+																</option>
+																<option value="4">
+																	Select 4
+																</option>
+																<option value="5">
+																	Select 5
+																</option>
+																<option value="6">
+																	Select 6
+																</option>
+																<option value="7">
+																	Select 7
+																</option>
+															</select>
+														</div>
 													</div>
 												</div>
 												<div class="new-boat__line">
 													<label for="meetingPointMessage">Meeting
 														Point</label>
 													<input id="meetingPointMessage" autocomplete="off" type="text" name="Meeting Point" data-error="Error" placeholder="Specify the link" class="input" />
-													<!-- <textarea
-                                                            id="meetingPointMessage"
-                                                            autocomplete="off"
-                                                            type="text"
-                                                            name="Meeting Point"
-                                                            data-error="Error"
-                                                            placeholder="Specify the link"
-                                                            class="input"
-                                                        ></textarea> -->
+
 													<p>
 														Please fill in an
 														exact location, i.e.
@@ -2844,6 +2874,14 @@
 							</div>
 						</div>
 					</div>
+					<!-- Picker line -->
+					<div class="calendar__small">
+						<label for="bookingStartDate">Start Date *</label>
+						<div class="calendar__small-input">
+							<input id="bookingStartDate" autocomplete="off" type="text" required data-datepicker name="form[bookingStartDate]" data-error="" placeholder="" class="input" />
+							<span class="_icon-calendar-day"></span>
+						</div>
+					</div>
 					<!-- Quantity -->
 					<div data-quantity class="booking-details__quantity quantity">
 						<div class="quantity__input">
@@ -2854,6 +2892,15 @@
 							<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
 						</div>
 					</div>
+					<!-- Picker line (Range picker) -->
+					<div class="calendar__line">
+						<label for="period">Period</label>
+						<div class="calendar__line-input">
+							<input id="period" autocomplete="off" name="daterange" type="text" class="input" />
+							<span class="_icon-calendar-day"></span>
+						</div>
+					</div>
+
 				</div>
 				<aside class="page__notification notification">
 					<div class="notification__header">
@@ -3773,7 +3820,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20240610121740"></script>
+	<script src="js/app.min.js?_v=20240610213427"></script>
 </body>
 
 </html>

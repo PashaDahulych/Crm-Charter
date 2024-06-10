@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Agents</title>
+	<title>Edit Location Admin</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -18,6 +18,10 @@
 			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
+						<!-- <a href="#" class="aside__logo"
+            ><span class="_icon-logo"></span>
+            <p>Charter<span>Click</span></p></a
+        > -->
 						<a href="#" class="aside__logo">
 							<span class="aside__logo-icon">
 								<img src="img/icon.svg" alt="logo icon" />
@@ -32,7 +36,7 @@
 					<nav class="aside__menu">
 						<ul class="aside__list">
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
 										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
@@ -40,9 +44,7 @@
 									<p class="aside__link-text">Calendar</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
-										<p class="aside__link-value">
-											4321
-										</p>
+										<p class="aside__link-value">4321</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -54,11 +56,48 @@
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-notifications"></div>
-									<p class="aside__link-text">
-										Notifications
-									</p>
+									<div class="aside__link-icon _icon-invoices"></div>
+									<p class="aside__link-text">Invoices</p>
 								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-requests"></div>
+									<p class="aside__link-text">Requests</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-notifications"></div>
+									<p class="aside__link-text">Notifications</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-price">
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Price Manager</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">2030</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Chargeable Options
+											<span class="aside__sub-value">2010</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<!--! Якщо хочете додати значення долінків sub-menu - то потрібно додати <span class="aside__sub-value">20</span>. Вище спеціально зробив значення з великою цифро, що Ви почачили, що нічого не зламається. -->
+										<a href="#" class="aside__sub-link">Special Offers
+											<span class="aside__sub-value">20</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Promo Codes</a>
+									</li>
+								</ul>
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
@@ -67,11 +106,9 @@
 								</a>
 							</li>
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller href="#!" class="aside__link _spoller-init">
 									<div class="aside__link-icon _icon-my-company"></div>
-									<p class="aside__link-text">
-										My Company
-									</p>
+									<p class="aside__link-text">My Company</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<!-- <p class="aside__link-value">20</p> -->
@@ -87,6 +124,40 @@
 									</li>
 									<li class="aside__sub-item">
 										<a href="#" class="aside__sub-link">Companies</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-reports"></div>
+									<p class="aside__link-text">Reports</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-manage"></div>
+									<p class="aside__link-text">Manage</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Locations</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Portal</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Blog</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Pages</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Feedback</a>
 									</li>
 								</ul>
 							</li>
@@ -111,312 +182,200 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="page__agents agents">
-					<div class="agents__header header-details">
-						<h1 class="header-details__title title">Agents</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">
-								Invite
-							</button>
+
+				<div class="page__main-admin main-admin">
+					<div class="scroll__wrapper">
+						<div class="main-admin__header header-details">
+							<h1 class="header-details__title title">
+								New Country
+							</h1>
+							<div class="header-details__actions">
+								<button data-popup="#offline-book" type="button" class="form-small__button button button--priority-icon _icon-plus">
+									<span>Create</span>
+								</button>
+							</div>
 						</div>
 					</div>
-					<form class="agents__form" action="#" method="POST">
-						<div class="agents__body">
-							<div class="agents__line">
-								<label for="calendar">Date Added</label>
-								<div class="agents__line-input">
-									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar-day"></span>
+					<div class="main-admin__block">
+						<div class="main-admin__body body-admin">
+							<!-- Edit County -->
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>Main Info</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="country">Country *</label>
+											<input id="country" autocomplete="off" type="text" required name="Country" data-error="Error" placeholder="" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="internationalKey">International Key*</label>
+											<input id="internationalKey" autocomplete="off" type="text" required name="internationalKey" data-error="Error" placeholder="" class="input" />
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Regional settings</h2>
+									<div class="body-admin__lines">
+										<div class="body-admin__line">
+											<label for="defaultCurrency">Default Currency *</label>
+											<input id="defaultCurrency" autocomplete="off" type="text" required name="defaultCurrency" data-error="Error" placeholder="" class="input" />
+										</div>
+										<div class="body-admin__line">
+											<label for="VAT">VAT %</label>
+											<div data-quantity class="body-admin__quantity quantity">
+												<div class="quantity__input">
+													<input id="VAT" data-quantity-value autocomplete="off" type="text" name="VAT" value="0" />
+												</div>
+												<div class="quantity__actions">
+													<button data-quantity-plus type="button" class="quantity__button quantity__button--plus _icon-select-arrow"></button>
+													<button data-quantity-minus type="button" class="quantity__button quantity__button--minus _icon-select-arrow"></button>
+												</div>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultTimezone">Default timezone *</label>
+											<div class="body-admin__select">
+												<select required id="defaultTimezone" name="defaultTimezone">
+													<option value="1" selected>
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="2">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="3">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+													<option value="4">
+														GMT +04:00, Abu
+														Dhabi, Muscat
+													</option>
+												</select>
+											</div>
+										</div>
+										<div class="body-admin__line">
+											<label for="defaultStartDay">Default start day *</label>
+											<div class="body-admin__select">
+												<select required id="defaultStartDay" name="defaultStartDay">
+													<option value="Monday" selected>
+														Monday
+													</option>
+													<option value="Tuesday">
+														Tuesday
+													</option>
+													<option value="Wednesday">
+														Wednesday
+													</option>
+													<option value="Thursday">
+														Thursday
+													</option>
+													<option value="Friday">
+														Friday
+													</option>
+													<option value="Saturday">
+														Saturday
+													</option>
+													<option value="Sunday">
+														Sunday
+													</option>
+												</select>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Boat booking periods</h2>
+									<div class="body-admin__options">
+										<div class="body-admin__checkbox checkbox">
+											<input id="hourBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="hourBooking" />
+											<label for="hourBooking" class="checkbox__label">
+												<span class="checkbox__text">Hour Booking
+													<span>(i.e. 2 hour, 5
+														hour, 10 hour trips,
+														etc)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="dailyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="dailyBooking" />
+											<label for="dailyBooking" class="checkbox__label">
+												<span class="checkbox__text">Daily Booking
+													<span>(i.e. 1 day, 2 day,
+														3 day, etc. -
+														overnight, 24 hour
+														trips)</span></span>
+											</label>
+										</div>
+										<div class="body-admin__checkbox checkbox">
+											<input id="weeklyBooking" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="weeklyBooking" />
+											<label for="weeklyBooking" class="checkbox__label">
+												<span class="checkbox__text">Weekly Booking
+													<span>(i.e. 1 week, 2
+														week, 3 week trips,
+														etc.)</span></span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Blog</h2>
+									<div class="body-admin__line">
+										<label for="tag">Tag *</label>
+										<input id="tag" autocomplete="off" type="text" required name="tag" data-error="Error" placeholder="" class="input" />
+									</div>
 								</div>
 							</div>
-							<div class="agents__select">
-								<label for="selectAddedBy">Added By</label>
-								<select id="selectAddedBy" name="form[selectAddedBy]" data-class-modif="agents" multiple data-checkbox data-scroll>
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Owner">Owner</option>
-									<option value="Agent">Agent</option>
-								</select>
-							</div>
-							<div class="agents__line agents__line--name">
-								<label for="name-input">Name</label>
-								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input" />
-							</div>
-							<div class="agents__select">
-								<label for="selectStatus">Status</label>
-								<select id="statusAction" name="form[statusAction]" multiple data-checkbox data-class-modif="agents">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Requested">
-										Requested
-									</option>
-									<option value="Activated">
-										Activated
-									</option>
-									<option value="Rejected">
-										Rejected
-									</option>
-									<option value="Revoked">Revoked</option>
-								</select>
+							<div class="body-admin__column">
+								<div class="body-admin__item">
+									<h2>SEO Settings</h2>
+									<div class="body-admin__line">
+										<label for="metaTitle">Meta Title *</label>
+										<input id="metaTitle" autocomplete="off" type="text" required name="metaTitle" data-error="Error" class="input" />
+									</div>
+									<div class="body-admin__line">
+										<label for="metaDescription">Meta Description *</label>
+										<textarea id="metaDescription" autocomplete="off" required name="metaDescription" data-error="Error" class="input"></textarea>
+									</div>
+									<div class="body-admin__line">
+										<label for="title">Title *</label>
+										<input id="title" autocomplete="off" type="text" required name="title" data-error="Error" class="input" />
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+									<div class="body-admin__line">
+										<!-- <label for="aboutLocation">About this location *</label> -->
+										<!-- Тут фукціонал wp має бути. В дизайні була тілька картинка, тому і я вставлю картинку, але лейбл буде підготований на майбутнє у стилях -->
+										<h3 class="body-admin__not-label">
+											About this location *
+										</h3>
+										<div class="body-admin__img-textarea">
+											<picture><source srcset="img/textarea.webp" type="image/webp"><img src="img/textarea.png" alt="img" /></picture>
+										</div>
+										<p class="body-admin__text">
+											This title can be shown in
+											headers. It could be H1, H2, H3
+											and so on. Keep it short.
+										</p>
+									</div>
+								</div>
+								<div class="body-admin__item">
+									<h2>Photos</h2>
+									<div class="body-admin__gallery">
+										<button type="button" class="body-admin__add-btn">
+											<span class="icon _icon-camera">
+												<img src="img/icons/camera.svg" alt="icon" />
+											</span>
+											<span class="text">Click to upload
+												picture</span>
+										</button>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="agents__ations">
-							<div class="agents__checkbox checkbox">
-								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]" />
-								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve
-										Bookings</span></label>
-							</div>
-							<button type="reset" class="agents__button button _icon-close">
-								<span>Clear</span>
-							</button>
-						</div>
-					</form>
-					<div class="agents__wrapper">
-						<table class="agents__table table">
-							<thead class="agents__thead">
-								<tr class="agents__tr">
-									<th>
-										<div>Date Added</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<img src="img/letter-status-image/close.svg" alt="letter" />
-									</th>
-									<th>
-										<div>Name</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Contact Details</div>
-									</th>
-									<th>
-										<div>Access Status</div>
-										<button class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>
-											Automatically Approve Bookings
-										</div>
-									</th>
-									<th>
-										<div>Actions</div>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="agents__tbody">
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
-											<label for="approve" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-02" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[]" />
-											<label for="approve-02" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-03" data-error="" class="checkbox__input" type="checkbox" value="3" name="form[]" />
-											<label for="approve-03" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="statu3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-04" data-error="" class="checkbox__input" type="checkbox" value="4" name="form[]" />
-											<label for="approve-04" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status4" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
-								<tr>
-									<td>
-										<nav class="agents__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
-											<ul class="pagging__list">
-												<li>
-													<a href="#" class="pagging__item _active">1</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">2</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">3</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">4</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item pagging__item--dots">...</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">25</a>
-												</li>
-											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
-										</nav>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
 					</div>
 				</div>
 				<aside class="page__notification notification">

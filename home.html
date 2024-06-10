@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240604194434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240610213427">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -184,82 +184,113 @@
 				</aside>
 
 				<div class="page__main-admin main-admin">
-					<div class="main-admin__header header-details">
-						<h1 class="header-details__title title">
-							Price Manager
-						</h1>
-						<button type="button" class="header-details__notifications">
-							<span class="header-details__text">Notification</span>
-							<span class="header-details__icon _icon-notifications">
-								<span>381</span>
-							</span>
-						</button>
+					<div class="scroll__wrapper">
+						<div class="main-admin__header header-details">
+							<h1 class="header-details__title title">
+								Price Manager
+							</h1>
+							<button type="button" class="header-details__notifications">
+								<span class="header-details__text">Notification</span>
+								<span class="header-details__icon _icon-notifications">
+									<span>381</span>
+								</span>
+							</button>
+						</div>
+						<form action="#" method="POST" class="main-admin__form form">
+							<div class="form__body">
+								<div class="form__line">
+									<label for="boat">Boat</label>
+									<div class="form__select">
+										<select id="boat" name="boat">
+											<option value="">Select</option>
+											<option selected value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="location">Location</label>
+									<div class="form__select">
+										<select id="location" name="location">
+											<option value="">Select</option>
+											<option value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="companyName">Company</label>
+									<div class="form__select">
+										<select id="companyName" name="company name">
+											<option value="">Select</option>
+											<option value="2">
+												Пункт №1
+											</option>
+											<option value="3">
+												Пункт №2
+											</option>
+											<option value="4">
+												Пункт №3
+											</option>
+											<option value="5">
+												Пункт №4
+											</option>
+											<option value="6">
+												Пункт №5
+											</option>
+											<option value="7">
+												Пункт №6
+											</option>
+											<option value="8">
+												Пункт №7
+											</option>
+											<option value="9">
+												Пункт №8
+											</option>
+											<option value="10">
+												Пункт №9
+											</option>
+											<option value="11">
+												Пункт №10
+											</option>
+											<option value="12">
+												Пункт №11
+											</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="form__actions">
+								<div class="form__checkbox checkbox">
+									<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
+								</div>
+								<div class="form__buttons">
+									<button type="reset" class="form__button button _icon-close">
+										<span>Clear</span>
+									</button>
+									<button type="submit" class="form__button button _icon-check">
+										<span>Apply</span>
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
-					<form action="#" method="POST" class="main-admin__form form">
-						<div class="form__body">
-							<div class="form__line">
-								<label for="boat">Boat</label>
-								<div class="form__select">
-									<select id="boat" name="boat">
-										<option value="">Select</option>
-										<option selected value="2">
-											Пункт №1
-										</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-									</select>
-								</div>
-							</div>
-							<div class="form__line">
-								<label for="location">Location</label>
-								<div class="form__select">
-									<select id="location" name="location">
-										<option value="">Select</option>
-										<option value="2">Пункт №1</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-									</select>
-								</div>
-							</div>
-							<div class="form__line">
-								<label for="companyName">Company</label>
-								<div class="form__select">
-									<select id="companyName" name="company name">
-										<option value="">Select</option>
-										<option value="2">Пункт №1</option>
-										<option value="3">Пункт №2</option>
-										<option value="4">Пункт №3</option>
-										<option value="5">Пункт №4</option>
-										<option value="6">Пункт №5</option>
-										<option value="7">Пункт №6</option>
-										<option value="8">Пункт №7</option>
-										<option value="9">Пункт №8</option>
-										<option value="10">Пункт №9</option>
-										<option value="11">
-											Пункт №10
-										</option>
-										<option value="12">
-											Пункт №11
-										</option>
-									</select>
-								</div>
-							</div>
-						</div>
-						<div class="form__actions">
-							<div class="form__checkbox checkbox">
-								<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
-								<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
-							</div>
-							<div class="form__buttons">
-								<button type="reset" class="form__button button _icon-close">
-									<span>Clear</span>
-								</button>
-								<button type="submit" class="form__button button _icon-check">
-									<span>Apply</span>
-								</button>
-							</div>
-						</div>
-					</form>
+
 					<div class="main-admin__wrapper">
 						<table class="main-admin__table table">
 							<thead class="main-admin__thead">
@@ -579,7 +610,7 @@
 	</div>
 	<!-- =================================================================== -->
 	<!-- Individual price popup -->
-	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price ">
+	<div id="individual-price" aria-hidden="true" class="popup popup--individual-price">
 		<div class="popup__wrapper">
 			<div class="popup__content">
 				<button data-close type="button" class="popup__close"></button>
@@ -643,41 +674,47 @@
 					<form action="#" method="POST" class="filters__form">
 						<div class="filters__line">
 							<label for="boatNameFilters">Boat Name</label>
-							<select name="form[boatNameFilters]" id="boatNameFilters" data-scroll data-class-modif="boat-name">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-							</select>
+							<div class="select">
+								<select id="boatNameFilters" name="boatNameFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+								</select>
+							</div>
 						</div>
 						<div class="filters__line">
 							<label for="companyFilters">Company</label>
-							<select name="form[companyFilters]" data-scroll id="companyFilters" data-class-modif="company-filte">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-								<option value="5">Пункт №4</option>
-								<option value="6">Пункт №5</option>
-								<option value="7">Пункт №6</option>
-								<option value="8">Пункт №7</option>
-							</select>
+							<div class="select">
+								<select name="companyFilters" id="companyFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+								</select>
+							</div>
 						</div>
 						<div class="filters__line">
 							<label for="locationFilters">Location</label>
-							<select name="form[locationFilters]" data-scroll data-class-modif="form" id="locationFilters">
-								<option value="" selected>Select</option>
-								<option value="2">Пункт №1</option>
-								<option value="3">Пункт №2</option>
-								<option value="4">Пункт №3</option>
-								<option value="5">Пункт №4</option>
-								<option value="6">Пункт №5</option>
-								<option value="7">Пункт №6</option>
-								<option value="8">Пункт №7</option>
-								<option value="9">Пункт №8</option>
-								<option value="10">Пункт №9</option>
-								<option value="11">Пункт №10</option>
-							</select>
+							<div class="select">
+								<select name="locationFilters" id="locationFilters">
+									<option value="" selected>Select</option>
+									<option value="2">Пункт №1</option>
+									<option value="3">Пункт №2</option>
+									<option value="4">Пункт №3</option>
+									<option value="5">Пункт №4</option>
+									<option value="6">Пункт №5</option>
+									<option value="7">Пункт №6</option>
+									<option value="8">Пункт №7</option>
+									<option value="9">Пункт №8</option>
+									<option value="10">Пункт №9</option>
+									<option value="11">Пункт №10</option>
+								</select>
+							</div>
 						</div>
 						<button type="submit" class="filters__button filters-button _icon-filter">
 							Filters
@@ -1151,7 +1188,6 @@
 											</span>
 										</label>
 									</div>
-
 								</div>
 							</div>
 						</div>
@@ -1328,7 +1364,6 @@
 									<option value="4">Пункт №3</option>
 								</select>
 							</div>
-
 						</div>
 						<div class="popup__action">
 							<button type="submit" class="popup__button button button--priority _icon-create">
@@ -1340,7 +1375,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20240604194434"></script>
+
+
+	<script src="js/app.min.js?_v=20240610213427"></script>
 </body>
 
 </html>

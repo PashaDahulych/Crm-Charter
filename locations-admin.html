@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Agents</title>
+	<title>Bookongs Admin</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -14,10 +14,14 @@
 
 <body>
 	<div class="wrapper">
-		<main class="page">
-			<section class="page__container">
+		<main class="period">
+			<section class="period__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
+						<!-- <a href="#" class="aside__logo"
+            ><span class="_icon-logo"></span>
+            <p>Charter<span>Click</span></p></a
+        > -->
 						<a href="#" class="aside__logo">
 							<span class="aside__logo-icon">
 								<img src="img/icon.svg" alt="logo icon" />
@@ -32,7 +36,7 @@
 					<nav class="aside__menu">
 						<ul class="aside__list">
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
 										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
@@ -40,9 +44,7 @@
 									<p class="aside__link-text">Calendar</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
-										<p class="aside__link-value">
-											4321
-										</p>
+										<p class="aside__link-value">4321</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -54,11 +56,48 @@
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
-									<div class="aside__link-icon _icon-notifications"></div>
-									<p class="aside__link-text">
-										Notifications
-									</p>
+									<div class="aside__link-icon _icon-invoices"></div>
+									<p class="aside__link-text">Invoices</p>
 								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-requests"></div>
+									<p class="aside__link-text">Requests</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-notifications"></div>
+									<p class="aside__link-text">Notifications</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller data-spoller-close href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-price">
+										<div class="aside__link-status"></div>
+									</div>
+									<p class="aside__link-text">Price Manager</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<p class="aside__link-value">2030</p>
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Chargeable Options
+											<span class="aside__sub-value">2010</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<!--! Якщо хочете додати значення долінків sub-menu - то потрібно додати <span class="aside__sub-value">20</span>. Вище спеціально зробив значення з великою цифро, що Ви почачили, що нічого не зламається. -->
+										<a href="#" class="aside__sub-link">Special Offers
+											<span class="aside__sub-value">20</span></a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Promo Codes</a>
+									</li>
+								</ul>
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
@@ -67,11 +106,9 @@
 								</a>
 							</li>
 							<li class="aside__item">
-								<a data-spoller href="#!" class="aside__link">
+								<a data-spoller href="#!" class="aside__link _spoller-init">
 									<div class="aside__link-icon _icon-my-company"></div>
-									<p class="aside__link-text">
-										My Company
-									</p>
+									<p class="aside__link-text">My Company</p>
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<!-- <p class="aside__link-value">20</p> -->
@@ -87,6 +124,40 @@
 									</li>
 									<li class="aside__sub-item">
 										<a href="#" class="aside__sub-link">Companies</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside__item">
+								<a href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-reports"></div>
+									<p class="aside__link-text">Reports</p>
+								</a>
+							</li>
+							<li class="aside__item">
+								<a data-spoller href="#!" class="aside__link">
+									<div class="aside__link-icon _icon-manage"></div>
+									<p class="aside__link-text">Manage</p>
+									<div class="aside__link-info">
+										<span class="_icon-select-arrow"></span>
+										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+								</a>
+								<ul class="aside__sub-menu">
+									<li class="aside__sub-padding"></li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Locations</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Portal</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Blog</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Pages</a>
+									</li>
+									<li class="aside__sub-item">
+										<a href="#" class="aside__sub-link">Feedback</a>
 									</li>
 								</ul>
 							</li>
@@ -111,312 +182,546 @@
 						</div>
 					</div>
 				</aside>
-				<div data-one-select class="page__agents agents">
-					<div class="agents__header header-details">
-						<h1 class="header-details__title title">Agents</h1>
-						<div class="header-details__actions">
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span><span class="header-details__icon _icon-notifications"><span>381</span></span>
-							</button>
-							<button data-popup="#invite" type="button" class="header-deatils__button button button--priority">
-								Invite
-							</button>
+
+				<div class="period__calendar calendar">
+					<div class="scroll__wrapper">
+						<div class="calendar__header header-details">
+							<h1 class="header-details__title title">
+								Locations
+							</h1>
+							<div class="header-details__actions">
+								<button type="button" class="header-details__notifications">
+									<span class="header-details__text">Notification</span>
+									<span class="header-details__icon _icon-notifications"><span>381</span></span>
+								</button>
+								<button data-popup="#offline-book-options" type="button" class="form-small__button button button--priority _icon-plus">
+									<span>Add Country</span>
+								</button>
+								<button data-popup="#offline-book" type="button" class="form-small__button button button--priority _icon-plus">
+									<span>Add City</span>
+								</button>
+							</div>
 						</div>
 					</div>
-					<form class="agents__form" action="#" method="POST">
-						<div class="agents__body">
-							<div class="agents__line">
-								<label for="calendar">Date Added</label>
-								<div class="agents__line-input">
-									<input id="calendar" autocomplete="off" name="daterange" type="text" class="input" />
-									<span class="_icon-calendar-day"></span>
-								</div>
-							</div>
-							<div class="agents__select">
-								<label for="selectAddedBy">Added By</label>
-								<select id="selectAddedBy" name="form[selectAddedBy]" data-class-modif="agents" multiple data-checkbox data-scroll>
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Owner">Owner</option>
-									<option value="Agent">Agent</option>
-								</select>
-							</div>
-							<div class="agents__line agents__line--name">
-								<label for="name-input">Name</label>
-								<input id="name-input" type="text" name="form[name]" data-error="" autocomplete="off" placeholder="" class="input" />
-							</div>
-							<div class="agents__select">
-								<label for="selectStatus">Status</label>
-								<select id="statusAction" name="form[statusAction]" multiple data-checkbox data-class-modif="agents">
-									<option value="" selected>
-										Select
-									</option>
-									<option value="Requested">
-										Requested
-									</option>
-									<option value="Activated">
-										Activated
-									</option>
-									<option value="Rejected">
-										Rejected
-									</option>
-									<option value="Revoked">Revoked</option>
-								</select>
-							</div>
-						</div>
-						<div class="agents__ations">
-							<div class="agents__checkbox checkbox">
-								<input id="approve-bookings" data-error="" class="checkbox__input" type="checkbox" value="Automatically Approve Bookings" name="form[]" />
-								<label for="approve-bookings" class="checkbox__label"><span class="checkbox__text">Automatically Approve
-										Bookings</span></label>
-							</div>
-							<button type="reset" class="agents__button button _icon-close">
-								<span>Clear</span>
-							</button>
-						</div>
-					</form>
-					<div class="agents__wrapper">
-						<table class="agents__table table">
-							<thead class="agents__thead">
-								<tr class="agents__tr">
-									<th>
-										<div>Date Added</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<img src="img/letter-status-image/close.svg" alt="letter" />
-									</th>
-									<th>
-										<div>Name</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Contact Details</div>
-									</th>
-									<th>
-										<div>Access Status</div>
-										<button class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>
-											Automatically Approve Bookings
-										</div>
-									</th>
-									<th>
-										<div>Actions</div>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="agents__tbody">
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
-											<label for="approve" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-02" data-error="" class="checkbox__input" type="checkbox" value="2" name="form[]" />
-											<label for="approve-02" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status2" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-received.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Requested</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-03" data-error="" class="checkbox__input" type="checkbox" value="3" name="form[]" />
-											<label for="approve-03" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="statu3" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-								<tr class="agents__tr">
-									<td class="agents__date">
-										<p>03.10.2023</p>
-									</td>
-									<td class="agents__letter-status">
-										<img src="img/letter-status-image/email-sent.svg" alt="letter" />
-									</td>
-									<td class="agents__user-name">
-										<p>User Name</p>
-									</td>
-									<td class="agents__contact">
-										<a href="mailto:Useremail@gmail.com">Useremail@gmail.com</a>
-										<a href="tel:9171234567">(917) 123 4567</a>
-									</td>
-									<td class="agents__access-status">
-										<p>Activated</p>
-									</td>
-									<td>
-										<div class="agents__checkbox checkbox">
-											<input id="approve-04" data-error="" class="checkbox__input" type="checkbox" value="4" name="form[]" />
-											<label for="approve-04" class="checkbox__label"></label>
-										</div>
-									</td>
-									<td class="agents__actions">
-										<select id="status4" data-scroll multiple data-checkbox name="form[]" data-class-modif="actions-table">
-											<option value="" selected>
-												Actions
-											</option>
-											<option value="2">
-												Activate
-											</option>
-											<option value="3">Block</option>
-											<option value="4">
-												Revoke
-											</option>
-											<option value="5">
-												Request
-											</option>
-											<option value="6">
-												View Details
-											</option>
-										</select>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
-								<tr>
-									<td>
-										<nav class="agents__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
-											<ul class="pagging__list">
-												<li>
-													<a href="#" class="pagging__item _active">1</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">2</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">3</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">4</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item pagging__item--dots">...</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">25</a>
-												</li>
-											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
-										</nav>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
+					<div class="main-admin__wrapper">
+						<!-- <table class="table-test table">
+                                <thead class="table-test__thead">
+                                    <tr colspan="7" class="table-test__tr">
+                                        <th></th>
+                                        <th>
+                                            <div>id</div>
+                                        </th>
+                                        <th>
+                                            <div>
+                                                Name
+                                                <button
+                                                    type="button"
+                                                    class="_icon-burger-arrow"
+                                                ></button>
+                                            </div>
+                                        </th>
+                                        <th><div>Code</div></th>
+                                        <th><div>Timezone</div></th>
+                                        <th><div>Status</div></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-test__tbody">
+                                    <tr>
+                                        <td>
+                                            <button
+                                                class="_icon-select-arrow"
+                                            ></button>
+                                        </td>
+                                        <td>1</td>
+                                        <td>UAE</td>
+                                        <td>AE</td>
+                                        <td>GMT +04:00</td>
+                                        <td>Enabled</td>
+                                        <td>
+                                            <button class="_icon-edit"></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>1</td>
+                                        <td>Dubai</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Enabled</td>
+                                        <td>
+                                            <button class="_icon-edit"></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <table>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>Dubai</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Enabled</td>
+                                                <td>
+                                                    <button
+                                                        class="_icon-edit"
+                                                    ></button>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="table-test__tfoot">
+                                    <tr>
+                                        <td colspan="7">
+                                            <nav
+                                                class="table-test__pagging pagging"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"
+                                                ></a>
+                                                <ul class="pagging__list">
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item _active"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >3</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >4</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item pagging__item--dots"
+                                                            >...</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >25</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--right _icon-menu-arrow"
+                                                ></a>
+                                            </nav>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table> -->
+
+						<!-- <table data-spol class="table-test table">
+                                <thead class="table-test__thead">
+                                    <tr class="table-test__tr">
+                                        <th></th>
+                                        <th><div>id</div></th>
+                                        <th>
+                                            <div>
+                                                Name<button
+                                                    type="button"
+                                                    class="_icon-burger-arrow"
+                                                ></button>
+                                            </div>
+                                        </th>
+                                        <th><div>Code</div></th>
+                                        <th><div>Timezone</div></th>
+                                        <th><div>Status</div></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-test__tbody">
+                                    <tr>
+                                        <td colspan="7">
+                                            <table>
+                                                <tr
+                                                    class="table-test__tr"
+                                                    data-spollernew
+                                                >
+                                                    <td>
+                                                        <button
+                                                            data-spoller-btn
+                                                            class="spoller-btn _icon-select-arrow"
+                                                        >
+                                                            +
+                                                        </button>
+                                                    </td>
+                                                    <td>1</td>
+                                                    <td>UAE</td>
+                                                    <td>AE</td>
+                                                    <td>GMT +04:00</td>
+                                                    <td>Enabled</td>
+                                                    <td>
+                                                        <button
+                                                            class="_icon-edit"
+                                                        ></button>
+                                                    </td>
+                                                </tr>
+                                                <tr
+                                                    class="table-test__tr spoller-content"
+                                                >
+                                                    <td
+                                                        colspan="7"
+                                                        style="padding: 0px"
+                                                    >
+                                                        <table>
+                                                            <tr>
+                                                                <td colspan="7">
+                                                                    <table>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                1
+                                                                            </td>
+                                                                            <td>
+                                                                                Dubai
+                                                                            </td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                Enabled
+                                                                            </td>
+                                                                            <td>
+                                                                                <button
+                                                                                    class="_icon-edit"
+                                                                                ></button>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                2
+                                                                            </td>
+                                                                            <td>
+                                                                                Abu
+                                                                                Dhabi
+                                                                            </td>
+                                                                            <td></td>
+                                                                            <td></td>
+                                                                            <td>
+                                                                                Disabled
+                                                                            </td>
+                                                                            <td>
+                                                                                <button
+                                                                                    class="_icon-edit"
+                                                                                ></button>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-test__tr" data-spollernew>
+                                        <td>
+                                            <button
+                                                data-spoller-btn
+                                                class="spoller-btn _icon-select-arrow"
+                                            >
+                                                +
+                                            </button>
+                                        </td>
+                                        <td>2</td>
+                                        <td>USA</td>
+                                        <td>US</td>
+                                        <td>GMT -05:00</td>
+                                        <td>Enabled</td>
+                                        <td>
+                                            <button class="_icon-edit"></button>
+                                        </td>
+                                    </tr>
+                                    <tr class="table-test__tr spoller-content">
+                                        <td colspan="7" style="padding: 0px">
+                                            <table>
+                                                <tr>
+                                                    <td colspan="7">
+                                                        <table>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>1</td>
+                                                                <td>
+                                                                    New York
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>Enabled</td>
+                                                                <td>
+                                                                    <button
+                                                                        class="_icon-edit"
+                                                                    ></button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td></td>
+                                                                <td>2</td>
+                                                                <td>
+                                                                    Los Angeles
+                                                                </td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td>
+                                                                    Disabled
+                                                                </td>
+                                                                <td>
+                                                                    <button
+                                                                        class="_icon-edit"
+                                                                    ></button>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="table-test__tfoot">
+                                    <tr>
+                                        <td colspan="7">
+                                            <nav
+                                                class="table-test__pagging pagging"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"
+                                                ></a>
+                                                <ul class="pagging__list">
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item _active"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >3</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >4</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item pagging__item--dots"
+                                                            >...</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >25</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--right _icon-menu-arrow"
+                                                ></a>
+                                            </nav>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table> -->
+
+						<!-- <div data-spol class="spollers">
+                                <div class="sub__item">
+                                    <div
+                                        class="spollers__title-wrapper"
+                                        data-spollernew
+										data-open
+                                    >
+                                        <button
+                                            type="button"
+                                            data-spoller-btn
+                                            class="spollers__title"
+                                        >
+                                            Заголовок спойлера
+                                        </button>
+                                        <span>loh</span><span>loh</span
+                                        ><span>loh</span><span>loh</span
+                                        ><span>loh</span>
+                                    </div>
+                                    <div class="spollers__body">
+                                        <div>
+                                            Lorem ipsum dolor sit amet
+                                            consectetur adipisicing elit. Sit
+                                            possimus magni est eveniet explicabo
+                                            doloremque id vero recusandae quas
+                                            ut error, vitae molestias
+                                            consequuntur quo amet perspiciatis
+                                            corporis harum. Natus.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+						<!-- <table data-spol>
+                                <thead>
+                                    <tr class="table-test__tr">
+                                        <th></th>
+                                        <th><div>ID</div></th>
+                                        <th>
+                                            <div>
+                                                Name<button
+                                                    type="button"
+                                                    class="_icon-burger-arrow"
+                                                ></button>
+                                            </div>
+                                        </th>
+                                        <th><div>Code</div></th>
+                                        <th><div>Timezone</div></th>
+                                        <th><div>Status</div></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="7">
+                                            <table>
+                                                <tbody>
+                                                    <tr
+                                                        class="item"
+                                                        data-spollernew
+														
+                                                    >
+                                                        <td>
+                                                            <button
+                                                                data-spoller-btn
+                                                                class="_icon-select-arrow"
+                                                            ></button>
+                                                        </td>
+                                                        <td><div>1</div></td>
+                                                        <td>UAE</td>
+                                                        <td>AE</td>
+                                                        <td>GMT +04:00</td>
+                                                        <td>Enabled</td>
+                                                        <td>
+                                                            <button
+                                                                class="_icon-select-edit"
+                                                            ></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="7">
+                                                            <table>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            id
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Name
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Code
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Timezone
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Status
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button
+                                                                                class="_icon-edit"
+                                                                            ></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td></td>
+                                                                        <td>
+                                                                            id
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Name
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Code
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Timezone
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div>
+                                                                                Status
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>
+                                                                            <button
+                                                                                class="_icon-edit"
+                                                                            ></button>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table> -->
+
+
 					</div>
 				</div>
 				<aside class="page__notification notification">
