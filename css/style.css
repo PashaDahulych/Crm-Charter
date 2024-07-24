@@ -13667,6 +13667,10 @@ body::after {
     font-size: 2.5rem;
   }
 
+  .new-boat__password input {
+    padding-right: 2.75rem;
+  }
+
   .new-boat__password button {
     font-size: 1.25rem;
   }
