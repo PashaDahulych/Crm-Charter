@@ -9684,7 +9684,7 @@ body::after {
 }
 
 .new-boat__password input {
-  padding-right: 2.75rem;
+  padding: 0.6563rem 2.6875rem 0.6563rem 0.625rem;
 }
 
 .new-boat__password button {
@@ -13668,7 +13668,7 @@ body::after {
   }
 
   .new-boat__password input {
-    padding-right: 2.75rem;
+    padding: 0.84375rem 3rem 0.84375rem 0.9375rem;
   }
 
   .new-boat__password button {
@@ -14994,6 +14994,10 @@ body::after {
 
   .login__thanks h1 {
     font-size: 2.75rem;
+  }
+
+  .new-boat__password input {
+    padding: 1.09375rem 3rem 1.09375rem 0.9375rem;
   }
 }
 
