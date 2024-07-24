@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Register owner</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240724143554">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="login">
+			<form action="#" method="POST" class="login__form owner">
+				<a href="#" class="login__logo"><img src="img/login-pages/logo-register.svg" alt="logo" /></a>
+				<h1 class="login__title">Register as Owner</h1>
+				<div class="login__steps">
+					<h2>Step 2 of 2</h2>
+					<h3>Tell us about yourself</h3>
+					<p>
+						This data will be provided to customers in the
+						confirmation email.
+					</p>
+				</div>
+				<div class="login__wr-body">
+					<div class="new-boat__line">
+						<label for="companyName">Company Name * </label>
+						<input type="text" id="companyName" name="companyName" required data-error="Error" placeholder="Enter Company Name" class="input" />
+					</div>
+					<div class="new-boat__line">
+						<label for="companyPhoneNumber">Company Phone Number *
+						</label>
+						<input type="tel" id="companyPhoneNumber" name="companyPhoneNumber" required data-error="Error" placeholder="Enter Company Phone Number" class="input" />
+					</div>
+					<div class="new-boat__line">
+						<label for="companyEmailAddress">Company Email Address *</label>
+						<input type="email" id="companyEmailAddress" name="companyEmailAddress" required data-error="Error" placeholder="Enter Company Email Address" class="input" />
+					</div>
+				</div>
+				<div class="login__checkbox checkbox">
+					<input id="agreeOwner" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="I agree with Terms and Conditions" />
+					<label for="agreeOwner" class="checkbox__label"><span class="checkbox__text">I agree with Terms and Conditions</span></label>
+				</div>
+				<div class="login__reg-act">
+					<div class="login__back">
+						<a href="#" class="_icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+								<path d="M21.5 11.5H7.33L10.91 7.91L9.5 6.5L3.5 12.5L9.5 18.5L10.91 17.09L7.33 13.5H21.5V11.5Z" fill="#109EEE" />
+							</svg>
+							<span>Back</span></a>
+					</div>
+
+					<button disabled type="submit" class="login__button button button--login">
+						Register
+					</button>
+				</div>
+			</form>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20240724143554"></script>
+</body>
+
+</html>

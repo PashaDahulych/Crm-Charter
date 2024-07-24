@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Register agent</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240724143554">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="login">
+			<form action="#" method="POST" class="login__form register">
+				<a href="#" class="login__logo"><img src="img/login-pages/logo-register.svg" alt="logo" /></a>
+				<h1 class="login__title">Register as Agent</h1>
+				<div class="login__wr-body">
+					<div class="login__lines">
+						<div class="new-boat__line">
+							<label for="fName">First Name *</label>
+							<input type="text" id="fName" name="fName" required data-error="Error" placeholder="Enter Your First Name" class="input" />
+						</div>
+						<div class="new-boat__line">
+							<label for="lName">Last Name *</label>
+							<input type="text" id="lName" name="l§Name" required data-error="Error" placeholder="Enter Your Last Name" class="input" />
+						</div>
+					</div>
+					<div class="new-boat__line">
+						<label for="country">Country * </label>
+						<input type="text" id="country" name="country" required data-error="Error" placeholder="Enter Your Country" class="input" />
+					</div>
+					<div class="new-boat__line">
+						<label for="phoneNumber">Phone Number * </label>
+						<input type="tel" id="phoneNumber" name="phoneNumber" required data-error="Error" placeholder="Enter Your Phone Number" class="input" />
+					</div>
+					<div class="login__options-comp options-comp">
+						<div class="options-comp__item">
+							<input id="individual" class="options-comp__input" type="radio" value="individual" name="typeAgent" />
+							<label for="individual" class="options-comp__label">
+								<span class="options-comp__icon"></span>
+								<span class="options-comp__text">Individual Enterpreneur</span>
+							</label>
+							<button type="button" class="_icon-info"></button>
+						</div>
+						<div class="options-comp__item">
+							<input id="company" class="options-comp__input" type="radio" value="2" name="typeAgent" checked />
+							<label for="company" class="options-comp__label">
+								<span class="options-comp__icon"></span>
+								<span class="options-comp__text">Company</span>
+							</label>
+							<button type="button" class="_icon-info"></button>
+						</div>
+					</div>
+					<div class="new-boat__line">
+						<label for="companyName">Company Name * </label>
+						<input type="text" id="companyName" name="companyName" required data-error="Error" placeholder="Enter Company Nam" class="input" />
+					</div>
+				</div>
+				<div class="login__checkbox checkbox">
+					<input id="agree" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="I agree with Terms and Conditions" />
+					<label for="agree" class="checkbox__label"><span class="checkbox__text">I agree with Terms and Conditions</span></label>
+				</div>
+				<div class="login__reg-act">
+					<div class="login__back">
+						<a href="#" class="_icon">
+							<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+								<path d="M21.5 11.5H7.33L10.91 7.91L9.5 6.5L3.5 12.5L9.5 18.5L10.91 17.09L7.33 13.5H21.5V11.5Z" fill="#109EEE" />
+							</svg>
+							<span>Back</span></a>
+					</div>
+
+					<button disabled type="submit" class="login__button button button--login">
+						Register
+					</button>
+				</div>
+			</form>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20240724143554"></script>
+</body>
+
+</html>

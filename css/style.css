@@ -9302,6 +9302,24 @@ body::after {
           flex: 0 1 23.625rem;
 }
 
+.login__form.register .login__title:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.login__form.owner .login__title:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.login__form.owner .new-boat__line p {
+  color: #487791;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.login__form.owner .new-boat__line input:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
 .login__logo {
   display: block;
   max-width: 22.125rem;
@@ -9326,6 +9344,35 @@ body::after {
 
 .login__title:not(:last-child) {
   margin-bottom: 3.125rem;
+}
+
+.login__steps {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.login__steps > *:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.login__steps h2 {
+  color: #487791;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.login__steps h3 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.login__steps p {
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+
+.login__steps:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 
 .login__wr-body {
@@ -9361,8 +9408,97 @@ body::after {
   cursor: default;
 }
 
+.login__options-comp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.25rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.login__options-comp .options-comp__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+}
+
+.login__options-comp .options-comp__item button {
+  color: #90bfdb;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 0.875rem;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.login__checkbox:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
 .login__actions:not(:last-child) {
   margin-bottom: 2.5rem;
+}
+
+.login__reg-act {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.login__reg-act button {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.login__back {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  text-align: center;
+}
+
+.login__back a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+.login__back a span {
+  color: #109eee;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: capitalize;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.login__back a svg path {
+  -webkit-transition: fill 0.3s ease 0s;
+  transition: fill 0.3s ease 0s;
 }
 
 .login__button {
@@ -9394,7 +9530,8 @@ body::after {
   line-height: 1.5;
 }
 
-.login__register button {
+.login__register button,
+.login__register a {
   color: #109eee;
   font-size: 1rem;
   font-weight: 700;
@@ -9404,8 +9541,26 @@ body::after {
   transition: color 0.3s ease;
 }
 
-.login__register button:disabled {
+.login__register button:disabled,
+.login__register a:disabled {
   opacity: 0.3;
+}
+
+.login__back-lg {
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: inline-block;
+  color: #109eee;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.2;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .login__social {
@@ -9485,6 +9640,45 @@ body::after {
   max-width: 100%;
 }
 
+.login__thanks {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 36.25rem;
+          flex: 0 1 36.25rem;
+}
+
+.login__thanks h1 {
+  color: #109eee;
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1.4;
+}
+
+.login__thanks h1:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.login__text {
+  color: #487791;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.login__text p:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.login__text a {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.login__text a:first-of-type {
+  font-style: italic;
+}
+
 .new-boat__password {
   position: relative;
 }
@@ -9504,6 +9698,71 @@ body::after {
   -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
   font-size: 0.9375rem;
+}
+
+.register__as {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  border-radius: 0.625rem;
+  border: 0.0625rem solid rgba(144, 191, 219, 0.5);
+  background-color: #f2f6f8;
+}
+
+.register__as a {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 1.0625rem 0.625rem;
+  gap: 0.3125rem;
+  color: #109eee;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.2;
+  -webkit-transition: color 0.3s ease, background-color 0.3s ease;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.register__as a i {
+  color: #90bfdb;
+  font-size: 0.875rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.register__as .decor__line {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 0.0625rem;
+          flex: 0 1 0.0625rem;
+  height: 85%;
+  width: 0.0625rem;
+  background-color: rgba(144, 191, 219, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.register__as:not(:last-child) {
+  margin-bottom: 2.5rem;
 }
 
 .daterangepicker {
@@ -10978,6 +11237,19 @@ body::after {
 
   .new-boat__list {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .login__lines {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  .login__lines .new-boat__line {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
   }
 }
 
@@ -13325,6 +13597,10 @@ body::after {
         flex-basis: 31.25rem;
   }
 
+  .login__form.owner .new-boat__line p {
+    font-size: 1rem;
+  }
+
   .login__title {
     font-size: 1.25rem;
   }
@@ -13333,15 +13609,45 @@ body::after {
     font-size: 1.5rem;
   }
 
+  .login__steps h2 {
+    font-size: 1.125rem;
+  }
+
+  .login__steps h3 {
+    font-size: 1.25rem;
+  }
+
+  .login__steps p {
+    font-size: 1.125rem;
+  }
+
   .login__forgot-btn {
     font-size: 1.125rem;
+  }
+
+  .login__options-comp .options-comp__item button {
+    font-size: 1.125rem;
+  }
+
+  .login__back a span {
+    font-size: 1.375rem;
+  }
+
+  .login__back a svg {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .login__register p {
     font-size: 1.125rem;
   }
 
-  .login__register button {
+  .login__register button,
+  .login__register a {
+    font-size: 1.25rem;
+  }
+
+  .login__back-lg {
     font-size: 1.25rem;
   }
 
@@ -13357,8 +13663,30 @@ body::after {
     height: 3rem;
   }
 
+  .login__thanks h1 {
+    font-size: 2.5rem;
+  }
+
   .new-boat__password button {
     font-size: 1.25rem;
+  }
+
+  .register__as a {
+    font-size: 1.25rem;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .register__as a i {
+    font-size: 1rem;
+  }
+
+  .register__as a {
+    padding-bottom: 1.5rem;
+  }
+
+  .register__as a i {
+    font-size: 1.125rem;
   }
 }
 
@@ -14644,8 +14972,24 @@ body::after {
         flex-basis: 43.75rem;
   }
 
+  .login__form.owner .new-boat__line p {
+    font-size: 1.25rem;
+  }
+
   .login__forgot-btn {
     font-size: 1.375rem;
+  }
+
+  .login__back a span {
+    font-size: 1.5rem;
+  }
+
+  .login__back-lg {
+    font-size: 1.5rem;
+  }
+
+  .login__thanks h1 {
+    font-size: 2.75rem;
   }
 }
 
@@ -14654,7 +14998,8 @@ body::after {
     font-size: 1.375rem;
   }
 
-  .login__register button {
+  .login__register button,
+  .login__register a {
     font-size: 1.5rem;
   }
 
@@ -14928,6 +15273,18 @@ body::after {
     width: 2rem;
     height: 2rem;
     font-size: 0.6875rem;
+  }
+
+  .login__steps h2 {
+    font-size: 1.375rem;
+  }
+
+  .login__steps h3 {
+    font-size: 1.5rem;
+  }
+
+  .login__steps p {
+    font-size: 1.375rem;
   }
 }
 
@@ -16218,6 +16575,10 @@ body::after {
 
   .calendar-open .notif__line input {
     border: 0.0625rem solid transparent;
+  }
+
+  .login__lines .new-boat__line:not(:last-child) {
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -17654,12 +18015,30 @@ body::after {
     color: #487791;
   }
 
-  .login__register button:disabled:hover {
+  .login__options-comp .options-comp__item button:hover {
+    color: #0a3647;
+  }
+
+  .login__back a:hover span {
+    color: #0a3647;
+  }
+
+  .login__back a:hover svg path {
+    fill: #0a3647;
+  }
+
+  .login__register button:disabled:hover,
+  .login__register a:disabled:hover {
     color: #109eee;
     cursor: default;
   }
 
-  .login__register button:hover {
+  .login__register button:hover,
+  .login__register a:hover {
+    color: #0a3647;
+  }
+
+  .login__back-lg:hover {
     color: #0a3647;
   }
 
@@ -17669,7 +18048,16 @@ body::after {
             transform: scale(1.1);
   }
 
+  .login__text a:hover {
+    color: #0a3647;
+  }
+
   .new-boat__password button:hover {
     color: #90bfdb;
+  }
+
+  .register__as a:hover {
+    background-color: #109eee;
+    color: #fff;
   }
 }
