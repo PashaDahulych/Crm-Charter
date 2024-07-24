@@ -19781,7 +19781,7 @@
                     if (!el.closest("[data-spollers]")) spollersClose.forEach((spollerClose => {
                         const spollersBlock = spollerClose.closest("[data-spollers]");
                         if (spollersBlock.classList.contains("_spoller-init")) {
-                            const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 0;
+                            const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
                             spollerClose.classList.remove("_spoller-active");
                             _slideUp(spollerClose.nextElementSibling, spollerSpeed);
                         }
@@ -19845,7 +19845,7 @@
                     const el = e.target;
                     const isSpollerButton = el.matches("[data-spoller-btn]");
                     if (isSpollerButton) {
-                        const spollerTitle = el.closest("[data-spollerNew]");
+                        const spollerTitle = el.closest("[data-spollernew]");
                         if (spollerTitle) {
                             const spollersBlock = spollerTitle.closest("[data-spol]");
                             const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
@@ -20082,7 +20082,6 @@
                 this.options.init ? this.initPopups() : null;
             }
             initPopups() {
-                this.popupLogging(`Прокинувся`);
                 this.eventsPopup();
             }
             eventsPopup() {
@@ -20102,7 +20101,8 @@
                         return;
                     }
                     const buttonClose = e.target.closest(`[${this.options.attributeCloseButton}]`);
-                    if (buttonClose || !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
+                    const isFilterPopup = e.target.closest(".popup--filters");
+                    if (buttonClose || !isFilterPopup && !e.target.closest(`.${this.options.classes.popupContent}`) && this.isOpen) {
                         e.preventDefault();
                         this.close();
                         return;
@@ -20410,6 +20410,23 @@
             }));
         }
         var datepicker_min = __webpack_require__(1448);
+        const dateInputs = document.querySelectorAll("[data-datepicker]");
+        if (dateInputs.length > 0) dateInputs.forEach((dateInput => {
+            const picker = datepicker_min(dateInput, {
+                customDays: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Нд" ],
+                customMonths: [ "Січ", "Лют", "Берез", "Квіт", "Трав", "Черв", "Лип", "Серп", "Верес", "Жовт", "Листоп", "Груд" ],
+                overlayButton: "Застосувати",
+                overlayPlaceholder: "Рік (4 цифри)",
+                startDay: 1,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            if (!modules_flsModules.datepicker) modules_flsModules.datepicker = [];
+            modules_flsModules.datepicker.push(picker);
+        }));
         if (document.querySelector("[data-datepicker]")) {
             const picker = datepicker_min("[data-datepicker]", {
                 customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
@@ -20473,6 +20490,38 @@
                 onSelect: function(input, instance, date) {}
             });
             modules_flsModules.datepickerSecond = pickerSecond;
+        }
+        if (document.getElementById("startDateOutOfServices")) {
+            const pickerStart = datepicker_min("#startDateOutOfServices", {
+                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                showAllDates: true,
+                overlayButton: "Apply",
+                overlayPlaceholder: "Year (4 numbers)",
+                startDay: 0,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            modules_flsModules.datepickerSecond = pickerStart;
+        }
+        if (document.getElementById("endDateOutOfServices")) {
+            const pickerEnd = datepicker_min("#endDateOutOfServices", {
+                customDays: [ "S", "M", "T", "W", "T", "F", "S" ],
+                customMonths: [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ],
+                showAllDates: true,
+                overlayButton: "Apply",
+                overlayPlaceholder: "Year (4 numbers)",
+                startDay: 0,
+                formatter: (input, date, instance) => {
+                    const value = date.toLocaleDateString();
+                    input.value = value;
+                },
+                onSelect: function(input, instance, date) {}
+            });
+            modules_flsModules.datepickerSecond = pickerEnd;
         }
         var jquery = __webpack_require__(9755);
         var moment = __webpack_require__(381);
@@ -21478,32 +21527,6 @@
             });
         }));
         let addWindowScrollEvent = false;
-        function headerScroll() {
-            addWindowScrollEvent = true;
-            const header = document.querySelector("div.scroll__wrapper");
-            const headerShow = header.hasAttribute("data-scroll-show");
-            const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
-            const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
-            let scrollDirection = 0;
-            let timer;
-            document.addEventListener("windowScroll", (function(e) {
-                const scrollTop = window.scrollY;
-                clearTimeout(timer);
-                if (scrollTop >= startPoint) {
-                    !header.classList.contains("_sticky") ? header.classList.add("_sticky") : null;
-                    if (headerShow) {
-                        if (scrollTop > scrollDirection) header.classList.contains("_sticky-show") ? header.classList.remove("_sticky-show") : null; else !header.classList.contains("_sticky-show") ? header.classList.add("_sticky-show") : null;
-                        timer = setTimeout((() => {
-                            !header.classList.contains("_sticky-show") ? header.classList.add("_sticky-show") : null;
-                        }), headerShowTimer);
-                    }
-                } else {
-                    header.classList.contains("_sticky") ? header.classList.remove("_sticky") : null;
-                    if (headerShow) header.classList.contains("_sticky-show") ? header.classList.remove("_sticky-show") : null;
-                }
-                scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
-            }));
-        }
         setTimeout((() => {
             if (addWindowScrollEvent) {
                 let windowScroll = new Event("windowScroll");
@@ -21566,36 +21589,7 @@
             }));
         }));
         //!  Код який працює на розширенні менше 1024 з потрібними ф-ми
-                document.addEventListener("DOMContentLoaded", (function() {
-            const asideButton = document.querySelector(".aside__button");
-            const aside = document.querySelector(".aside");
-            let isMenuOpen = false;
-            document.addEventListener("click", (function(e) {
-                if (window.innerWidth <= 1024 && aside.contains(e.target)) {
-                    isMenuOpen = true;
-                    document.documentElement.classList.add("menu-open");
-                    document.documentElement.classList.add("lock");
-                } else if (isMenuOpen && e.target !== asideButton) {
-                    isMenuOpen = false;
-                    document.documentElement.classList.remove("menu-open");
-                    document.documentElement.classList.remove("lock");
-                }
-            }));
-            asideButton.addEventListener("click", (function(e) {
-                e.stopPropagation();
-                if (window.innerWidth <= 1024) {
-                    isMenuOpen = !isMenuOpen;
-                    if (isMenuOpen) {
-                        document.documentElement.classList.add("menu-open");
-                        document.documentElement.classList.add("lock");
-                    } else {
-                        document.documentElement.classList.remove("menu-open");
-                        document.documentElement.classList.remove("lock");
-                    }
-                }
-            }));
-        }));
-        const menuNotificationOpen = document.querySelector(".header-details__notifications");
+                const menuNotificationOpen = document.querySelector(".header-details__notifications");
         const menuNotificationClosed = document.querySelector(".notification__close");
         if (menuNotificationOpen) menuNotificationOpen.addEventListener("click", (() => {
             document.documentElement.classList.toggle("_notifications-open");
@@ -21615,6 +21609,5 @@
             autoHeight: false
         });
         formQuantity();
-        headerScroll();
     })();
 })();
