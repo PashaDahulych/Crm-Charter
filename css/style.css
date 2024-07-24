@@ -700,15 +700,6 @@ body {
   transition: color 0.3s ease;
 }
 
-.button--login:disabled {
-  background-color: #109eee;
-  color: #fff;
-  opacity: 0.3;
-  cursor: default;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .button--login:active {
   color: #fff;
   background-color: #109eee;
@@ -716,6 +707,15 @@ body {
 
 .button--login:active::before {
   color: #fff;
+}
+
+.button--login:disabled {
+  background-color: #109eee;
+  color: #fff;
+  opacity: 0.3;
+  cursor: default;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .button-chancel {
@@ -17364,16 +17364,17 @@ body::after {
     color: #90bfdb;
   }
 
-  .button--login:disabled:hover {
-    color: #fff;
-  }
-
   .button--login:hover {
     color: #0a3647;
   }
 
   .button--login:hover:before {
     color: #90bfdb;
+  }
+
+  .button--login:disabled:hover {
+    color: #fff;
+    background-color: #109eee;
   }
 
   .button-chancel:hover {
