@@ -4661,6 +4661,7 @@ body::after {
           align-items: center;
   gap: 0.625rem;
   padding: 0.3125rem 0.625rem;
+  position: relative;
 }
 
 .aside__link._spoller-active {
@@ -4686,6 +4687,23 @@ body::after {
 
 .menu-open .aside__link {
   gap: 0rem;
+}
+
+.aside__link::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -15px;
+  height: 100%;
+  width: 5px;
+  background-color: transparent;
+  border-radius: 0px 3px 3px 0px;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.aside__link._checked::after {
+  background-color: #fff;
 }
 
 .menu-open .aside__link-text {
