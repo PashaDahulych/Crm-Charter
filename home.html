@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240610213427">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240816130855">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,10 +18,6 @@
 			<section class="page__container">
 				<aside data-spollers class="page__aside aside">
 					<div class="aside__header">
-						<!-- <a href="#" class="aside__logo"
-            ><span class="_icon-logo"></span>
-            <p>Charter<span>Click</span></p></a
-        > -->
 						<a href="#" class="aside__logo">
 							<span class="aside__logo-icon">
 								<img src="img/icon.svg" alt="logo icon" />
@@ -36,7 +32,8 @@
 					<nav class="aside__menu">
 						<ul class="aside__list">
 							<li class="aside__item">
-								<a data-spoller data-spoller-close href="#!" class="aside__link">
+								<!-- data-spoller-close -->
+								<a data-spoller href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-calendar">
 										<!-- Якщо потрібно додати наявність повідомлення на згорнутому сайдбарі. Це можна буде додати в потрібне місце і зеоений кружечок буде доданий. Стилі в css -->
 										<div class="aside__link-status"></div>
@@ -45,6 +42,9 @@
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<p class="aside__link-value">4321</p>
+									</div>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Calendar</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -55,21 +55,30 @@
 								</ul>
 							</li>
 							<li class="aside__item">
-								<a href="#!" class="aside__link">
+								<a data-id href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-invoices"></div>
 									<p class="aside__link-text">Invoices</p>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Invoices</p>
+									</div>
 								</a>
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-requests"></div>
 									<p class="aside__link-text">Requests</p>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Requests</p>
+									</div>
 								</a>
 							</li>
 							<li class="aside__item">
 								<a href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-notifications"></div>
 									<p class="aside__link-text">Notifications</p>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Notifications</p>
+									</div>
 								</a>
 							</li>
 							<li class="aside__item">
@@ -81,6 +90,9 @@
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<p class="aside__link-value">2030</p>
+									</div>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Price Manager</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -103,6 +115,9 @@
 								<a href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-boast"></div>
 									<p class="aside__link-text">Boats</p>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Boats</p>
+									</div>
 								</a>
 							</li>
 							<li class="aside__item">
@@ -112,6 +127,9 @@
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">My Company</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -131,6 +149,9 @@
 								<a href="#!" class="aside__link">
 									<div class="aside__link-icon _icon-reports"></div>
 									<p class="aside__link-text">Reports</p>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Reports</p>
+									</div>
 								</a>
 							</li>
 							<li class="aside__item">
@@ -140,6 +161,9 @@
 									<div class="aside__link-info">
 										<span class="_icon-select-arrow"></span>
 										<!-- <p class="aside__link-value">20</p> -->
+									</div>
+									<div class="aside__h-btn-wrapper">
+										<p class="aside__h-btn">Manage</p>
 									</div>
 								</a>
 								<ul class="aside__sub-menu">
@@ -183,282 +207,381 @@
 					</div>
 				</aside>
 
-				<div class="page__main-admin main-admin">
-					<div class="scroll__wrapper">
-						<div class="main-admin__header header-details">
-							<h1 class="header-details__title title">
-								Price Manager
-							</h1>
-							<button type="button" class="header-details__notifications">
-								<span class="header-details__text">Notification</span>
-								<span class="header-details__icon _icon-notifications">
-									<span>381</span>
-								</span>
-							</button>
-						</div>
-						<form action="#" method="POST" class="main-admin__form form">
-							<div class="form__body">
-								<div class="form__line">
-									<label for="boat">Boat</label>
-									<div class="form__select">
-										<select id="boat" name="boat">
-											<option value="">Select</option>
-											<option selected value="2">
-												Пункт №1
-											</option>
-											<option value="3">
-												Пункт №2
-											</option>
-											<option value="4">
-												Пункт №3
-											</option>
-										</select>
-									</div>
-								</div>
-								<div class="form__line">
-									<label for="location">Location</label>
-									<div class="form__select">
-										<select id="location" name="location">
-											<option value="">Select</option>
-											<option value="2">
-												Пункт №1
-											</option>
-											<option value="3">
-												Пункт №2
-											</option>
-											<option value="4">
-												Пункт №3
-											</option>
-										</select>
-									</div>
-								</div>
-								<div class="form__line">
-									<label for="companyName">Company</label>
-									<div class="form__select">
-										<select id="companyName" name="company name">
-											<option value="">Select</option>
-											<option value="2">
-												Пункт №1
-											</option>
-											<option value="3">
-												Пункт №2
-											</option>
-											<option value="4">
-												Пункт №3
-											</option>
-											<option value="5">
-												Пункт №4
-											</option>
-											<option value="6">
-												Пункт №5
-											</option>
-											<option value="7">
-												Пункт №6
-											</option>
-											<option value="8">
-												Пункт №7
-											</option>
-											<option value="9">
-												Пункт №8
-											</option>
-											<option value="10">
-												Пункт №9
-											</option>
-											<option value="11">
-												Пункт №10
-											</option>
-											<option value="12">
-												Пункт №11
-											</option>
-										</select>
-									</div>
-								</div>
-							</div>
-							<div class="form__actions">
-								<div class="form__checkbox checkbox">
-									<input id="c_1" data-error="" class="checkbox__input" type="checkbox" value="1" name="form[]" />
-									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Show only posted online</span></label>
-								</div>
-								<div class="form__buttons">
-									<button type="reset" class="form__button button _icon-close">
-										<span>Clear</span>
-									</button>
-									<button type="submit" class="form__button button _icon-check">
-										<span>Apply</span>
-									</button>
-								</div>
-							</div>
-						</form>
-					</div>
+				<!-- <div class="page__main-admin main-admin">
+                        <div class="scroll__wrapper">
+                            <div class="main-admin__header header-details">
+                                <h1 class="header-details__title title">
+                                    Price Manager
+                                </h1>
+                                <button
+                                    type="button"
+                                    class="header-details__notifications"
+                                >
+                                    <span class="header-details__text"
+                                        >Notification</span
+                                    >
+                                    <span
+                                        class="header-details__icon _icon-notifications"
+                                    >
+                                        <span>381</span>
+                                    </span>
+                                </button>
+                            </div>
+                            <form
+                                action="#"
+                                method="POST"
+                                class="main-admin__form form"
+                            >
+                                <div class="form__body">
+                                    <div class="form__line">
+                                        <label for="boat">Boat</label>
+                                        <div class="form__select">
+                                            <select id="boat" name="boat">
+                                                <option value="">Select</option>
+                                                <option selected value="2">
+                                                    Пункт №1
+                                                </option>
+                                                <option value="3">
+                                                    Пункт №2
+                                                </option>
+                                                <option value="4">
+                                                    Пункт №3
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form__line">
+                                        <label for="location">Location</label>
+                                        <div class="form__select">
+                                            <select
+                                                id="location"
+                                                name="location"
+                                            >
+                                                <option value="">Select</option>
+                                                <option value="2">
+                                                    Пункт №1
+                                                </option>
+                                                <option value="3">
+                                                    Пункт №2
+                                                </option>
+                                                <option value="4">
+                                                    Пункт №3
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form__line">
+                                        <label for="companyName">Company</label>
+                                        <div class="form__select">
+                                            <select
+                                                id="companyName"
+                                                name="company name"
+                                            >
+                                                <option value="">Select</option>
+                                                <option value="2">
+                                                    Пункт №1
+                                                </option>
+                                                <option value="3">
+                                                    Пункт №2
+                                                </option>
+                                                <option value="4">
+                                                    Пункт №3
+                                                </option>
+                                                <option value="5">
+                                                    Пункт №4
+                                                </option>
+                                                <option value="6">
+                                                    Пункт №5
+                                                </option>
+                                                <option value="7">
+                                                    Пункт №6
+                                                </option>
+                                                <option value="8">
+                                                    Пункт №7
+                                                </option>
+                                                <option value="9">
+                                                    Пункт №8
+                                                </option>
+                                                <option value="10">
+                                                    Пункт №9
+                                                </option>
+                                                <option value="11">
+                                                    Пункт №10
+                                                </option>
+                                                <option value="12">
+                                                    Пункт №11
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__actions">
+                                    <div class="form__checkbox checkbox">
+                                        <input
+                                            id="c_1"
+                                            data-error=""
+                                            class="checkbox__input"
+                                            type="checkbox"
+                                            value="1"
+                                            name="form[]"
+                                        />
+                                        <label for="c_1" class="checkbox__label"
+                                            ><span class="checkbox__text"
+                                                >Show only posted online</span
+                                            ></label
+                                        >
+                                    </div>
+                                    <div class="form__buttons">
+                                        <button
+                                            type="reset"
+                                            class="form__button button _icon-close"
+                                        >
+                                            <span>Clear</span>
+                                        </button>
+                                        <button
+                                            type="submit"
+                                            class="form__button button _icon-check"
+                                        >
+                                            <span>Apply</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
 
-					<div class="main-admin__wrapper">
-						<table class="main-admin__table table">
-							<thead class="main-admin__thead">
-								<tr class="main-admin__tr">
-									<th>
-										<div>Boat</div>
-										<button type="button" class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>Lication</div>
-									</th>
-									<th>
-										<div>Company</div>
-									</th>
-									<th>
-										<div>Minimal Duration</div>
-									</th>
-									<th>
-										<div>
-											Lowest Price for Agent (Hour)
-										</div>
-										<button class="_icon-burger-arrow"></button>
-									</th>
-									<th>
-										<div>
-											Standard Price for Clients
-											(Hour)
-										</div>
-									</th>
-								</tr>
-							</thead>
-							<tbody class="main-admin__tbody">
-								<tr class="main-admin__tr">
-									<td class="main-admin__boat boat-cell">
-										<a href="#">
-											<div>
-												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
-											</div>
-											<p>
-												Luxury Yacht SilverCreek 61
-												Ft
-											</p>
-										</a>
-									</td>
-									<td class="main-admin__lication">
-										<p>UAE Dubai</p>
-									</td>
-									<td class="main-admin__company">
-										<a href="#">Boat Owner LLC </a>
-									</td>
-									<td class="main-admin__duration">
-										<p>1 hour</p>
-									</td>
-									<td class="main-admin__agent-price">
-										<p><span>1 000</span> AED</p>
-									</td>
-									<td class="main-admin__started-price">
-										<form action="#" method="POST">
-											<p>AED</p>
-											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
-											<button type="reset" class="_icon-update"></button>
-										</form>
-										<!-- <p>AED <span>900</span></p> <button type="button" class="_icon-update"></button> -->
-									</td>
-								</tr>
-								<tr class="main-admin__tr">
-									<td class="main-admin__boat boat-cell">
-										<a href="#">
-											<div>
-												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
-											</div>
-											<p>
-												Luxury Yacht SilverCreek 61
-												Ft
-											</p>
-										</a>
-									</td>
-									<td class="main-admin__lication">
-										<p>UAE Dubai</p>
-									</td>
-									<td class="main-admin__company">
-										<a href="#">Boat Owner LLC</a>
-									</td>
-									<td class="main-admin__duration">
-										<p>1 hour</p>
-									</td>
-									<td class="main-admin__agent-price">
-										<p><span>1 000</span> AED</p>
-									</td>
-									<td class="main-admin__started-price">
-										<form action="#" method="POST">
-											<p>AED</p>
-											<input type="tel" name="form[email]" data-error="" autocomplete="off" placeholder="" class="input" />
-											<button type="reset" class="_icon-update"></button>
-										</form>
-										<!-- <p>AED <span></span></p> -->
-									</td>
-								</tr>
-								<tr class="main-admin__tr">
-									<td class="main-admin__boat boat-cell">
-										<a href="#">
-											<div>
-												<picture><source srcset="img/ship-image.webp" type="image/webp"><img src="img/ship-image.png" alt="ship" /></picture>
-											</div>
-											<p>
-												Luxury Yacht SilverCreek 61
-												Ft
-											</p>
-										</a>
-									</td>
-									<td class="main-admin__lication">
-										<p>UAE Dubai</p>
-									</td>
-									<td class="main-admin__company">
-										<a href="#">Boat Owner LLC </a>
-									</td>
-									<td class="main-admin__duration">
-										<p>1 hour</p>
-									</td>
-									<td class="main-admin__agent-price">
-										<p><span>1 000</span> AED</p>
-									</td>
-									<td class="main-admin__started-price main-admin__started-price--only">
-										<div class="main-admin__agent-only">
-											Agents only
-											<button data-show-modal type="button" class="_icon-info">
-												<span data-modal>
-													This boat is not posted
-													online
-												</span>
-											</button>
-										</div>
-									</td>
-								</tr>
-							</tbody>
-							<tfoot class="main-admin__tfoot">
-								<tr>
-									<td>
-										<nav class="main-admin__pagging pagging">
-											<a href="#" class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"></a>
-											<ul class="pagging__list">
-												<li>
-													<a href="#" class="pagging__item _active">1</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">2</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">3</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">4</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item pagging__item--dots">...</a>
-												</li>
-												<li>
-													<a href="#" class="pagging__item">25</a>
-												</li>
-											</ul>
-											<a href="#" class="pagging__arrow pagging__arrow--right _icon-menu-arrow"></a>
-										</nav>
-									</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</div>
+                        <div class="main-admin__wrapper">
+                            <table class="main-admin__table table">
+                                <thead class="main-admin__thead">
+                                    <tr class="main-admin__tr">
+                                        <th>
+                                            <div>Boat</div>
+                                            <button
+                                                type="button"
+                                                class="_icon-burger-arrow"
+                                            ></button>
+                                        </th>
+                                        <th><div>Lication</div></th>
+                                        <th><div>Company</div></th>
+                                        <th><div>Minimal Duration</div></th>
+                                        <th>
+                                            <div>
+                                                Lowest Price for Agent (Hour)
+                                            </div>
+                                            <button
+                                                class="_icon-burger-arrow"
+                                            ></button>
+                                        </th>
+                                        <th>
+                                            <div>
+                                                Standard Price for Clients
+                                                (Hour)
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody class="main-admin__tbody">
+                                    <tr class="main-admin__tr">
+                                        <td class="main-admin__boat boat-cell">
+                                            <a href="#">
+                                                <div>
+                                                    <img
+                                                        src="img/ship-image.png"
+                                                        alt="ship"
+                                                    />
+                                                </div>
+                                                <p>
+                                                    Luxury Yacht SilverCreek 61
+                                                    Ft
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td class="main-admin__lication">
+                                            <p>UAE Dubai</p>
+                                        </td>
+                                        <td class="main-admin__company">
+                                            <a href="#">Boat Owner LLC </a>
+                                        </td>
+                                        <td class="main-admin__duration">
+                                            <p>1 hour</p>
+                                        </td>
+                                        <td class="main-admin__agent-price">
+                                            <p><span>1 000</span> AED</p>
+                                        </td>
+                                        <td class="main-admin__started-price">
+                                            <form action="#" method="POST">
+                                                <p>AED</p>
+                                                <input
+                                                    type="tel"
+                                                    name="form[email]"
+                                                    data-error=""
+                                                    autocomplete="off"
+                                                    placeholder=""
+                                                    class="input"
+                                                />
+                                                <button
+                                                    type="reset"
+                                                    class="_icon-update"
+                                                ></button>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    <tr class="main-admin__tr">
+                                        <td class="main-admin__boat boat-cell">
+                                            <a href="#">
+                                                <div>
+                                                    <img
+                                                        src="img/ship-image.png"
+                                                        alt="ship"
+                                                    />
+                                                </div>
+                                                <p>
+                                                    Luxury Yacht SilverCreek 61
+                                                    Ft
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td class="main-admin__lication">
+                                            <p>UAE Dubai</p>
+                                        </td>
+                                        <td class="main-admin__company">
+                                            <a href="#">Boat Owner LLC</a>
+                                        </td>
+                                        <td class="main-admin__duration">
+                                            <p>1 hour</p>
+                                        </td>
+                                        <td class="main-admin__agent-price">
+                                            <p><span>1 000</span> AED</p>
+                                        </td>
+                                        <td class="main-admin__started-price">
+                                            <form action="#" method="POST">
+                                                <p>AED</p>
+                                                <input
+                                                    type="tel"
+                                                    name="form[email]"
+                                                    data-error=""
+                                                    autocomplete="off"
+                                                    placeholder=""
+                                                    class="input"
+                                                />
+                                                <button
+                                                    type="reset"
+                                                    class="_icon-update"
+                                                ></button>
+                                            </form>
+                                     
+                                        </td>
+                                    </tr>
+                                    <tr class="main-admin__tr">
+                                        <td class="main-admin__boat boat-cell">
+                                            <a href="#">
+                                                <div>
+                                                    <img
+                                                        src="img/ship-image.png"
+                                                        alt="ship"
+                                                    />
+                                                </div>
+                                                <p>
+                                                    Luxury Yacht SilverCreek 61
+                                                    Ft
+                                                </p>
+                                            </a>
+                                        </td>
+                                        <td class="main-admin__lication">
+                                            <p>UAE Dubai</p>
+                                        </td>
+                                        <td class="main-admin__company">
+                                            <a href="#">Boat Owner LLC </a>
+                                        </td>
+                                        <td class="main-admin__duration">
+                                            <p>1 hour</p>
+                                        </td>
+                                        <td class="main-admin__agent-price">
+                                            <p><span>1 000</span> AED</p>
+                                        </td>
+                                        <td
+                                            class="main-admin__started-price main-admin__started-price--only"
+                                        >
+                                            <div class="main-admin__agent-only">
+                                                Agents only
+                                                <button
+                                                    data-show-modal
+                                                    type="button"
+                                                    class="_icon-info"
+                                                >
+                                                    <span data-modal>
+                                                        This boat is not posted
+                                                        online
+                                                    </span>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot class="main-admin__tfoot">
+                                    <tr>
+                                        <td>
+                                            <nav
+                                                class="main-admin__pagging pagging"
+                                            >
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--left disabled _icon-menu-arrow"
+                                                ></a>
+                                                <ul class="pagging__list">
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item _active"
+                                                            >1</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >2</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >3</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >4</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item pagging__item--dots"
+                                                            >...</a
+                                                        >
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            class="pagging__item"
+                                                            >25</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                                <a
+                                                    href="#"
+                                                    class="pagging__arrow pagging__arrow--right _icon-menu-arrow"
+                                                ></a>
+                                            </nav>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div> -->
 				<aside class="page__notification notification">
 					<div class="notification__header">
 						<div class="notification__header-wrapper">
@@ -1351,7 +1474,7 @@
 							<div class="popup__line">
 								<label class="popup__label-pop label-pop" for="endDateOutOfServices">End Date *</label>
 								<div class="popup__calendar-input calendar-input">
-									<input id="endDateOutOfServices" type="text" data-datepicker name="form[endDateOutOfServices]" required data-error="" placeholder="" class="input" />
+									<input id="endDateOutOfServices" type="text" name="form[endDateOutOfServices]" required data-error="" placeholder="" data-datepicker class="input" />
 									<span class="_icon-calendar-day"></span>
 								</div>
 							</div>
@@ -1377,7 +1500,7 @@
 	</div>
 
 
-	<script src="js/app.min.js?_v=20240610213427"></script>
+	<script src="js/app.min.js?_v=20240816130855"></script>
 </body>
 
 </html>
