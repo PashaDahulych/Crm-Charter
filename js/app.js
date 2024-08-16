@@ -196,17 +196,19 @@
                 }
                 function setSpollerAction(e) {
                     const el = e.target;
-                    if (el.closest("[data-spoller]")) {
+                    if (el.tagName === "SPAN") {
                         const spollerTitle = el.closest("[data-spoller]");
-                        const spollersBlock = spollerTitle.closest("[data-spollers]");
-                        const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
-                        const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
-                        if (!spollersBlock.querySelectorAll("._slide").length) {
-                            if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) hideSpollersBody(spollersBlock);
-                            spollerTitle.classList.toggle("_spoller-active");
-                            _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
+                        if (spollerTitle) {
+                            const spollersBlock = spollerTitle.closest("[data-spollers]");
+                            const oneSpoller = spollersBlock.hasAttribute("data-one-spoller");
+                            const spollerSpeed = spollersBlock.dataset.spollersSpeed ? parseInt(spollersBlock.dataset.spollersSpeed) : 500;
+                            if (!spollersBlock.querySelectorAll("._slide").length) {
+                                if (oneSpoller && !spollerTitle.classList.contains("_spoller-active")) hideSpollersBody(spollersBlock);
+                                spollerTitle.classList.toggle("_spoller-active");
+                                _slideToggle(spollerTitle.nextElementSibling, spollerSpeed);
+                            }
+                            e.preventDefault();
                         }
-                        e.preventDefault();
                     }
                 }
                 function hideSpollersBody(spollersBlock) {
@@ -2033,24 +2035,7 @@
             }));
         }
         initModalHandlers("[data-show-modal]", "[data-modal]");
-        document.addEventListener("DOMContentLoaded", (function() {
-            const asideButton = document.querySelector(".aside__button");
-            const aside = document.querySelector(".aside");
-            let isMenuOpen = false;
-            if (asideButton) asideButton.addEventListener("click", (function(e) {
-                e.stopPropagation();
-                isMenuOpen = !isMenuOpen;
-                if (isMenuOpen) document.documentElement.classList.add("menu-open");
-            }));
-            document.addEventListener("click", (function(e) {
-                if (isMenuOpen && (e.target === aside || aside.contains(e.target))) {
-                    isMenuOpen = false;
-                    document.documentElement.classList.remove("menu-open");
-                }
-            }));
-        }));
-        //!  Код який працює на розширенні менше 1024 з потрібними ф-ми
-                const menuNotificationOpen = document.querySelector(".header-details__notifications");
+        const menuNotificationOpen = document.querySelector(".header-details__notifications");
         const menuNotificationClosed = document.querySelector(".notification__close");
         if (menuNotificationOpen) menuNotificationOpen.addEventListener("click", (() => {
             document.documentElement.classList.toggle("_notifications-open");
@@ -2060,20 +2045,46 @@
             document.documentElement.classList.remove("_notifications-open");
             bodyUnlock();
         }));
-        function checkedLink() {
-            const menuLinkList = document.querySelectorAll(".aside__link");
-            const storageIndex = localStorage.getItem("checkedMenuLink");
-            if (storageIndex !== null) menuLinkList[storageIndex].classList.add("_checked");
-            for (let i = 0; i < menuLinkList.length; i++) {
-                const link = menuLinkList[i];
-                link.addEventListener("click", (() => {
-                    for (const item of menuLinkList) item.classList.remove("_checked");
-                    link.classList.add("_checked");
-                    localStorage.setItem("checkedMenuLink", i);
+        window.onload = function() {
+            function checkedLink() {
+                const menuLinkList = document.querySelectorAll(".aside__link");
+                const storageIndex = localStorage.getItem("checkedMenuLink");
+                if (storageIndex !== null) menuLinkList[storageIndex].classList.add("_checked");
+                for (let i = 0; i < menuLinkList.length; i++) {
+                    const link = menuLinkList[i];
+                    link.addEventListener("click", (() => {
+                        for (const item of menuLinkList) item.classList.remove("_checked");
+                        link.classList.add("_checked");
+                        localStorage.setItem("checkedMenuLink", i);
+                    }));
+                }
+            }
+            checkedLink();
+            function closeMenu() {
+                const aside = document.querySelector(".aside");
+                const asideBtn = document.querySelector(".aside__button");
+                asideBtn.addEventListener("click", (() => {
+                    aside.classList.toggle("menu-open");
                 }));
             }
-        }
-        checkedLink();
+            closeMenu();
+            function removeClassMenuOpen() {
+                const aside = document.querySelector(".aside");
+                const hoverBtn = document.querySelectorAll(".aside__h-btn");
+                for (const btn of hoverBtn) btn.addEventListener("click", (() => {
+                    if (aside.classList.contains("menu-open")) aside.classList.remove("menu-open");
+                }));
+            }
+            removeClassMenuOpen();
+            function mobileMenu() {
+                const aside = document.querySelector(".aside");
+                const mobBtn = document.querySelector(".aside__mob-button");
+                mobBtn.addEventListener("click", (() => {
+                    aside.classList.add("menu-open");
+                }));
+            }
+            mobileMenu();
+        };
         window["FLS"] = false;
         isWebp();
         spollers();
