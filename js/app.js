@@ -2062,28 +2062,27 @@
             checkedLink();
             function closeMenu() {
                 const aside = document.querySelector(".aside");
+                const asideMenu = document.querySelector(".aside__menu");
+                const asideUser = document.querySelector(".aside__user");
                 const asideBtn = document.querySelector(".aside__button");
-                asideBtn.addEventListener("click", (() => {
+                const mobBtn = document.querySelector(".aside__mob-button");
+                asideBtn.addEventListener("click", toggleClassMenOpen);
+                mobBtn.addEventListener("click", (() => {
                     aside.classList.toggle("menu-open");
+                    mobBtn.classList.remove("visible");
                 }));
+                function toggleClassMenOpen() {
+                    aside.classList.toggle("menu-open");
+                }
+                if (innerWidth > 767.98 && innerWidth < 1024) {
+                    asideMenu.addEventListener("click", toggleClassVisible);
+                    asideUser.addEventListener("click", toggleClassVisible);
+                    function toggleClassVisible() {
+                        mobBtn.classList.toggle("visible");
+                    }
+                }
             }
             closeMenu();
-            function removeClassMenuOpen() {
-                const aside = document.querySelector(".aside");
-                const hoverBtn = document.querySelectorAll(".aside__h-btn");
-                for (const btn of hoverBtn) btn.addEventListener("click", (() => {
-                    if (aside.classList.contains("menu-open")) aside.classList.remove("menu-open");
-                }));
-            }
-            removeClassMenuOpen();
-            function mobileMenu() {
-                const aside = document.querySelector(".aside");
-                const mobBtn = document.querySelector(".aside__mob-button");
-                mobBtn.addEventListener("click", (() => {
-                    aside.classList.add("menu-open");
-                }));
-            }
-            mobileMenu();
         };
         window["FLS"] = false;
         isWebp();

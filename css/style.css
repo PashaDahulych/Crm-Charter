@@ -4529,7 +4529,8 @@ body::after {
   left: 0;
   z-index: 4;
   background-color: #03171f;
-  transition: padding 0.3s ease;
+  -webkit-transition: padding 0.3s ease width 0.3s ease;
+  transition: padding 0.3s ease width 0.3s ease;
 }
 
 .menu-open .aside__header {
@@ -4548,10 +4549,10 @@ body::after {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.6125rem;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  -webkit-transition: -webkit-transform 0.3s ease width 0.3s ease;
+  transition: -webkit-transform 0.3s ease width 0.3s ease;
+  transition: transform 0.3s ease width 0.3s ease;
+  transition: transform 0.3s ease width 0.3s ease, -webkit-transform 0.3s ease width 0.3s ease;
   will-change: transform;
 }
 
@@ -4616,7 +4617,7 @@ body::after {
   padding: 10px;
   background-color: rgba(3, 23, 31, 0.6);
   color: #90bfdb;
-  border-radius: 0px 0px 10px 10px;
+  border-radius: 0rem 0rem 0.625rem 0.625rem;
   right: 0%;
   -webkit-transform: translateX(calc(100% - 3px)) rotate(-90deg);
       -ms-transform: translateX(calc(100% - 3px)) rotate(-90deg);
@@ -4632,6 +4633,9 @@ body::after {
   scrollbar-width: none;
   padding-right: 300px;
   margin-right: -285px;
+  pointer-events: none;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .aside__list {
@@ -4657,6 +4661,8 @@ body::after {
   gap: 0.625rem;
   padding: 0.3125rem 0.625rem;
   position: relative;
+  -webkit-transition: width 0.3s ease;
+  transition: width 0.3s ease;
 }
 
 .aside__link::after {
@@ -4882,8 +4888,8 @@ body::after {
   margin-right: 1rem;
   padding-top: 1.25rem;
   border-top: 0.0625rem solid #90bfdb;
-  -webkit-transition: margin-left 0.3s ease, margin-right 0.3s ease;
-  transition: margin-left 0.3s ease, margin-right 0.3s ease;
+  -webkit-transition: margin-left 0.3s ease, margin-right 0.3s ease, width 0.3s ease;
+  transition: margin-left 0.3s ease, margin-right 0.3s ease, width 0.3s ease;
 }
 
 /* Заглишка щоб прибрати браузерний повзунок на .aside__menu*/
@@ -4918,6 +4924,11 @@ body::after {
 
 .menu-open .user-aside__account {
   gap: 0rem;
+}
+
+.user-aside__about {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .menu-open .user-aside__about h3,
@@ -10702,8 +10713,8 @@ body::after {
         -ms-flex-align: center;
             align-items: center;
     gap: 0.625rem;
-    -webkit-transition: background-color 0.3s ease;
-    transition: background-color 0.3s ease;
+    -webkit-transition: background-color 0.3s ease width 0.3s ease;
+    transition: background-color 0.3s ease width 0.3s ease;
     padding: 0.3125rem 0.625rem;
     border-radius: 0.125rem;
     background-color: #03171f;
@@ -11145,6 +11156,18 @@ body::after {
     padding: 1.25rem;
   }
 
+  .aside__mob-button {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+
+  .aside__mob-button.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .page__main-admin {
     padding-left: 0.625rem;
   }
@@ -11454,10 +11477,6 @@ body::after {
 }
 
 @media (min-width: 1025px) {
-  .aside__mob-button {
-    display: none;
-  }
-
   .menu-open .user-aside__button span {
     font-size: 0rem;
     gap: 0rem;
@@ -15927,10 +15946,6 @@ body::after {
     overflow: visible;
   }
 
-  .menu-open .aside__mob-button {
-    display: none;
-  }
-
   .aside__link {
     gap: 0rem;
   }
@@ -16449,6 +16464,11 @@ body::after {
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
             transform: rotate(-90deg);
+  }
+
+  .menu-open .aside__mob-button {
+    opacity: 0;
+    visibility: hidden;
   }
 
   .page__container {
@@ -17821,6 +17841,11 @@ body::after {
 
   .calendar__small-input:hover {
     border: 0.0625rem solid rgba(144, 191, 219, 0.5);
+  }
+
+  .aside.menu-open:hover .aside__mob-button {
+    opacity: 1;
+    visibility: visible;
   }
 
   .aside.menu-open .aside__link:hover .aside__h-btn {
