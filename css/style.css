@@ -4628,7 +4628,7 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
-  overflow: hidden auto;
+  overflow: scroll auto;
   padding: 0.9375rem;
   scrollbar-width: none;
   padding-right: 300px;
@@ -4709,6 +4709,7 @@ body::after {
   left: 100%;
   top: 0;
   padding-left: 0.9375rem;
+  pointer-events: none;
 }
 
 .aside__h-btn {
@@ -16467,8 +16468,7 @@ body::after {
   }
 
   .menu-open .aside__mob-button {
-    opacity: 0;
-    visibility: hidden;
+    display: none;
   }
 
   .page__container {
@@ -17869,6 +17869,10 @@ body::after {
 
   .aside__link:hover .aside__link-info span {
     color: #90bfdb;
+  }
+
+  .aside__link:hover .aside__h-btn-wrapper {
+    pointer-events: auto;
   }
 
   .aside__sub-link:hover {
