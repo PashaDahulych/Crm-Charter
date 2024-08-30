@@ -11169,6 +11169,10 @@ body::after {
     visibility: visible;
   }
 
+  .aside__menu {
+    pointer-events: none;
+  }
+
   .page__main-admin {
     padding-left: 0.625rem;
   }
