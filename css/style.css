@@ -4633,11 +4633,9 @@ body::after {
   scrollbar-width: none;
   padding-right: 300px;
   margin-right: -285px;
-  pointer-events: none;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
   -webkit-overflow-scrolling: touch;
-  max-height: 100vh;
 }
 
 .aside__list {
@@ -4650,7 +4648,6 @@ body::after {
           flex-direction: column;
   gap: 0.75rem;
   pointer-events: auto;
-  min-height: 100vh;
 }
 
 .aside__link {
