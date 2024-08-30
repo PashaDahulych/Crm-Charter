@@ -4647,6 +4647,7 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden scroll;
   gap: 0.75rem;
   pointer-events: auto;
 }
