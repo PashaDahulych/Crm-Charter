@@ -4529,8 +4529,8 @@ body::after {
   left: 0;
   z-index: 4;
   background-color: #03171f;
-  -webkit-transition: padding 0.3s ease width 0.3s ease;
-  transition: padding 0.3s ease width 0.3s ease;
+  -webkit-transition: padding 0.3s ease, width 0.3s ease;
+  transition: padding 0.3s ease, width 0.3s ease;
 }
 
 .menu-open .aside__header {
@@ -4628,9 +4628,11 @@ body::after {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
-  overflow-x: hidden;
+  overflow: hidden scroll;
   padding: 0.9375rem;
   scrollbar-width: none;
+  padding-right: 300px;
+  margin-right: -285px;
   pointer-events: none;
   -webkit-transition: width 0.3s ease;
   transition: width 0.3s ease;
@@ -4646,6 +4648,7 @@ body::after {
           flex-direction: column;
   gap: 0.75rem;
   pointer-events: auto;
+  min-height: 100vh;
 }
 
 .aside__link {
