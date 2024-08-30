@@ -4625,10 +4625,9 @@ body::after {
 }
 
 .aside__menu {
-  max-height: 1500px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   overflow: hidden scroll;
   padding: 0.9375rem;
   scrollbar-width: none;
@@ -4647,7 +4646,8 @@ body::after {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  overflow: hidden scroll;
+  max-height: 1000px;
+  overflow: hidden auto;
   gap: 0.75rem;
   pointer-events: auto;
 }
